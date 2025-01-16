@@ -20,12 +20,12 @@
 	"buttons": {
 		"primary": {
 			"title": "Contáctame",
-			"url": "",
+			"url": "mailto:javam2639@gmail.com",
 			"leaveSite": false
 		},
 		"secondary": {
 			"title": "LinkedIn",
-			"url": "",
+			"url": "https://www.linkedin.com/in/javasquez26/",
 			"leaveSite": "true"
 		}
 	}
