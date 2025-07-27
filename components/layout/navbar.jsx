@@ -1,15 +1,26 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import ThemeMode from '../utils/theme.util'
+import LanguageSwitcher from '../utils/language-switcher'
 
 import settings from '../../content/_settings.json'
-import content from '../../content/navbar.json'
 import css from '../../styles/structure/navbar.module.scss'
 
 export default function Navbar() {
   const router = useRouter()
+  const { t } = useTranslation('common')
   const [menuState, menuToggle] = useState(false)
+
+  // Navigation items with translations
+  const navItems = [
+    { url: "/#about", titleKey: "nav.about" },
+    { url: "/#featured-projects", titleKey: "nav.projects" },
+    { url: "/#technical", titleKey: "nav.about" }, // This should be technical skills
+    { url: "/#career", titleKey: "nav.about" }, // This should be career/experience  
+    { url: "/#pricing", titleKey: "nav.pricing" },
+  ]
 
   useEffect(() => {
     menuToggle(false)
@@ -65,13 +76,35 @@ export default function Navbar() {
         </li>
         <li data-open={menuState} className={css.menuContent}>
           <ul>
-            {content.map(({ url, title }, index) => (
-              <li key={index}>
-                <a href={url} onClick={(e) => handleNavigation(e, url)}>
-                  {title}
-                </a>
-              </li>
-            ))}
+            {/* Usar directamente los textos por ahora hasta actualizar las traducciones */}
+            <li>
+              <a href="/#about" onClick={(e) => handleNavigation(e, "/#about")}>
+                {router.locale === 'en' ? 'About' : 'Sobre mí'}
+              </a>
+            </li>
+            <li>
+              <a href="/#featured-projects" onClick={(e) => handleNavigation(e, "/#featured-projects")}>
+                {router.locale === 'en' ? 'Projects' : 'Proyectos'}
+              </a>
+            </li>
+            <li>
+              <a href="/#technical" onClick={(e) => handleNavigation(e, "/#technical")}>
+                {router.locale === 'en' ? 'Skills' : 'Habilidades'}
+              </a>
+            </li>
+            <li>
+              <a href="/#career" onClick={(e) => handleNavigation(e, "/#career")}>
+                {router.locale === 'en' ? 'Experience' : 'Experiencia'}
+              </a>
+            </li>
+            <li>
+              <a href="/#pricing" onClick={(e) => handleNavigation(e, "/#pricing")}>
+                {router.locale === 'en' ? 'Pricing' : 'Precios'}
+              </a>
+            </li>
+            <li>
+              <LanguageSwitcher />
+            </li>
             <li>
               <ThemeMode />
             </li>

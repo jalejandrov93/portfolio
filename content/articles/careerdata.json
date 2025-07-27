@@ -1,124 +1,62 @@
 {
-    "sectionInfo": {
-      "title": "Experiencia",
-      "preTitle": "Carrera",
-      "subTitle": "Actualmente lidero el area de Tecnología en el Liceo Taller San Miguel, aportando con soluciones tecnológicas y digitales para la gestión de la institución."
-    },
-    "currentPosition": {
-      "company": "Liceo Taller San Miguel",
-      "position": "Tiempo completo",
-      "startDate": "2021-01-01",
+  "sectionInfo": {
+    "title": "Experiencia",
+    "preTitle": "Carrera",
+    "subTitle": "Experiencia profesional en desarrollo de soluciones tecnológicas y gestión de infraestructura TI en organizaciones educativas y empresariales."
+  },
+  "currentPosition": {
+    "company": "Liceo Taller San Miguel",
+    "position": "Líder de Tecnología",
+    "startDate": null,
+    "endDate": null,
+    "location": "Pereira, Colombia",
+    "description": "• Implementación de soluciones digitales para gestión académica y administrativa • Liderazgo de equipos de soporte tecnológico y modernización de infraestructura TI",
+    "logo": "/img/company-logoi.png"
+  },
+  "positions": [
+    {
+      "title": "Líder del Área de Tecnología",
+      "startDate": null,
       "endDate": null,
-      "location": "Pereira, Risaralda, Colombia",
-      "description": "El Liceo Taller San Miguel es una institución educativa que ofrece una educación integral a niños y jóvenes en la ciudad de Pereira. Como líder de tecnología, soy responsable de la planificación, implementación y mantenimiento de la infraestructura tecnológica de la institución. Esto incluye la gestión de la red, la seguridad de la información, la administración de sistemas y la implementación de soluciones digitales para la gestión de la institución.",
-      "logo": "/img/company-logoi.png"
+      "description": "• Administración de plataforma educativa y coordinación de equipos técnicos • Desarrollo e implementación de herramientas para optimización de procesos institucionales",
+      "achievements": null,
+      "badges": [
+        { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+        { "key": "react", "name": "React", "type": "devicon" },
+        { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+        { "key": "python", "name": "Python", "type": "devicon" },
+        { "key": "docker", "name": "Docker", "type": "devicon" }
+      ]
     },
-    "positions": [
-      {
-        "title": "Lider del Area de Tecnologia",
-        "startDate": "2022-06-01",
-        "endDate": null,
-        "description": "Soy responsable de administrar y gestionar la plataforma educativa, coordinar el equipo de soporte tecnológico y liderar la implementación de soluciones digitales para la gestión de la institución.",
-        "achievements": null,
-        "badges": 
-            [
-                { "key": "linux", "name": "Linux", "type": "devicon" },
-                { "key": "ubuntu", "name": "Ubuntu", "type": "devicon" },
-                { "key": "windows8", "name": "Windows", "type": "devicon" },
-                { "key": "nodejs", "name": "Node.js", "type": "devicon" },
-                { "key": "express", "name": "Express", "type": "devicon" },
-                { "key": "python", "name": "Python", "type": "devicon" },
-                { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
-                { "key": "git", "name": "Git", "type": "devicon" },
-                { "key": "docker", "name": "Docker", "type": "devicon" },
-                { "key": "jenkins", "name": "Jenkins", "type": "devicon" },
-                { "key": "amazonwebservices", "name": "AWS", "type": "devicon" },
-                { "key": "azure", "name": "Azure", "type": "devicon" },
-                { "key": "slack", "name": "Slack", "type": "devicon" },
-                { "key": "teams", "name": "Teams", "type": "devicon" },
-                { "key": "zoom", "name": "Zoom", "type": "devicon" },
-                { "key": "cpanel", "name": "cPanel", "type": "devicon" },
-                { "key": "html5", "name": "HTML5", "type": "devicon" },
-                { "key": "css3", "name": "CSS", "type": "devicon" },
-                { "key": "javascript", "name": "JavaScript", "type": "devicon" },
-                { "key": "react", "name": "React", "type": "devicon" },
-                { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-                { "key": "tailwindcss", "name": "Tailwind", "type": "devicon" },
-                { "key": "wordpress", "name": "WordPress", "type": "devicon" },
-                { "key": "woocommerce", "name": "WooCommerce", "type": "devicon" }
-            ]
-        
-      },
-      {
-        "title": "Soporte Tecnopedagogico",
-        "startDate": "2020-12-01",
-        "endDate": "2022-05-31",
-        "description": "Brindar soporte tecnologico a docentes y estudiantes, para la implementación de tecnologias en el aula de clase.",
-        "achievements": [
-          {
-            "title": "Mejorar tolerancia a fallos de la red de datos de la institución",
-            "result": "Eliminación de interrupciones de red en un 99.9%"
-          },
-          {
-            "title": "Capacitación de docentes en el uso de tecnologias educativas",
-            "result": "Aumento del uso de tecnologias en el aula en un 30%"
-          },
-          {
-            "title": "Configuración y administracion de la plataforma educativa brightspace",
-            "result": "100% de los docentes capacitados en la plataforma"
-          }
-        ],
-        "badges": [
+    {
+      "title": "Soporte Tecnopedagógico",
+      "startDate": null,
+      "endDate": null,
+      "description": "• Soporte tecnológico a docentes y estudiantes para integración de TI en aulas • Capacitación en herramientas educativas digitales y administración de plataformas LMS",
+      "achievements": null,
+      "badges": [
         { "key": "html5", "name": "HTML", "type": "devicon" },
         { "key": "css3", "name": "CSS", "type": "devicon" },
         { "key": "javascript", "name": "JavaScript", "type": "devicon" },
-        { "key": "php", "name": "PHP", "type": "devicon" },
-        { "key": "mysql", "name": "MySQL", "type": "devicon" },
-        { "key": "moodle", "name": "Moodle", "type": "devicon" },
-        { "key": "brightspace", "name": "Brightspace", "type": "devicon" }
+        { "key": "mysql", "name": "MySQL", "type": "devicon" }
       ]
-      }
-    ],
-    "previousPositions": [
-      {
-        "company": "EcoTecnologia S.A.S",
-        "position": "Soporte Tecnico",
-        "startDate": "2019-01-01",
-        "endDate": "2020-12-31",
-        "location": "Pereira, Risaralda, Colombia",
-        "description": "Era el encargado de brindar soporte técnico a los clientes de la empresa, realizando mantenimiento preventivo y correctivo a los equipos de cómputo y redes.",
-        "logo": "/img/logos/ecotecnologia.png",
-        "badges": [
-            [
-                { "key": "linux", "name": "Linux", "type": "devicon" },
-                { "key": "ubuntu", "name": "Ubuntu", "type": "devicon" },
-                { "key": "windows8", "name": "Windows", "type": "devicon" }
-            ]
+    }
+  ],
+  "previousPositions": [
+    {
+      "company": "EcoTecnologia S.A.S",
+      "position": "Soporte Técnico",
+      "startDate": null,
+      "endDate": null,
+      "location": "Pereira, Colombia",
+      "description": "• Mantenimiento preventivo y correctivo de equipos de cómputo y redes • Atención técnica especializada a clientes corporativos",
+      "logo": "/img/logos/ecotecnologia.png",
+      "badges": [
+        [
+          { "key": "linux", "name": "Linux", "type": "devicon" },
+          { "key": "windows8", "name": "Windows", "type": "devicon" }
         ]
-      },
-      {
-        "company": "Liceo Taller San Miguel",
-        "position": "Practicante Tecnologia",
-        "startDate": "2018-01-01",
-        "endDate": "2018-12-31",
-        "location": "Pereira, Risaralda, Colombia",
-        "description": "Realice mis practicas como tecnologo en sistemas, realizando mantenimiento y soporte a la infraestructura tecnologica de la institucion.",
-        "logo": "/img/company-logoi.png",
-        "badges": [
-            [
-                { "key": "linux", "name": "Linux", "type": "devicon" },
-                { "key": "ubuntu", "name": "Ubuntu", "type": "devicon" },
-                { "key": "windows8", "name": "Windows", "type": "devicon" }
-            ]
-        ]
-      },
-      {
-        "company": "Soportec",
-        "position": "Medio Tiempo",
-        "startDate": "2012-12-01",
-        "endDate": "2018-11-30",
-        "location": "Pereira, Risaralda, Colombia",
-        "description": "Como Apasionado por la tecnologia 🧙‍♂️. Algo que inicio como hobby termino siendo mi primer trabajo arreglaba computadoras, tablets y teléfonos celulares."
-      }
-    ]
-  }
+      ]
+    }
+  ]
+}

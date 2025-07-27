@@ -1,91 +1,95 @@
 [
 	{
-		"project": "TecnoVoltac App",
-		"url": "https://ProtecApp.co",
+		"project": "Artemisa",
+		"url": "https://arts.liceotallersanmiguel.edu.co",
 		"repo": "Private",
-		"descriptionTitle": "App para el manejo de inventario y cotizaciones.",
-		"description": "Es una aplicación web desarrollada a la medida para el manejo de inventario y cotizaciones. Desarrollada en Vue y FastAPI, con una base de datos en Postgresql.",
-		"imageOptions": [
+		"descriptionTitle": "Ongoing web‑app for curriculum management and teacher support.",
+		"description": "Ongoing web‑app for curriculum management and teacher support.",
+		"keyFeatures": [
+			"Integrated AI agent for academic content generation and lesson planning.",
+			"Real‑time updates to study plans and resource library."
 		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" }
-		],
-		"stack": [
-			{ "key": "postgresql", 	"name": "postgresql", 	"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "tailwind",	"name": "Tailwind", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" }
-		]
-	},
-	{
-		"project": "Sitio Web",
-		"url": "https://esptribunas.com.co",
-		"repo": "Private",
-		"descriptionTitle": "Sitio web para la empresa de servicios publicos de tribunas corcega",
-		"description": "Desarrollado en wordpress, con un diseño personalizado y adaptado a las necesidades del cliente, permitiendo optimizar y mejorar la experiencia de los usuarios y permitiendo de una forma mas clara realizar tramites y consultas.",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/04.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
-		],
-		"stack": [
-			{ "key": "mysql", 	"name": "mysql", 	"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{ "key": "google",		"name": "GA4/GTM/EEC", 	"type": "devicon" },
-			{ "key": "wordpress",	"name": "Wordpress", 	"type": "devicon" },
-			{ "key": "php",		"name": "php", 	"type": "devicon" }
-		]
-	},
-	{
-		"project": "Utilidades LTSM",
-		"url": "https://tools.liceotallersanmiguel.edu.co",
-		"repo": "Private",
-		"descriptionTitle": "Herramientas administrativas para optimización de procesos",
-		"description": "Plataforma de utilidades que facilita tareas administrativas del colegio, incluyendo manipulación de archivos Excel/CSV, generación de documentos, comparaciones y gestión de seguimientos. Desarrollada con React y FastAPI, implementada en contenedores Docker.",
+		"techStack": "Next.js (monolith), PostgreSQL, Tailwind CSS, TypeScript",
 		"imageOptions": [],
 		"images": [
 			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/06.png" },
 			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" }
 		],
 		"stack": [
-			{ "key": "python", "name": "Python", "type": "devicon" },
-			{ "key": "react", "name": "React", "type": "devicon" },
-			{ "key": "javascript", "name": "JavaScript", "type": "devicon" },
-			{ "key": "html5", "name": "HTML5", "type": "devicon" },
-			{ "key": "css3", "name": "CSS3", "type": "devicon" },
-			{ "key": "tailwind", "name": "Tailwind", "type": "devicon" },
-			{ "key": "docker", "name": "Docker", "type": "devicon" },
-			{ "key": "fastapi", "name": "FastAPI", "type": "devicon" }
+			{ "key": "nextjs", "name": "Next.js", "type": "devicon" },
+			{ "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+			{ "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
+			{ "key": "typescript", "name": "TypeScript", "type": "devicon" }
 		]
 	},
 	{
-		"project": "Phidias Scraper",
-		"url": "https://calendar.liceotallersanmiguel.edu.co",
+		"project": "ESP Tribunas Corcega",
+		"url": "https://esptribunas.com.co",
 		"repo": "Private",
-		"descriptionTitle": "Sistema automatizado de extracción y análisis de datos académicos",
-		"description": "Herramienta de scraping desarrollada para extraer datos de la plataforma Phidias. Procesa información académica como asistencia, planeación docente, calificaciones y seguimientos psicológicos. Integra con n8n para automatización, Google Sheets para almacenamiento y Looker Studio para visualización de datos.",
+		"descriptionTitle": "Redesigned public‑services site to improve user experience and bill payments.",
+		"description": "Redesigned public‑services site to improve user experience and bill payments.",
+		"keyFeatures": [
+			"Streamlined payment workflows and invoice lookup.",
+			"Enhanced mobile responsiveness and load times."
+		],
+		"techStack": "WordPress, HTML, CSS, JavaScript",
 		"imageOptions": [],
 		"images": [
-			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/07.png" },
-			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" }		],
+			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/04.png" },
+			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
+			{ "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+		],
 		"stack": [
-			{ "key": "nextjs", "name": "Next.js", "type": "devicon" },
-			{ "key": "nodejs", "name": "Node.js", "type": "devicon" },
-			{ "key": "express", "name": "Express", "type": "devicon" },
-			{ "key": "javascript", "name": "JavaScript", "type": "devicon" },
-			{ "key": "html5", "name": "HTML5", "type": "devicon" },
-			{ "key": "css3", "name": "CSS3", "type": "devicon" },
-			{ "key": "google", "name": "Google Cloud", "type": "devicon" }
+			{ "key": "wordpress", "name": "WordPress", "type": "devicon" },
+			{ "key": "html5", "name": "HTML", "type": "devicon" },
+			{ "key": "css3", "name": "CSS", "type": "devicon" },
+			{ "key": "javascript", "name": "JavaScript", "type": "devicon" }
+		]
+	},
+	{
+		"project": "Territorio Vichero",
+		"url": "https://www.territoriovichero.com/",
+		"repo": "Private",
+		"descriptionTitle": "Tourism and cultural platform for Vichada region.",
+		"description": "Tourism and cultural platform showcasing the beauty and heritage of Vichada region.",
+		"keyFeatures": [
+			"Interactive tourism guide and cultural content.",
+			"Responsive design optimized for mobile users."
+		],
+		"techStack": "React, Tailwind CSS, JavaScript",
+		"imageOptions": [],
+		"images": [
+			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/03.png" },
+			{ "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+		],
+		"stack": [
+			{ "key": "react", "name": "React", "type": "devicon" },
+			{ "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
+			{ "key": "javascript", "name": "JavaScript", "type": "devicon" }
+		]
+	},
+	{
+		"project": "Tecnovolta",
+		"url": "",
+		"repo": "Private",
+		"descriptionTitle": "Internal corporate app for process tracking and reporting.",
+		"description": "Internal corporate app for process tracking and reporting.",
+		"keyFeatures": [
+			"Custom dashboards for managers.",
+			"Role‑based access controls."
+		],
+		"techStack": "Vue.js, FastAPI, PostgreSQL, Tailwind CSS",
+		"imageOptions": [],
+		"images": [
+			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" },
+			{ "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
+			{ "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" }
+		],
+		"stack": [
+			{ "key": "vuejs", "name": "Vue.js", "type": "devicon" },
+			{ "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+			{ "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+			{ "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
 		]
 	}
 ]

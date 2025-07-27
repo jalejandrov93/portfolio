@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "articles": "Artículos",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "madeWith": "Hecho con",
+    "nextjs": "Next.js",
+    "github": "GitHub",
+    "rights": "Todos los derechos reservados"
+  },
+  "hero": {
+    "greeting": "Hola, mi nombre es",
+    "name": "Alejandro Vásquez",
+    "tagline": "Diseño y construyo experiencias significativas.",
+    "description": "Soy un apasionado por la tecnología y un creador digital en constante evolución, impulsado por mi interés en el aprendizaje continuo y un fuerte deseo de dejar un impacto duradero a través de cada uno de mis proyectos.",
+    "contactButton": "Contáctame",
+    "linkedinButton": "LinkedIn"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "preTitle": "Sinopsis",
+    "description": "Soy un profesional digital con habilidades en diseño UX/UI y desarrollo full stack, especializado en la creación de experiencias de usuario intuitivas y funcionales. Mi experiencia abarca tanto el frontend como el backend, lo que me permite ofrecer soluciones completas y eficientes. Además, como IT Manager apasionado por la tecnología, tengo una sólida experiencia en la gestión de infraestructuras tecnológicas y operativas, siempre buscando optimizar procesos y aprovechar la innovación para transformar digitalmente las organizaciones."
+  },
+  "pricing": {
+    "badge": "Precios Transparentes",
+    "title": "Tarifas de Proyectos",
+    "subtitle": "Rangos de precios referenciales para diferentes tipos de proyectos web y aplicaciones. Precios competitivos y transparentes para tu próximo proyecto.",
+    "currency": {
+      "usd": "USD",
+      "cop": "COP",
+      "trm": "TRM",
+      "toggle": "Cambiar moneda"
+    },
+    "projects": {
+      "landingPage": {
+        "title": "Landing Page",
+        "description": "Ideal para campañas o promociones específicas",
+        "features": [
+          "Diseño responsive",
+          "SEO básico",
+          "Formulario de contacto"
+        ]
+      },
+      "cms": {
+        "title": "Sitio CMS",
+        "description": "WordPress con panel de administración básico",
+        "features": [
+          "Panel admin",
+          "Plantilla personalizada",
+          "Plugins básicos"
+        ]
+      },
+      "framework": {
+        "title": "Framework Personalizado",
+        "description": "Next.js/React/Vue con funcionalidades avanzadas",
+        "features": [
+          "Código personalizado",
+          "Optimización avanzada",
+          "Integraciones API"
+        ]
+      },
+      "fullApp": {
+        "title": "App Web Completa",
+        "description": "CRUD completo con autenticación y backend",
+        "features": [
+          "Frontend + Backend",
+          "Base de datos",
+          "Autenticación",
+          "Dashboard"
+        ]
+      }
+    },
+    "formatNote": "M = Millones, K = Miles",
+    "disclaimer": {
+      "title": "Nota importante:",
+      "text": "Los precios son estimaciones referenciales y pueden variar según la complejidad específica del proyecto, funcionalidades adicionales requeridas y tiempo de desarrollo.",
+      "trmNote": " La conversión se realiza con la TRM oficial actual de Colombia."
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "save": "Guardar",
+    "cancel": "Cancelar"
+  }
+} 

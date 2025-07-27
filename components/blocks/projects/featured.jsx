@@ -12,7 +12,7 @@ import Link from "next/link"
 
 export default function FeaturedProject({ content }, index) {
 
-	const { project, url, repo, descriptionTitle,description, stack, imageOptions, images } = content
+	const { project, url, repo, descriptionTitle, description, keyFeatures, techStack, stack, imageOptions, images } = content
 
 	const controls = useAnimation();
 	const { ref, inView  } = useInView({
@@ -39,18 +39,39 @@ export default function FeaturedProject({ content }, index) {
 			<div className={css.details}>
 				<div className={css.projectHeader}>
 					<div className={css.header}>
-						<h3 className="highlight">{project}</h3><span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
+						<h3 className="highlight">
+							{project}
+							{url && (
+								<Link href={url} target="_blank" rel="noopener noreferrer">
+									<Icon icon={[ 'fad', 'external-link' ]} />
+								</Link>
+							)}
+						</h3>
+						<span className={css.privateOr}><i className="devicon-github-plain"></i>{repo}</span>	
 					</div>
 					<div className={css.description}>
-						<p><strong>{descriptionTitle}</strong> {description}</p>
+						<p>{description}</p>
+						{keyFeatures && (
+							<ul className={css.keyFeatures}>
+								{keyFeatures.map((feature, index) => (
+									<li key={index}>• {feature}</li>
+								))}
+							</ul>
+						)}
+						{techStack && (
+							<p className={css.techStack}><strong>Tech stack:</strong> {techStack}</p>
+						)}
 					</div>
 					<div className={css.stackContainer}>
 						<Badges list={stack} block="stack" fullContainer={false} color={false} />
 					</div>
-					<m.div variants={''} className={css.viewProject}>
-						<Link href={url}>
-						<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} /></Link>
-					</m.div>
+					{url && (
+						<m.div variants={''} className={css.viewProject}>
+							<Link href={url} target="_blank" rel="noopener noreferrer">
+								<Icon icon={[ 'fad', 'arrow-right-to-bracket' ]} />
+							</Link>
+						</m.div>
+					)}
 				</div>
 			</div>
 

@@ -25,80 +25,98 @@ export default function Technical() {
 		<Section classProp={`${about.section} borderBottom`}>	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
-					title="Ingeniero de Sistemas y Computación"
-					preTitle="Habilidades técnicas"
-					subTitle="Como ingeniero en sistemas, diseño y gestiono soluciones tecnológicas eficientes,
-					abarcando tanto el desarrollo de experiencias digitales intuitivas como la optimización de infraestructuras TI.
-					Utilizo una amplia variedad de herramientas y lenguajes para crear entornos que mejoren la operatividad y productividad de las organizaciones."
+					title="Habilidades Técnicas"
+					preTitle="Competencias"
+					subTitle="Experiencia en desarrollo full-stack y gestión de infraestructura tecnológica, con enfoque en soluciones web modernas y automatización de procesos."
 				/>
 				<section className={`${about.content} ${about.container}`}>
 					<div className={about.copy}>
-						<CopyBlock 
-							title="Fundamentos polímata"
-							icon={[ 'fat', 'chart-network' ]}
-							copy="Con una sólida base tanto en diseño como en desarrollo, aporto una perspectiva única a cada proyecto y estoy en constante aprendizaje
-							y evolución para mantenerme actualizado con las últimas tendencias de la industria."
-							iconClass={about.icon}
-							containerClass={about.container}
-						/>
 						<BadgesBlock 
-							title="Software con el que me encanta trabajar" 
-							copy="Con más de 5 años de experiencia creando activos digitales, tengo una comprensión profunda e intuitiva de cómo se diseñan las interfaces
-							 de los mejores productos de software del mundo. Este es solo parte del software que he utilizado durante ese tiempo."
-							list={software}
-							block="software" 
+							title="Languages" 
+							copy="Lenguajes de programación con los que desarrollo soluciones eficientes y escalables."
+							list={languages}
+							block="languages" 
 							fullContainer="fullContainer"
-							icon="grid-2-plus"
+							icon="code"
 							containerClass={about.container}
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
-							title="Tecnologías con las que me encanta construir" 
-							copy="Disfruto profundamente resolviendo problemas a través del código. Desde el front-end hasta el back-end y las API en el medio. Ningún proyecto es demasiado desafiante para mí."
-							list={tech} 
-							block="tech"
+							title="Frameworks & Libraries" 
+							copy="Frameworks y librerías para desarrollo de aplicaciones web modernas y APIs robustas."
+							list={frameworks} 
+							block="frameworks"
 							fullContainer="fullContainer" 
-							icon="laptop-code"
+							icon="cubes"
 							containerClass={about.container}
 							headerIcon={about.icon} 
-						/>							
+						/>
+						<BadgesBlock 
+							title="Databases" 
+							copy="Sistemas de gestión de bases de datos para almacenamiento y manipulación eficiente de datos."
+							list={databases} 
+							block="databases"
+							fullContainer="fullContainer" 
+							icon="database"
+							containerClass={about.container}
+							headerIcon={about.icon} 
+						/>
+						<BadgesBlock 
+							title="Styling & UI" 
+							copy="Herramientas para crear interfaces de usuario atractivas y responsivas."
+							list={styling} 
+							block="styling"
+							fullContainer="fullContainer" 
+							icon="palette"
+							containerClass={about.container}
+							headerIcon={about.icon} 
+						/>
+						<BadgesBlock 
+							title="Automation & DevOps" 
+							copy="Herramientas para automatización, control de versiones y mejores prácticas de desarrollo."
+							list={devops} 
+							block="devops"
+							fullContainer="fullContainer" 
+							icon="rocket"
+							containerClass={about.container}
+							headerIcon={about.icon} 
+						/>
 					</div>
 					<div className={`${about.image} ${about.technicalSvg}`}>
 						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="Data Strings 01 por Colorpong: https://ywft.us/2177b695b" />
 					</div>
 				</section>	
 			</Container>
-			{/* <SectionGridBg gridSize={4}/> */}
 		</Section>
 	)
 }
 
-const software = [
-	// { key: 'photoshop', 	name: 'Photoshop', 			type: 'devicon' },
-	// { key: 'illustrator', 	name: 'Illustrator', 		type: 'devicon' },
-	{ key: 'figma', 		name: 'Figma', 				type: 'devicon' },
-	{ key: 'vscode', 		name: 'VSCode', 			type: 'devicon' },
-	{ key: 'mailbox', 		name: 'Postman', 			type: 'fas' },
-	{ key: 'computer-mouse',name: 'Click Up', 			type: 'fas' },
-	{ key: 'list-music',	name: 'Ableton', 			type: 'fas' },
-	{ key: 'aftereffects',	name: 'After Effects', 		type: 'devicon' },
-	{ key: 'premierepro',	name: 'Premiere Pro', 		type: 'devicon' },
+// Languages - ordenados por competencia
+const languages = [
+	{ key: 'javascript', 	name: 'JavaScript (ES6+)', 	type: 'devicon' },
+	{ key: 'typescript', 	name: 'TypeScript', 		type: 'devicon' },
+	{ key: 'python', 		name: 'Python', 			type: 'devicon' },
 ]
 
-const tech	= [
-	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
-	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
+// Frameworks & Libraries - ordenados por competencia
+const frameworks = [
+	{ key: 'nextjs', 		name: 'Next.js', 			type: 'devicon' },
 	{ key: 'react', 		name: 'React', 				type: 'devicon' },
-	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
-	{ key: 'jquery', 		name: 'jQuery', 			type: 'devicon' },
-	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
-	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
-	{ key: 'woocommerce', 	name: 'WooCommerce', 		type: 'devicon' },
-	{ key: "google",		name: "GA4/GTM", 			type: "devicon" },
-	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
-	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
-	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
-	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
-	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
-	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },
+	{ key: 'fastapi', 		name: 'FastAPI', 			type: 'devicon' },
+]
+
+// Databases
+const databases = [
+	{ key: 'postgresql', 	name: 'PostgreSQL', 		type: 'devicon' },
+]
+
+// Styling & UI
+const styling = [
+	{ key: 'tailwindcss', 	name: 'Tailwind CSS', 		type: 'devicon' },
+]
+
+// Automation & DevOps
+const devops = [
+	{ key: 'git', 			name: 'Husky', 			type: 'devicon' },
+	{ key: 'github', 		name: 'GitHub Actions', 	type: 'devicon' },
 ]

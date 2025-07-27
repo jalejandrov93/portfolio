@@ -1,0 +1,399 @@
+.section {
+  min-height: 100vh;
+  background: var(--background-dim);
+  padding: 0.1rem 0;
+}
+
+// Header Section
+.headerSection {
+  text-align: center;
+  margin-bottom: 0.01rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  background-color: var(--background-dim2);
+  color: var(--primary-dim);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+  &.secondary {
+    background-color: var(--background-dim2);
+    color: var(--primary-dim);
+  }
+  
+  &.outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-dark);
+    color: var(--primary);
+  }
+}
+
+.mainTitle {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--primary-bright);
+  margin-bottom: 0.5rem;
+  
+  @media (min-width: 768px) {
+    font-size: var(--font-xl-l);
+  }
+}
+
+.subtitle {
+  font-size: var(--font-m);
+  color: var(--primary);
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+// Currency Toggle Section
+.currencySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.currencyToggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--background-dim2);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary-dark);
+}
+
+.currencyLabel {
+  font-size: var(--font-s);
+  font-weight: 600;
+  transition: color 0.2s ease;
+  color: var(--primary-dim);
+  
+  &.active {
+    &.usd {
+      color: var(--secondary);
+    }
+    
+    &.cop {
+      color: var(--neon-1-1);
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  height: 1.5rem;
+  width: 2.75rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  background-color: var(--primary-dark);
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--secondary);
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  &.checked {
+    background-color: var(--neon-1-1);
+  }
+}
+
+.switchSlider {
+  pointer-events: none;
+  display: inline-block;
+  height: 1.25rem;
+  width: 1.25rem;
+  transform: translateX(0);
+  border-radius: 9999px;
+  background-color: var(--background-dim2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  
+  &.checked {
+    transform: translateX(1.25rem);
+  }
+}
+
+.trmInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--background-dim2);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: var(--font-s);
+  color: var(--primary-dim);
+  border: 1px solid var(--primary-dark);
+  
+  svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--primary-dim);
+  }
+}
+
+// Cards Section
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 0.3rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.pricingCard {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-dim2);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--primary-dark);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-color: var(--secondary);
+  }
+}
+
+.cardHeader {
+  padding: 1.5rem;
+  padding-bottom: 0.1rem;
+}
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  
+  &.blue { 
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--neon-1-2) 100%);
+  }
+  &.green { 
+    background: linear-gradient(135deg, var(--neon-1-1) 0%, var(--neon-1-2) 100%);
+  }
+  &.purple { 
+    background: linear-gradient(135deg, var(--neon-2-2) 0%, var(--secondary-bright) 100%);
+  }
+  &.orange { 
+    background: linear-gradient(135deg, var(--neon-2-1) 0%, var(--neon-1-1) 100%);
+  }
+  
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--background);
+  }
+}
+
+.cardTitle {
+  font-size: var(--font-m);
+  font-weight: 700;
+  color: var(--primary-bright);
+  line-height: 1.2;
+  margin-bottom: 0.1rem;
+}
+
+.cardDescription {
+  color: var(--primary);
+  font-size: var(--font-s);
+}
+
+.cardContent {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.priceSection {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.priceRange {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-bright);
+  
+  &.large {
+    font-size: var(--font-l);
+  }
+  
+  &.medium {
+    font-size: var(--font-m);
+  }
+}
+
+.priceSeparator {
+  color: var(--primary-dim);
+  font-weight: 500;
+  font-size: var(--font-m);
+}
+
+.currencyBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-dark);
+  color: var(--primary);
+  border-radius: 0.375rem;
+  font-size: var(--font-xs);
+}
+
+.formatNote {
+  font-size: var(--font-xs);
+  color: var(--primary-dim);
+  margin-top: 0.1rem;
+}
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featureDot {
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: var(--neon-1-1);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.featureText {
+  font-size: var(--font-s);
+  color: var(--primary);
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  
+  .pricingCard:hover & {
+    opacity: 1;
+  }
+}
+
+// Disclaimer Section
+.disclaimerSection {
+  text-align: center;
+}
+
+.disclaimerBox {
+  background-color: var(--background-dim2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+  border: 1px solid var(--primary-dark);
+}
+
+.disclaimerText {
+  font-size: var(--font-s);
+  color: var(--primary);
+  line-height: 1.6;
+  
+  strong {
+    font-weight: 600;
+    color: var(--primary-bright);
+  }
+}
+
+// Loading skeleton
+.skeleton {
+  background-color: var(--primary-dark);
+  border-radius: 0.25rem;
+  animation: pulse 2s infinite;
+  
+  &.inline {
+    display: inline-block;
+    width: 4rem;
+    height: 1rem;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 767px) {
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .mainTitle {
+    font-size: var(--font-l);
+  }
+  
+  .subtitle {
+    font-size: var(--font-r);
+    padding: 0 1rem;
+  }
+  
+  .cardsContainer {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .price {
+    &.large {
+      font-size: var(--font-m);
+    }
+    
+    &.medium {
+      font-size: var(--font-r);
+    }
+  }
+} 

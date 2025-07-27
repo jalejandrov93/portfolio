@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "articles": "Articles", 
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "nextjs": "Next.js",
+    "github": "GitHub",
+    "rights": "All rights reserved"
+  },
+  "hero": {
+    "greeting": "Hello, my name is",
+    "name": "Alejandro Vásquez",
+    "tagline": "I design and build meaningful experiences.",
+    "description": "I'm passionate about technology and a constantly evolving digital creator, driven by my interest in continuous learning and a strong desire to leave a lasting impact through each of my projects.",
+    "contactButton": "Contact Me",
+    "linkedinButton": "LinkedIn"
+  },
+  "about": {
+    "title": "About me",
+    "preTitle": "Synopsis",
+    "description": "I am a digital professional with skills in UX/UI design and full stack development, specializing in creating intuitive and functional user experiences. My experience spans both frontend and backend, allowing me to deliver complete and efficient solutions. Additionally, as an IT Manager passionate about technology, I have solid experience in managing technological and operational infrastructures, always seeking to optimize processes and leverage innovation to digitally transform organizations."
+  },
+  "pricing": {
+    "badge": "Transparent Pricing",
+    "title": "Project Rates",
+    "subtitle": "Reference price ranges for different types of web projects and applications. Competitive and transparent pricing for your next project.",
+    "currency": {
+      "usd": "USD",
+      "cop": "COP",
+      "trm": "TRM",
+      "toggle": "Switch currency"
+    },
+    "projects": {
+      "landingPage": {
+        "title": "Landing Page",
+        "description": "Ideal for specific campaigns or promotions",
+        "features": [
+          "Responsive design",
+          "Basic SEO",
+          "Contact form"
+        ]
+      },
+      "cms": {
+        "title": "CMS Site",
+        "description": "WordPress with basic admin panel",
+        "features": [
+          "Admin panel",
+          "Custom template",
+          "Basic plugins"
+        ]
+      },
+      "framework": {
+        "title": "Custom Framework",
+        "description": "Next.js/React/Vue with advanced features",
+        "features": [
+          "Custom code",
+          "Advanced optimization",
+          "API integrations"
+        ]
+      },
+      "fullApp": {
+        "title": "Complete Web App",
+        "description": "Full CRUD with authentication and backend",
+        "features": [
+          "Frontend + Backend",
+          "Database",
+          "Authentication",
+          "Dashboard"
+        ]
+      }
+    },
+    "formatNote": "M = Millions, K = Thousands",
+    "disclaimer": {
+      "title": "Important note:",
+      "text": "Prices are reference estimates and may vary according to the specific complexity of the project, additional functionalities required and development time.",
+      "trmNote": " Conversion is made with the current official TRM from Colombia."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+} 

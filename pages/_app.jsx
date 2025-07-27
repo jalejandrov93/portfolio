@@ -1,6 +1,7 @@
 // Core packages
 import { Analytics } from '@vercel/analytics/react';
 import { LazyMotion, domAnimation } from "framer-motion"
+import { appWithTranslation } from 'next-i18next'
 
 // Utils
 import SetGridGap from '../components/utils/set.grid.util'
@@ -32,7 +33,7 @@ import '../styles/css/global.css'
  * @param {?} pageProps
  * @returns
  */
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
 	return (
 		<>
 		<LazyMotion features={domAnimation}>
@@ -45,3 +46,5 @@ export default function MyApp({ Component, pageProps }) {
 		</>
 	)
 }
+
+export default appWithTranslation(MyApp)
