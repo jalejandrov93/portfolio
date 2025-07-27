@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import Container from '../structure/container'
 import Icon from '../utils/icon.util'
-
+import Link from 'next/link'
 import css from '../../styles/structure/footer.module.scss'
 
 import content from '../../content/footer.json'
@@ -38,7 +38,7 @@ export default function Footer() {
 						content.acknowledgments.map( ({ person, link, note }, index) => {
 							return (
 								<li key={index}>
-									<a href={link} rel="noreferrer" target="_blank">{person} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
+									<Link href={link} rel="noreferrer" target="_blank">{person} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></Link>
 									<p>{note}</p>
 								</li>
 							)
@@ -51,7 +51,7 @@ export default function Footer() {
 						content.links.map( ({ person, link, note }, index) => {
 							return (
 								<li key={index}>
-									<a href={link} rel="noreferrer" target="_blank">{person} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
+									<Link href={link} rel="noreferrer" target="_blank">{person} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></Link>
 									<p>{note}</p>
 								</li>
 							)
@@ -64,7 +64,7 @@ export default function Footer() {
 							{
 							content.social.map( ({ url, icon }, index) => {
 								return (
-									<a  key={index} href={url} rel="noreferrer" target="_blank"><Icon icon={[ 'fab', icon ]} /></a>
+									<Link key={index} href={url} rel="noreferrer" target="_blank"><Icon icon={[ 'fab', icon ]} /></Link>
 								)
 							})
 							}
@@ -72,7 +72,7 @@ export default function Footer() {
 					</ul>
 				</section>
 				{/* <section className={css.github}>
-					<a href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
+					<Link href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
 						<h5>{settings.portfolio.forkthis}</h5>
 						<ul>
 							<li>

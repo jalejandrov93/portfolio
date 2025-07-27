@@ -13,17 +13,243 @@
     "rights": "Todos los derechos reservados"
   },
   "hero": {
+    "intro": {
+      "start": "const Alejandro = (nombre, pasión) =>",
+      "end": "Hola, mi nombre es",
+      "speed": 60,
+      "deletionSpeed": 80,
+      "wrapper": "h2",
+      "startDelay": 1000,
+      "deleteDelay": 3000,
+      "restartDelay": 12000
+    },
     "greeting": "Hola, mi nombre es",
     "name": "Alejandro Vásquez",
     "tagline": "Diseño y construyo experiencias significativas.",
     "description": "Soy un apasionado por la tecnología y un creador digital en constante evolución, impulsado por mi interés en el aprendizaje continuo y un fuerte deseo de dejar un impacto duradero a través de cada uno de mis proyectos.",
-    "contactButton": "Contáctame",
-    "linkedinButton": "LinkedIn"
+    "buttons": {
+      "primary": {
+        "title": "Contáctame",
+        "url": "mailto:javam2639@gmail.com"
+      },
+      "secondary": {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/javasquez26/"
+      }
+    }
   },
   "about": {
     "title": "Sobre mí",
     "preTitle": "Sinopsis",
-    "description": "Soy un profesional digital con habilidades en diseño UX/UI y desarrollo full stack, especializado en la creación de experiencias de usuario intuitivas y funcionales. Mi experiencia abarca tanto el frontend como el backend, lo que me permite ofrecer soluciones completas y eficientes. Además, como IT Manager apasionado por la tecnología, tengo una sólida experiencia en la gestión de infraestructuras tecnológicas y operativas, siempre buscando optimizar procesos y aprovechar la innovación para transformar digitalmente las organizaciones."
+    "description": "Soy un profesional digital con habilidades en diseño UX/UI y desarrollo full stack, especializado en la creación de experiencias de usuario intuitivas y funcionales. Mi experiencia abarca tanto el frontend como el backend, lo que me permite ofrecer soluciones completas y eficientes. Además, como IT Manager apasionado por la tecnología, tengo una sólida experiencia en la gestión de infraestructuras tecnológicas y operativas, siempre buscando optimizar procesos y aprovechar la innovación para transformar digitalmente las organizaciones.",
+    "softSkills": {
+      "title": "Habilidades blandas que pagan las cuentas",
+      "description": "Además de mi experiencia en diseño y tecnología, también tengo habilidades sólidas de liderazgo, gestión del tiempo y multitarea, desarrolladas a través de mi experiencia como líder de TI en un colegio privado. Fuera del trabajo, me gusta mantenerme activo practicando deportes como fútbol. Tengo confianza en mi capacidad para aportar pasión y valor a cualquier proyecto."
+    },
+    "methods": {
+      "title": "Investigación y planificación",
+      "description": "Uno de los aspectos que más me gusta de la creación es planificar la arquitectura de un proyecto. Desde los sistemas de diseño hasta la estrategia de marca, disfruto trabajando con los muchos puntos de contacto de la experiencia del usuario."
+    }
+  },
+  "technical": {
+    "title": "Habilidades Técnicas",
+    "preTitle": "Competencias",
+    "description": "Experiencia en desarrollo full-stack y gestión de infraestructura tecnológica, con enfoque en soluciones web modernas y automatización de procesos.",
+    "categories": {
+      "languages": {
+        "title": "Lenguajes",
+        "description": "Lenguajes de programación con los que desarrollo soluciones eficientes y escalables."
+      },
+      "frameworks": {
+        "title": "Frameworks y Librerías",
+        "description": "Frameworks y librerías para desarrollo de aplicaciones web modernas y APIs robustas."
+      },
+      "databases": {
+        "title": "Bases de Datos",
+        "description": "Sistemas de gestión de bases de datos para almacenamiento y manipulación eficiente de datos."
+      },
+      "styling": {
+        "title": "Styling y UI",
+        "description": "Herramientas para crear interfaces de usuario atractivas y responsivas."
+      },
+      "devops": {
+        "title": "Automatización y DevOps",
+        "description": "Herramientas para automatización, control de versiones y mejores prácticas de desarrollo."
+      }
+    }
+  },
+  "career": {
+    "title": "Experiencia",
+    "preTitle": "Carrera",
+    "description": "Actualmente lidero el área de Tecnología en el Liceo Taller San Miguel, aportando con soluciones tecnológicas y digitales para la gestión de la institución.",
+    "current": {
+      "company": "Liceo Taller San Miguel",
+      "position": "Líder de Tecnología",
+      "location": "Pereira, Colombia",
+      "description": "• Implementación de soluciones digitales para gestión académica y administrativa • Liderazgo de equipos de soporte tecnológico y modernización de infraestructura TI"
+    },
+    "positions": [
+      {
+        "title": "Líder del Área de Tecnología",
+        "description": "• Administración de plataforma educativa y coordinación de equipos técnicos • Desarrollo e implementación de herramientas para optimización de procesos institucionales"
+      },
+      {
+        "title": "Soporte Tecnopedagógico",
+        "description": "• Soporte tecnológico a docentes y estudiantes para integración de TI en aulas • Capacitación en herramientas educativas digitales y administración de plataformas LMS"
+      }
+    ],
+    "previous": [
+      {
+        "company": "EcoTecnologia S.A.S",
+        "position": "Soporte Técnico",
+        "location": "Pereira, Colombia",
+        "description": "• Mantenimiento preventivo y correctivo de equipos de cómputo y redes • Atención técnica especializada a clientes corporativos"
+      }
+    ],
+    "freelance": {
+      "title": "Proyectos Freelance",
+      "subtitle": "Proyectos independientes y colaboraciones",
+      "projects": [
+        {
+          "title": "Artemisa - Plataforma Educativa",
+          "period": "2023 - Presente",
+          "description": "Aplicación web con IA para gestión curricular y apoyo docente",
+          "technologies": ["Next.js", "PostgreSQL", "TypeScript", "Tailwind CSS"]
+        },
+        {
+          "title": "ESP Tribunas Corcega",
+          "period": "2022 - 2023",
+          "description": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas",
+          "technologies": ["WordPress", "HTML", "CSS", "JavaScript"]
+        },
+        {
+          "title": "Territorio Vichero",
+          "period": "2021 - 2022",
+          "description": "Plataforma turística y cultural para la región de Vichada",
+          "technologies": ["React", "Tailwind CSS", "JavaScript"]
+        },
+        {
+          "title": "Tecnovolta - App Corporativa",
+          "period": "2020 - 2021",
+          "description": "Aplicación corporativa interna para seguimiento de procesos y reportes",
+          "technologies": ["Vue.js", "FastAPI", "PostgreSQL", "Tailwind CSS"]
+        },
+        {
+          "title": "Soluciones E-commerce",
+          "period": "2019 - 2020",
+          "description": "Desarrollo de plataformas e-commerce personalizadas para negocios locales",
+          "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL"]
+        },
+        {
+          "title": "Sitios Web para Pequeñas Empresas",
+          "period": "2018 - 2019",
+          "description": "Landing pages y sitios corporativos para startups y pequeñas empresas",
+          "technologies": ["HTML", "CSS", "JavaScript", "WordPress"]
+        }
+      ]
+    }
+  },
+  "projects": {
+    "featured": {
+      "title": "Proyectos destacados",
+      "preTitle": "UX y Full Stack",
+      "subtitle": "Centrados en la experiencia, impulsados por la ingeniería.",
+      "items": [
+        {
+          "project": "Artemisa",
+          "url": "https://arts.liceotallersanmiguel.edu.co",
+          "repo": "Privado",
+          "descriptionTitle": "Aplicación web en desarrollo para gestión curricular y apoyo docente.",
+          "description": "Aplicación web en desarrollo para gestión curricular y apoyo docente.",
+          "keyFeatures": [
+            "Agente de IA integrado para generación de contenido académico y planificación de clases.",
+            "Actualizaciones en tiempo real de planes de estudio y biblioteca de recursos."
+          ],
+          "techStack": "Next.js (monolito), PostgreSQL, Tailwind CSS, TypeScript",
+          "imageOptions": [],
+          "images": [
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/06.png" },
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" }
+          ],
+          "stack": [
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "ESP Tribunas Corcega",
+          "url": "https://esptribunas.com.co",
+          "repo": "Privado",
+          "descriptionTitle": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas.",
+          "description": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas.",
+          "keyFeatures": [
+            "Flujos de pago optimizados y búsqueda de facturas.",
+            "Mayor responsividad móvil y tiempos de carga mejorados."
+          ],
+          "techStack": "WordPress, HTML, CSS, JavaScript",
+          "imageOptions": [],
+          "images": [
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/04.png" },
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
+            { "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+          ],
+          "stack": [
+            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
+            { "key": "html5", "name": "HTML", "type": "devicon" },
+            { "key": "css3", "name": "CSS", "type": "devicon" },
+            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Territorio Vichero",
+          "url": "https://www.territoriovichero.com/",
+          "repo": "Privado",
+          "descriptionTitle": "Plataforma turística y cultural para la región de Vichada.",
+          "description": "Plataforma turística y cultural que muestra la belleza y patrimonio de la región de Vichada.",
+          "keyFeatures": [
+            "Guía turística interactiva y contenido cultural.",
+            "Diseño responsivo optimizado para usuarios móviles."
+          ],
+          "techStack": "React, Tailwind CSS, JavaScript",
+          "imageOptions": [],
+          "images": [
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/03.png" },
+            { "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+          ],
+          "stack": [
+            { "key": "react", "name": "React", "type": "devicon" },
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
+            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Tecnovolta",
+          "url": "",
+          "repo": "Privado",
+          "descriptionTitle": "Aplicación corporativa interna para seguimiento de procesos y reportes.",
+          "description": "Aplicación corporativa interna para seguimiento de procesos y reportes.",
+          "keyFeatures": [
+            "Dashboards personalizados para gerentes.",
+            "Controles de acceso basados en roles."
+          ],
+          "techStack": "Vue.js, FastAPI, PostgreSQL, Tailwind CSS",
+          "imageOptions": [],
+          "images": [
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" },
+            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
+            { "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" }
+          ],
+          "stack": [
+            { "key": "vuejs", "name": "Vue.js", "type": "devicon" },
+            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
+          ]
+        }
+      ]
+    }
   },
   "pricing": {
     "badge": "Precios Transparentes",

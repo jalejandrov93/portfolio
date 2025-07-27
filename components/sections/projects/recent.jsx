@@ -5,7 +5,7 @@ import Container 	from '../../structure/container';
 // Section structure
 import Section 		from '../../structure/section';
 import Icon from '../../utils/icon.util'
-
+import Link from 'next/link'
 export default function GitProjects({ repos, user }) {
 	return (
 		<Section classProp={css.section}>	
@@ -15,7 +15,7 @@ export default function GitProjects({ repos, user }) {
 					<Image className={css.profilePhoto} src={`${user[0].avatar_url}`} alt="Foto de Perfil de Github" height={60} width={60}/>
 					<span class={css.details}>
 						<p>{user[0].name}</p>
-						<a href={user[0].html_url} rel="noreferrer" target="_blank">{user[0].html_url} <Icon icon={[ 'far', 'arrow-up-right-from-square' ]} /></a>
+						<Link href={user[0].html_url} rel="noreferrer" target="_blank">{user[0].html_url} <Icon icon={[ 'far', 'arrow-up-right-from-square' ]} /></Link>
 					</span>
 				</section>
 				<div className={css.projects}>
@@ -26,7 +26,7 @@ export default function GitProjects({ repos, user }) {
 							<>
 							<article key={index} className={css.project}>
 								<span className={css.header}>
-									<a href={html_url} rel="noreferrer" target="_blank">{name} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
+									<Link href={html_url} rel="noreferrer" target="_blank">{name} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></Link>
 									<p className={css.homepage}>{homepage}</p>
 								</span>
 								<span className={css.descriptionContainer}>

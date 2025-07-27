@@ -1,5 +1,6 @@
 // Core packages
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next';
 
 // Section scss
 import about from '../../../styles/sections/index/about.module.scss'
@@ -21,19 +22,21 @@ import Section from '../../structure/section';
  * @returns {jsx} <Technical />
  */
 export default function Technical() {
+	const { t } = useTranslation('common');
+
 	return (
 		<Section classProp={`${about.section} borderBottom`}>	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
-					title="Habilidades Técnicas"
-					preTitle="Competencias"
-					subTitle="Experiencia en desarrollo full-stack y gestión de infraestructura tecnológica, con enfoque en soluciones web modernas y automatización de procesos."
+					title={t('technical.title')}
+					preTitle={t('technical.preTitle')}
+					subTitle={t('technical.description')}
 				/>
 				<section className={`${about.content} ${about.container}`}>
 					<div className={about.copy}>
 						<BadgesBlock 
-							title="Languages" 
-							copy="Lenguajes de programación con los que desarrollo soluciones eficientes y escalables."
+							title={t('technical.categories.languages.title')} 
+							copy={t('technical.categories.languages.description')}
 							list={languages}
 							block="languages" 
 							fullContainer="fullContainer"
@@ -42,8 +45,8 @@ export default function Technical() {
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
-							title="Frameworks & Libraries" 
-							copy="Frameworks y librerías para desarrollo de aplicaciones web modernas y APIs robustas."
+							title={t('technical.categories.frameworks.title')} 
+							copy={t('technical.categories.frameworks.description')}
 							list={frameworks} 
 							block="frameworks"
 							fullContainer="fullContainer" 
@@ -52,8 +55,8 @@ export default function Technical() {
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
-							title="Databases" 
-							copy="Sistemas de gestión de bases de datos para almacenamiento y manipulación eficiente de datos."
+							title={t('technical.categories.databases.title')} 
+							copy={t('technical.categories.databases.description')}
 							list={databases} 
 							block="databases"
 							fullContainer="fullContainer" 
@@ -62,8 +65,8 @@ export default function Technical() {
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
-							title="Styling & UI" 
-							copy="Herramientas para crear interfaces de usuario atractivas y responsivas."
+							title={t('technical.categories.styling.title')} 
+							copy={t('technical.categories.styling.description')}
 							list={styling} 
 							block="styling"
 							fullContainer="fullContainer" 
@@ -72,8 +75,8 @@ export default function Technical() {
 							headerIcon={about.icon} 
 						/>
 						<BadgesBlock 
-							title="Automation & DevOps" 
-							copy="Herramientas para automatización, control de versiones y mejores prácticas de desarrollo."
+							title={t('technical.categories.devops.title')} 
+							copy={t('technical.categories.devops.description')}
 							list={devops} 
 							block="devops"
 							fullContainer="fullContainer" 

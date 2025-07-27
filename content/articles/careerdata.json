@@ -7,7 +7,7 @@
   "currentPosition": {
     "company": "Liceo Taller San Miguel",
     "position": "Líder de Tecnología",
-    "startDate": null,
+    "startDate": "2020-03-01",
     "endDate": null,
     "location": "Pereira, Colombia",
     "description": "• Implementación de soluciones digitales para gestión académica y administrativa • Liderazgo de equipos de soporte tecnológico y modernización de infraestructura TI",
@@ -16,7 +16,7 @@
   "positions": [
     {
       "title": "Líder del Área de Tecnología",
-      "startDate": null,
+      "startDate": "2022-01-01",
       "endDate": null,
       "description": "• Administración de plataforma educativa y coordinación de equipos técnicos • Desarrollo e implementación de herramientas para optimización de procesos institucionales",
       "achievements": null,
@@ -30,8 +30,8 @@
     },
     {
       "title": "Soporte Tecnopedagógico",
-      "startDate": null,
-      "endDate": null,
+      "startDate": "2020-03-01",
+      "endDate": "2021-12-31",
       "description": "• Soporte tecnológico a docentes y estudiantes para integración de TI en aulas • Capacitación en herramientas educativas digitales y administración de plataformas LMS",
       "achievements": null,
       "badges": [
@@ -46,8 +46,8 @@
     {
       "company": "EcoTecnologia S.A.S",
       "position": "Soporte Técnico",
-      "startDate": null,
-      "endDate": null,
+      "startDate": "2018-06-01",
+      "endDate": "2020-02-28",
       "location": "Pereira, Colombia",
       "description": "• Mantenimiento preventivo y correctivo de equipos de cómputo y redes • Atención técnica especializada a clientes corporativos",
       "logo": "/img/logos/ecotecnologia.png",

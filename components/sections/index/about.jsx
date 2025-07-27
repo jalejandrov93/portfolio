@@ -1,5 +1,6 @@
 // Core packages
 import Image from 'next/image'
+import { useTranslation } from 'next-i18next';
 
 // Section scss
 import about from '../../../styles/sections/index/about.module.scss';
@@ -21,17 +22,15 @@ import Section from '../../structure/section';
  * @returns {jsx} <About />
  */
 export default function About() {
+	const { t } = useTranslation('common');
+
 	return (
 		<Section classProp={about.section}>	
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
-					title="Sobre mí"
-					preTitle="Sinopsis"
-					subTitle="Soy un profesional digital con habilidades en diseño UX/UI y desarrollo full stack,
-					especializado en la creación de experiencias de usuario intuitivas y funcionales. Mi experiencia abarca tanto el frontend como el backend,
-					lo que me permite ofrecer soluciones completas y eficientes.
-					Además, como IT Manager apasionado por la tecnología, tengo una sólida experiencia en la gestión de infraestructuras tecnológicas y operativas,
-					siempre buscando optimizar procesos y aprovechar la innovación para transformar digitalmente las organizaciones."
+					title={t('about.title')}
+					preTitle={t('about.preTitle')}
+					subTitle={t('about.description')}
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
@@ -40,24 +39,20 @@ export default function About() {
 					</div>
 					<div className={about.copy} >
 						<CopyBlock 
-							title="Habilidades blandas que pagan las cuentas"
+							title={t('about.softSkills.title')}
 							containerClass={about.container}
 							iconClass={about.icon}
 							icon={[ 'fat', 'ear-listen' ]}
-							copy="Además de mi experiencia en diseño y tecnología, también tengo habilidades sólidas de liderazgo, gestión del tiempo y multitarea,
-							desarrolladas a través de mi experiencia como lider de TI en un colegio privado.
-							Fuera del trabajo, me gusta mantenerme activo practicando deportes como futbol.
-							Tengo confianza en mi capacidad para aportar pasión y valor a cualquier proyecto."
+							copy={t('about.softSkills.description')}
 						/>
 						<BadgesBlock 
-							title="Investigación y planificación" 
+							title={t('about.methods.title')} 
 							containerClass={about.container}
 							list={methods} 
 							fullContainer="fullContainer"
 							block="methods" 
 							icon="fingerprint"
-							copy="Uno de los aspectos que más me gusta de la creación es planificar la arquitectura de un proyecto.
-							Desde los sistemas de diseño hasta la estrategia de marca, disfruto trabajando con los muchos puntos de contacto de la experiencia del usuario."
+							copy={t('about.methods.description')}
 							invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>

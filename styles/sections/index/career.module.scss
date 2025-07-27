@@ -8,6 +8,12 @@
 		flex-direction: column;
 		gap: 1rem;
 
+		&.splitLayout {
+			flex-direction: row;
+			gap: 2rem;
+			align-items: flex-start;
+		}
+
 		h3 {
 			margin-top: - .25rem;
 			margin-bottom: .35rem;
@@ -66,10 +72,11 @@
 	}
 
 	.companyLogo {
-		width: calc( var(--grid-32) * 4 ); // Ajusta según el tamaño deseado para el logo
+		width: calc( var(--grid-32) * 8 ); // Ajusta según el tamaño deseado para el logo
 		display: flex;
 		align-items: top;
 		justify-content: center;
+		object-fit: contain;
 		//background-color: var(--background-dim); // O el color que prefieras
 		border-radius: 0.5rem; // Para que coincida con el estilo del artículo
 	  }
@@ -126,6 +133,169 @@
 			transform: rotate(90deg);
 		}
 	}
+
+	// Two-column layout
+	.leftColumn {
+		flex: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.rightColumn {
+		flex: 1;
+		min-width: 0;
+	}
+
+	// Current position styles
+	.currentPosition {
+		border: 1px solid var(--primary-dark);
+		border-radius: 1rem;
+		padding: 2rem;
+		background: var(--background-dim2);
+		margin-bottom: 1rem;
+	}
+
+	.positionHeader {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 0.75rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.companyName {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--primary-bright);
+		margin: 0;
+	}
+
+	.location {
+		font-size: 0.85rem;
+		color: var(--primary);
+		opacity: 0.7;
+	}
+
+	.positionTitle {
+		font-size: 1rem;
+		font-weight: 500;
+		color: var(--primary-bright);
+		margin: 0 0 0.75rem 0;
+	}
+
+	.positionDescription {
+		font-size: 0.9rem;
+		line-height: 1.5;
+		margin-bottom: 1.5rem;
+		opacity: 0.8;
+	}
+
+	.techStack {
+		margin-top: 1rem;
+	}
+
+	// Timeline styles
+	.timeline {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.timelineItem {
+		border: 1px solid var(--primary-dark);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		background: var(--background-dim);
+		margin-left: calc(var(--grid-32) * 2);
+	}
+
+	// Previous position styles
+	.previousPosition {
+		border: 1px solid var(--primary-dark);
+		border-radius: 1rem;
+		padding: 2rem;
+		background: var(--background-dim2);
+	}
+
+	// Freelance section styles
+	.freelanceSection {
+		position: sticky;
+		top: 2rem;
+		background: var(--background-dim2);
+		border: 1px solid var(--primary-dark);
+		border-radius: 1rem;
+		padding: 2rem;
+	}
+
+	.freelanceTitle {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+		color: var(--primary-bright);
+	}
+
+	.freelanceSubtitle {
+		font-size: 0.9rem;
+		opacity: 0.7;
+		margin-bottom: 2rem;
+	}
+
+	.freelanceProjects {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.freelanceProject {
+		padding: 1.5rem;
+		background: var(--background-dim);
+		border-radius: 0.75rem;
+		
+	}
+
+	.projectHeader {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.projectTitle {
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--primary-bright);
+		margin: 0;
+	}
+
+	.projectPeriod {
+		font-size: 0.8rem;
+		color: var(--primary);
+		font-weight: 500;
+	}
+
+	.projectDescription {
+		font-size: 0.85rem;
+		line-height: 1.4;
+		margin-bottom: 1rem;
+		opacity: 0.8;
+	}
+
+	.projectTech {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.techBadge {
+		font-size: 0.7rem;
+		padding: 0.25rem 0.75rem;
+		background: var(--primary-dark);
+		color: var(--primary-bright);
+		border-radius: 1rem;
+		font-weight: 500;
+	}
 }
 
 @include media($max: $mobile) {
@@ -166,6 +336,72 @@
 					font-size: .6rem;
 				}
 			}
+
+			// Mobile responsive for two-column layout
+			&.splitLayout {
+				flex-direction: column;
+				gap: 2rem;
+			}
+		}
+
+		// Mobile styles for new career components
+		.currentPosition,
+		.timelineItem,
+		.previousPosition {
+			padding: 1.5rem 1rem;
+		}
+
+		.positionHeader {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.25rem;
+		}
+
+		.companyName {
+			font-size: 1.1rem;
+		}
+
+		.positionTitle {
+			font-size: 0.9rem;
+		}
+
+		.positionDescription {
+			font-size: 0.8rem;
+		}
+
+		.timelineItem {
+			margin-left: 0;
+		}
+
+		// Mobile styles for freelance section
+		.rightColumn {
+			flex: 1;
+		}
+
+		.freelanceSection {
+			position: static;
+			padding: 1.5rem;
+		}
+
+		.freelanceTitle {
+			font-size: 1.25rem;
+		}
+
+		.freelanceProject {
+			padding: 1rem;
+		}
+
+		.projectTitle {
+			font-size: 0.9rem;
+		}
+
+		.projectDescription {
+			font-size: 0.8rem;
+		}
+
+		.techBadge {
+			font-size: 0.65rem;
+			padding: 0.2rem 0.6rem;
 		}
 	}
 }

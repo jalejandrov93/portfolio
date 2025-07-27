@@ -1,7 +1,7 @@
 import { useState } 		from 'react';
 import { TypeAnimation } 	from 'react-type-animation';
+import { useTranslation } 	from 'next-i18next';
 
-import content		from '../../../content/index/hero.json'
 import button 		from '../../../styles/blocks/button.module.scss';
 import hero 		from '../../../styles/sections/index/hero.module.scss';
 import HeroBg		from '../../blocks/hero.bg/bg-color-1';
@@ -21,7 +21,7 @@ import space		from '../../utils/spacing.util';
  */
 
 export default function Hero() {
-
+	const { t } = useTranslation('common');
 	const [typingStatus, setTypingStatus] = useState('Initializing');
 
 	return (
@@ -29,42 +29,42 @@ export default function Hero() {
 			<Container spacing={'VerticalXXXL'}>
 				<TypeAnimation className={`${hero.preHeader}`}
 					sequence={[
-						content.intro.startDelay,
+						t('hero.intro.startDelay'),
 						() => { setTypingStatus('typing') },
-						content.intro.start,
+						t('hero.intro.start'),
 						() => {	setTypingStatus('typed') },
-						content.intro.deleteDelay,
+						t('hero.intro.deleteDelay'),
 						() => {	setTypingStatus('deleting') },
-						content.intro.end,
+						t('hero.intro.end'),
 						() => {	setTypingStatus('deleted') },
-						content.intro.restartDelay,
+						t('hero.intro.restartDelay'),
 					]}
-					speed={content.intro.speed}
-					deletionSpeed={content.intro.deletionSpeed}
-					wrapper={content.intro.wrapper}
+					speed={t('hero.intro.speed')}
+					deletionSpeed={t('hero.intro.deletionSpeed')}
+					wrapper={t('hero.intro.wrapper')}
 					repeat={Infinity}
 				/>
 				<section>
 					<h1 className={hero.header}>
-						{content.header.name}
+						{t('hero.name')}
 						</h1>
 					<h1 className={`${hero.header} ${hero.primaryDim}`}>
-						{content.header.usp}
+						{t('hero.tagline')}
 					</h1>
 				</section>
 				<section>
 					<p className={`${hero.primaryBright} subtitle ${space(["verticalLrg"])}`}>
-						{ content.paragraph }
+						{t('hero.description')}
 					</p>					
 				</section>
 				<section>
 					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = 'mailto:javam2639@gmail.com' } >
-						{content.buttons.primary.title}
+							onClick={ () => window.location = t('hero.buttons.primary.url') } >
+						{t('hero.buttons.primary.title')}
 					</button>
 					<button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("https://www.linkedin.com/in/javasquez26/", "_blank") } >
-						{content.buttons.secondary.title}
+							onClick={ ()=> window.open(t('hero.buttons.secondary.url'), "_blank") } >
+						{t('hero.buttons.secondary.title')}
 					</button>
 				</section>
 			</Container>

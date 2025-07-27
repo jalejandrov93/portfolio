@@ -1,4 +1,5 @@
 // Sections
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import GitRecentProjects from '../../components/sections/projects/recent'
 import FeaturedProjects from '../../components/sections/projects/featured'
 
@@ -19,7 +20,7 @@ export default function Projects({ user, repos }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps({ res }) {
+export async function getServerSideProps({ res, locale }) {
 
 	res.setHeader(
 		'Cache-Control',
@@ -60,5 +61,11 @@ export async function getServerSideProps({ res }) {
 
 	if (!repos || !user) { return { notFound: true,	} }
 
-	return { props: { repos, user } }
+	return { 
+		props: { 
+			repos, 
+			user,
+			...(await serverSideTranslations(locale, ['common']))
+		} 
+	}
 }

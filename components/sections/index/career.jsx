@@ -1,8 +1,8 @@
-// Core packages D:\Personales\Python_Projects\protecapp\portfolio\components\sections\articles\careerarticle.jsx
+// Core packages
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTranslation } from 'next-i18next';
 
-import careerData from '../../../content/articles/careerdata.json';
 // Career scss
 import career from "../../../styles/sections/index/career.module.scss";
 import SectionGridBg from "../../blocks/section.grid.block";
@@ -21,21 +21,102 @@ import CareerTimeline from "../articles/careertimeline";
  * @returns {jsx} <Career />
  */
 export default function Career() {
+  const { t } = useTranslation('common');
+
+  // Obtener los datos de experiencia de las traducciones
+  const currentPosition = t('career.current', { returnObjects: true });
+  const positions = t('career.positions', { returnObjects: true });
+  const previousPositions = t('career.previous', { returnObjects: true });
+
   return (
     <Section classProp={`${career.section} borderBottom`}>
       <Container spacing={["verticalXXXLrg"]}>
         <SectionTitle
-          title="Experiencia"
-          preTitle="Carrera"
-          subTitle="Actualmente lidero el area de Tecnología en el Liceo Taller San Miguel, aportando con soluciones tecnológicas y digitales para la gestión de la institución."
+          title={t('career.title')}
+          preTitle={t('career.preTitle')}
+          subTitle={t('career.description')}
         />
-        <section className={career.area}>
-        <CareerArticle {...careerData.currentPosition} />
-        <CareerTimeline positions={careerData.positions} />
-        {careerData.previousPositions.map((position, index) => (
-          <CareerArticle key={index} {...position} />
-        ))}
-      </section>
+        <section className={`${career.area} ${career.splitLayout}`}>
+          {/* Experiencia laboral - Lado izquierdo */}
+          <div className={career.leftColumn}>
+            {/* Posición actual */}
+            <div className={career.currentPosition}>
+              <div className={career.positionHeader}>
+                <h3 className={career.companyName}>{currentPosition.company}</h3>
+                <span className={career.location}>{currentPosition.location}</span>
+              </div>
+              <h4 className={career.positionTitle}>{currentPosition.position}</h4>
+              <p className={career.positionDescription}>{currentPosition.description}</p>
+              
+              {/* Badges para posición actual */}
+              <div className={career.techStack}>
+                <Badges list={organizedTechStack.frontend.slice(0, 4)} block="stack" fullContainer="fullContainer" color={false} />
+              </div>
+            </div>
+
+            {/* Timeline de posiciones */}
+            <div className={career.timeline}>
+              {positions.map((position, index) => (
+                <div key={index} className={career.timelineItem}>
+                  <h4 className={career.positionTitle}>{position.title}</h4>
+                  <p className={career.positionDescription}>{position.description}</p>
+                  
+                  {/* Badges específicos para cada posición */}
+                  <div className={career.techStack}>
+                    {index === 0 && (
+                      <Badges list={organizedTechStack.backend.slice(0, 5)} block="stack" fullContainer="fullContainer" color={false} />
+                    )}
+                    {index === 1 && (
+                      <Badges list={organizedTechStack.frontend.slice(0, 4)} block="stack" fullContainer="fullContainer" color={false} />
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Posiciones anteriores */}
+            {previousPositions.map((position, index) => (
+              <div key={index} className={career.previousPosition}>
+                <div className={career.positionHeader}>
+                  <h3 className={career.companyName}>{position.company}</h3>
+                  <span className={career.location}>{position.location}</span>
+                </div>
+                <h4 className={career.positionTitle}>{position.position}</h4>
+                <p className={career.positionDescription}>{position.description}</p>
+                
+                {/* Badges para posiciones anteriores */}
+                <div className={career.techStack}>
+                  <Badges list={organizedTechStack.operatingSystems} block="stack" fullContainer="fullContainer" color={false} />
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Proyectos Freelance - Lado derecho */}
+          <div className={career.rightColumn}>
+            <div className={career.freelanceSection}>
+              <h3 className={career.freelanceTitle}>{t('career.freelance.title')}</h3>
+              <p className={career.freelanceSubtitle}>{t('career.freelance.subtitle')}</p>
+              
+              <div className={career.freelanceProjects}>
+                {t('career.freelance.projects', { returnObjects: true }).map((project, index) => (
+                  <div key={index} className={career.freelanceProject}>
+                    <div className={career.projectHeader}>
+                      <h4 className={career.projectTitle}>{project.title}</h4>
+                      <span className={career.projectPeriod}>{project.period}</span>
+                    </div>
+                    <p className={career.projectDescription}>{project.description}</p>
+                    <div className={career.projectTech}>
+                      {project.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className={career.techBadge}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </Container> 
     </Section>
   );
@@ -57,6 +138,7 @@ const organizedTechStack = {
     { key: "express", name: "Express", type: "devicon" },
     { key: "python", name: "Python", type: "devicon" },
     { key: "fastapi", name: "FastAPI", type: "devicon" },
+    { key: "docker", name: "Docker", type: "devicon" },
   ],
   database: [
     { key: "mysql", name: "MySQL", type: "devicon" },

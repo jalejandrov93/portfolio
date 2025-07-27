@@ -78,29 +78,29 @@ export default function Navbar() {
           <ul>
             {/* Usar directamente los textos por ahora hasta actualizar las traducciones */}
             <li>
-              <a href="/#about" onClick={(e) => handleNavigation(e, "/#about")}>
+              <Link href="/#about" onClick={(e) => handleNavigation(e, "/#about")}>
                 {router.locale === 'en' ? 'About' : 'Sobre mí'}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#featured-projects" onClick={(e) => handleNavigation(e, "/#featured-projects")}>
+              <Link href="/#featured-projects" onClick={(e) => handleNavigation(e, "/#featured-projects")}>
                 {router.locale === 'en' ? 'Projects' : 'Proyectos'}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#technical" onClick={(e) => handleNavigation(e, "/#technical")}>
+              <Link href="/#technical" onClick={(e) => handleNavigation(e, "/#technical")}>
                 {router.locale === 'en' ? 'Skills' : 'Habilidades'}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#career" onClick={(e) => handleNavigation(e, "/#career")}>
+              <Link href="/#career" onClick={(e) => handleNavigation(e, "/#career")}>
                 {router.locale === 'en' ? 'Experience' : 'Experiencia'}
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/#pricing" onClick={(e) => handleNavigation(e, "/#pricing")}>
+              <Link href="/#pricing" onClick={(e) => handleNavigation(e, "/#pricing")}>
                 {router.locale === 'en' ? 'Pricing' : 'Precios'}
-              </a>
+              </Link>
             </li>
             <li>
               <LanguageSwitcher />
