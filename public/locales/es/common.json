@@ -225,28 +225,6 @@
           ]
         },
         {
-          "project": "Tecnovolta",
-          "url": "",
-          "repo": "Privado",
-          "descriptionTitle": "Aplicación corporativa interna para seguimiento de procesos y reportes.",
-          "description": "Aplicación corporativa interna para seguimiento de procesos y reportes.",
-          "keyFeatures": [
-            "Dashboards personalizados para gerentes.",
-            "Controles de acceso basados en roles."
-          ],
-          "techStack": "Vue.js, FastAPI, PostgreSQL, Tailwind CSS",
-          "imageOptions": [],
-          "images": [
-            { "key": "placeholder", "hover": "right", "h": "1200", "w": "556", "url": "/img/project-placeholder.svg" }
-          ],
-          "stack": [
-            { "key": "vuejs", "name": "Vue.js", "type": "devicon" },
-            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
-            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
-            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
-          ]
-        },
-        {
           "project": "Café Boutique (JAVM)",
           "url": "https://www.javm.tech/",
           "repo": "Privado",
