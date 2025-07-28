@@ -29,6 +29,9 @@ importers:
       '@fortawesome/react-fontawesome':
         specifier: ^0.2.3
         version: 0.2.3(@fortawesome/fontawesome-svg-core@7.0.0)(react@19.1.0)
+      '@tabler/icons-react':
+        specifier: ^3.34.1
+        version: 3.34.1(react@19.1.0)
       '@uiw/react-markdown-preview':
         specifier: ^5.1.4
         version: 5.1.4(@types/react@18.3.23)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -852,6 +855,14 @@ packages:
 
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
+
+  '@tabler/icons-react@3.34.1':
+    resolution: {integrity: sha512-Ld6g0NqOO05kyyHsfU8h787PdHBm7cFmOycQSIrGp45XcXYDuOK2Bs0VC4T2FWSKZ6bx5g04imfzazf/nqtk1A==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.34.1':
+    resolution: {integrity: sha512-9gTnUvd7Fd/DmQgr3MKY+oJLa1RfNsQo8c/ir3TJAWghOuZXodbtbVp0QBY2DxWuuvrSZFys0HEbv1CoiI5y6A==}
 
   '@testing-library/dom@8.20.1':
     resolution: {integrity: sha512-/DiOQ5xBxgdYRC8LNk7U+RWat0S3qRLeIw3ZIkMQ9kkVlRmwD/Eg8k8CqIpD6GW7u20JIUOfMKbxtiLutpjQ4g==}
@@ -4572,6 +4583,13 @@ snapshots:
   '@swc/helpers@0.5.15':
     dependencies:
       tslib: 2.8.1
+
+  '@tabler/icons-react@3.34.1(react@19.1.0)':
+    dependencies:
+      '@tabler/icons': 3.34.1
+      react: 19.1.0
+
+  '@tabler/icons@3.34.1': {}
 
   '@testing-library/dom@8.20.1':
     dependencies:
