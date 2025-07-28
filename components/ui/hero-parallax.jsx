@@ -95,21 +95,21 @@ export const HeroParallax = ({ products }) => {
 };
 
 export const Header = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
       <h1
         className="text-2xl md:text-7xl font-bold"
         style={{ color: "var(--primary-bright)" }}
       >
-        Proyectos <br /> Destacados
+        {t("projects.featured.title")}
       </h1>
       <p
         className="max-w-2xl text-base md:text-xl mt-8"
         style={{ color: "var(--primary)" }}
       >
-        Una colección de proyectos que he desarrollado, desde aplicaciones web
-        hasta sitios corporativos, cada uno con su propia historia y desafíos
-        únicos.
+        {t("projects.featured.subtitle")}
       </p>
     </div>
   );
