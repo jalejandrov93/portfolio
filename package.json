@@ -14,6 +14,7 @@
 		"@fortawesome/free-regular-svg-icons": "^7.0.0",
 		"@fortawesome/free-solid-svg-icons": "^7.0.0",
 		"@fortawesome/react-fontawesome": "^0.2.3",
+		"@tabler/icons-react": "^3.34.1",
 		"@uiw/react-markdown-preview": "^5.1.4",
 		"@vercel/analytics": "^1.5.0",
 		"autoprefixer": "^10.4.21",

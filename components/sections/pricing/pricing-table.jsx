@@ -147,7 +147,7 @@ export default function PricingTable() {
     {
       type: "framework",
       minPrice: 1000,
-      maxPrice: 2500,
+      maxPrice: +2500,
       icon: TrendingUp,
       color: "purple",
       activa: true, // ✅ Agregada propiedad activa

@@ -117,34 +117,40 @@
           "technologies": ["Next.js", "PostgreSQL", "TypeScript", "Tailwind CSS"]
         },
         {
+          "title": "AgentXI - Plataforma de Agentes IA",
+          "period": "2024 - 2025",
+          "description": "Sistema de gestión de agentes de inteligencia artificial para automatización empresarial",
+          "technologies": ["React", "Node.js", "MongoDB", "OpenAI API"]
+        },
+        {
+          "title": "Pet Lovers - Red Social de Mascotas",
+          "period": "2024",
+          "description": "Plataforma social para conectar dueños de mascotas y compartir experiencias",
+          "technologies": ["Vue.js", "Firebase", "Tailwind CSS", "PWA"]
+        },
+        {
+          "title": "Café Boutique - E-commerce",
+          "period": "2023 - Present",
+          "description": "Tienda online especializada en café gourmet con sistema de suscripciones",
+          "technologies": ["Next.js", "Stripe", "Sanity CMS", "Tailwind CSS"]
+        },
+        {
           "title": "ESP Tribunas Corcega",
-          "period": "2022 - 2023",
+          "period": "2022 - Present",
           "description": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas",
           "technologies": ["WordPress", "HTML", "CSS", "JavaScript"]
         },
         {
           "title": "Territorio Vichero",
-          "period": "2021 - 2022",
+          "period": "2024 - 2025",
           "description": "Plataforma turística y cultural para la región de Vichada",
           "technologies": ["React", "Tailwind CSS", "JavaScript"]
         },
         {
           "title": "Tecnovolta - App Corporativa",
-          "period": "2020 - 2021",
+          "period": "2020 - Present",
           "description": "Aplicación corporativa interna para seguimiento de procesos y reportes",
           "technologies": ["Vue.js", "FastAPI", "PostgreSQL", "Tailwind CSS"]
-        },
-        {
-          "title": "Soluciones E-commerce",
-          "period": "2019 - 2020",
-          "description": "Desarrollo de plataformas e-commerce personalizadas para negocios locales",
-          "technologies": ["WordPress", "WooCommerce", "PHP", "MySQL"]
-        },
-        {
-          "title": "Sitios Web para Pequeñas Empresas",
-          "period": "2018 - 2019",
-          "description": "Landing pages y sitios corporativos para startups y pequeñas empresas",
-          "technologies": ["HTML", "CSS", "JavaScript", "WordPress"]
         }
       ]
     }
@@ -352,7 +358,7 @@
         ]
       },
       "framework": {
-        "title": "Framework Personalizado",
+        "title": "Aplicación Web",
         "description": "Next.js/React/Vue con arquitectura escalable",
         "features": [
           "Código 100% personalizado",
@@ -406,6 +412,44 @@
       "title": "Nota importante:",
       "text": "Los precios son estimaciones referenciales y pueden variar según la complejidad específica del proyecto, funcionalidades adicionales requeridas y tiempo de desarrollo.",
       "trmNote": " La conversión se realiza con la TRM oficial actual de Colombia."
+    }
+  },
+  "features": {
+    "title": "Características de mis Proyectos",
+    "subtitle": "Cada proyecto está desarrollado con atención al detalle y según las necesidades del cliente",
+    "items": {
+      "fullStack": {
+        "title": "Desarrollo Full-Stack",
+        "description": "Experiencia completa en frontend y backend para crear aplicaciones robustas y escalables."
+      },
+      "responsive": {
+        "title": "Diseño Responsivo",
+        "description": "Interfaces que se adaptan perfectamente a cualquier dispositivo y tamaño de pantalla."
+      },
+      "uiux": {
+        "title": "UI/UX Moderno",
+        "description": "Diseños atractivos y funcionales que priorizan la experiencia del usuario."
+      },
+      "performance": {
+        "title": "Rendimiento Optimizado",
+        "description": "Aplicaciones rápidas y eficientes con las mejores prácticas de desarrollo."
+      },
+      "collaboration": {
+        "title": "Enfoque Colaborativo",
+        "description": "Trabajo en equipo efectivo y comunicación clara durante todo el proceso."
+      },
+      "security": {
+        "title": "Código Seguro",
+        "description": "Implementación de las mejores prácticas de seguridad en cada proyecto."
+      },
+      "modernTech": {
+        "title": "Tecnologías Modernas",
+        "description": "Uso de las últimas tecnologías y frameworks para soluciones innovadoras."
+      },
+      "dataManagement": {
+        "title": "Gestión de Datos",
+        "description": "Manejo eficiente de bases de datos y APIs para aplicaciones dinámicas."
+      }
     }
   },
   "common": {
