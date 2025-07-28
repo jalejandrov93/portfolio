@@ -303,42 +303,101 @@
       "trm": "TRM",
       "toggle": "Switch currency"
     },
+    "sections": {
+      "features": "Included Features",
+      "deliverables": "Project Deliverables"
+    },
     "projects": {
       "landingPage": {
         "title": "Landing Page",
         "description": "Ideal for specific campaigns or promotions",
         "features": [
-          "Responsive design",
-          "Basic SEO",
-          "Contact form"
+          "Responsive and mobile-first design",
+          "Complete technical SEO + Meta tags",
+          "WebP/AVIF image optimization",
+          "Functional contact form",
+          "Basic hosting configuration",
+          "Google Analytics & Search Console",
+          "SSL certificate included",
+          "Optimized loading speed",
+          "2 design revisions included"
+        ],
+        "deliverables": [
+          "Complete source code",
+          "Technical documentation",
+          "Maintenance guide",
+          "Initial backup"
         ]
       },
       "cms": {
         "title": "CMS Site",
-        "description": "WordPress with basic admin panel",
+        "description": "WordPress with complete admin panel",
         "features": [
-          "Admin panel",
-          "Custom template",
-          "Basic plugins"
+          "Custom admin panel",
+          "Custom WordPress theme",
+          "Security and SEO plugins",
+          "Automatic backup system",
+          "Database optimization",
+          "CDN and cache configured",
+          "Advanced contact forms",
+          "Optimized image gallery",
+          "Integrated blog with categories",
+          "Usage training included"
+        ],
+        "deliverables": [
+          "Complete WordPress installation",
+          "Detailed user manual",
+          "Optimized hosting configuration",
+          "3 months technical support"
         ]
       },
       "framework": {
         "title": "Custom Framework",
-        "description": "Next.js/React/Vue with advanced features",
+        "description": "Next.js/React/Vue with scalable architecture",
         "features": [
-          "Custom code",
-          "Advanced optimization",
-          "API integrations"
+          "100% custom code",
+          "Modern and scalable architecture",
+          "Core Web Vitals optimization",
+          "Complex API integrations",
+          "Authentication system",
+          "Optimized database",
+          "Admin panel",
+          "Automated testing",
+          "CI/CD pipeline configured",
+          "Complete technical documentation",
+          "Advanced monitoring & analytics"
+        ],
+        "deliverables": [
+          "Complete Git repository",
+          "Architecture documentation",
+          "Deployment guide",
+          "Automation scripts",
+          "6 months technical support"
         ]
       },
       "fullApp": {
         "title": "Complete Web App",
-        "description": "Full CRUD with authentication and backend",
+        "description": "Full-stack application with all functionalities",
         "features": [
-          "Frontend + Backend",
-          "Database",
-          "Authentication",
-          "Dashboard"
+          "Complete Frontend + Backend",
+          "Optimized relational database",
+          "Robust authentication system",
+          "Advanced admin dashboard",
+          "Documented REST/GraphQL API",
+          "Roles and permissions system",
+          "Real-time notifications",
+          "External services integration",
+          "Complete testing (Unit + E2E)",
+          "Automated deployment",
+          "Advanced monitoring & logging",
+          "Automatic backup & recovery"
+        ],
+        "deliverables": [
+          "Complete deployed application",
+          "Documented source code",
+          "Technical and user manual",
+          "Maintenance scripts",
+          "12 months premium support"
         ]
       }
     },

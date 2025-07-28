@@ -303,42 +303,101 @@
       "trm": "TRM",
       "toggle": "Cambiar moneda"
     },
+    "sections": {
+      "features": "Características Incluidas",
+      "deliverables": "Entregables del Proyecto"
+    },
     "projects": {
       "landingPage": {
         "title": "Landing Page",
         "description": "Ideal para campañas o promociones específicas",
         "features": [
-          "Diseño responsive",
-          "SEO básico",
-          "Formulario de contacto"
+          "Diseño responsive y mobile-first",
+          "SEO técnico completo + Meta tags",
+          "Optimización de imágenes WebP/AVIF",
+          "Formulario de contacto funcional",
+          "Configuración de hosting básico",
+          "Google Analytics y Search Console",
+          "Certificado SSL incluido",
+          "Velocidad de carga optimizada",
+          "2 revisiones de diseño incluidas"
+        ],
+        "deliverables": [
+          "Código fuente completo",
+          "Documentación técnica",
+          "Guía de mantenimiento",
+          "Backup inicial"
         ]
       },
       "cms": {
         "title": "Sitio CMS",
-        "description": "WordPress con panel de administración básico",
+        "description": "WordPress con panel de administración completo",
         "features": [
-          "Panel admin",
-          "Plantilla personalizada",
-          "Plugins básicos"
+          "Panel admin personalizado",
+          "Tema WordPress custom",
+          "Plugins de seguridad y SEO",
+          "Sistema de respaldos automático",
+          "Optimización de base de datos",
+          "CDN y caché configurado",
+          "Formularios de contacto avanzados",
+          "Galería de imágenes optimizada",
+          "Blog integrado con categorías",
+          "Capacitación de uso incluida"
+        ],
+        "deliverables": [
+          "Instalación WordPress completa",
+          "Manual de usuario detallado",
+          "Configuración de hosting optimizada",
+          "3 meses de soporte técnico"
         ]
       },
       "framework": {
         "title": "Framework Personalizado",
-        "description": "Next.js/React/Vue con funcionalidades avanzadas",
+        "description": "Next.js/React/Vue con arquitectura escalable",
         "features": [
-          "Código personalizado",
-          "Optimización avanzada",
-          "Integraciones API"
+          "Código 100% personalizado",
+          "Arquitectura moderna y escalable",
+          "Optimización Core Web Vitals",
+          "Integraciones API complejas",
+          "Sistema de autenticación",
+          "Base de datos optimizada",
+          "Panel de administración",
+          "Testing automatizado",
+          "CI/CD pipeline configurado",
+          "Documentación técnica completa",
+          "Monitoreo y analytics avanzado"
+        ],
+        "deliverables": [
+          "Repositorio Git completo",
+          "Documentación de arquitectura",
+          "Guía de deployment",
+          "Scripts de automatización",
+          "6 meses de soporte técnico"
         ]
       },
       "fullApp": {
         "title": "App Web Completa",
-        "description": "CRUD completo con autenticación y backend",
+        "description": "Aplicación full-stack con todas las funcionalidades",
         "features": [
-          "Frontend + Backend",
-          "Base de datos",
-          "Autenticación",
-          "Dashboard"
+          "Frontend + Backend completos",
+          "Base de datos relacional optimizada",
+          "Sistema de autenticación robusto",
+          "Dashboard administrativo avanzado",
+          "API REST/GraphQL documentada",
+          "Sistema de roles y permisos",
+          "Notificaciones en tiempo real",
+          "Integración con servicios externos",
+          "Testing completo (Unit + E2E)",
+          "Deployment automatizado",
+          "Monitoreo y logging avanzado",
+          "Backup y recuperación automática"
+        ],
+        "deliverables": [
+          "Aplicación completa desplegada",
+          "Código fuente documentado",
+          "Manual técnico y de usuario",
+          "Scripts de mantenimiento",
+          "12 meses de soporte premium"
         ]
       }
     },
