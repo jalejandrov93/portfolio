@@ -25,6 +25,7 @@ import '../node_modules/devicon/devicon.min.css'
 // Global css
 import '../styles/css/variables.css'
 import '../styles/css/global.css'
+import '../styles/globals.css'
 
 /**
  * _app.jsx

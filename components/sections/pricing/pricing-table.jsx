@@ -48,23 +48,23 @@ export default function PricingTable() {
   const pricingData = [
     {
       type: "landingPage",
-      minPrice: 400,
-      maxPrice: 800,
+      minPrice: 300,
+      maxPrice: 700,
       icon: Globe,
       color: "blue",
       activa: true, // ✅ Agregada propiedad activa
     },
     {
       type: "cms",
-      minPrice: 800,
-      maxPrice: 1500,
+      minPrice: 500,
+      maxPrice: 1200,
       icon: Code,
       color: "green",
       activa: true, // ✅ Agregada propiedad activa
     },
     {
       type: "framework",
-      minPrice: 1200,
+      minPrice: 1000,
       maxPrice: 2500,
       icon: TrendingUp,
       color: "purple",

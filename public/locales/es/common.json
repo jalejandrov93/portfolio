@@ -150,6 +150,10 @@
     }
   },
   "projects": {
+    "categories": {
+      "webApps": "Aplicaciones Web",
+      "landingsAndSites": "Landings & Sitios Web"
+    },
     "featured": {
       "title": "Proyectos destacados",
       "preTitle": "UX y Full Stack",
@@ -168,8 +172,7 @@
           "techStack": "Next.js (monolito), PostgreSQL, Tailwind CSS, TypeScript",
           "imageOptions": [],
           "images": [
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/06.png" },
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" }
+            { "key": "artemisa", "hover": "right", "h": "1200", "w": "556", "url": "/img/Artemisa.png" }
           ],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
@@ -191,9 +194,7 @@
           "techStack": "WordPress, HTML, CSS, JavaScript",
           "imageOptions": [],
           "images": [
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/04.png" },
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-            { "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+            { "key": "esptribunas", "hover": "right", "h": "1200", "w": "556", "url": "/img/esptribunas.png" }
           ],
           "stack": [
             { "key": "wordpress", "name": "WordPress", "type": "devicon" },
@@ -215,8 +216,7 @@
           "techStack": "React, Tailwind CSS, JavaScript",
           "imageOptions": [],
           "images": [
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/03.png" },
-            { "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/01.png" }
+            { "key": "territoriovichero", "hover": "right", "h": "1200", "w": "556", "url": "/img/territorioVichero.png" }
           ],
           "stack": [
             { "key": "react", "name": "React", "type": "devicon" },
@@ -237,15 +237,79 @@
           "techStack": "Vue.js, FastAPI, PostgreSQL, Tailwind CSS",
           "imageOptions": [],
           "images": [
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" },
-            { "key": "mock-stack", "hover": "right", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-            { "key": "mock-stack", "hover": "left", "h": "1200", "w": "556", "url": "/img/msc-mock_stack/05.png" }
+            { "key": "placeholder", "hover": "right", "h": "1200", "w": "556", "url": "/img/project-placeholder.svg" }
           ],
           "stack": [
             { "key": "vuejs", "name": "Vue.js", "type": "devicon" },
             { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
             { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
             { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Café Boutique (JAVM)",
+          "url": "https://www.javm.tech/",
+          "repo": "Privado",
+          "descriptionTitle": "Plataforma e-commerce moderna para café boutique con experiencia premium.",
+          "description": "Plataforma e-commerce moderna para café boutique con experiencia premium.",
+          "keyFeatures": [
+            "Catálogo de productos interactivo con filtros avanzados.",
+            "Sistema de pagos integrado y carrito de compras optimizado.",
+            "Panel de administración para gestión de inventario."
+          ],
+          "techStack": "Next.js, E-commerce",
+          "imageOptions": [],
+          "images": [
+            { "key": "cafeboutique", "hover": "right", "h": "1200", "w": "556", "url": "/img/cafeBoutique.png" }
+          ],
+          "stack": [
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+            { "key": "css3", "name": "CSS", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Pet Lovers (JAVM)",
+          "url": "https://petlovers.javm.tech/",
+          "repo": "Privado",
+          "descriptionTitle": "Landing page moderna para servicios veterinarios y cuidado de mascotas.",
+          "description": "Landing page moderna para servicios veterinarios y cuidado de mascotas.",
+          "keyFeatures": [
+            "Diseño responsivo optimizado para dispositivos móviles.",
+            "Integración directa con WhatsApp para consultas.",
+            "Secciones informativas sobre servicios veterinarios."
+          ],
+          "techStack": "Next.js, Landing Page",
+          "imageOptions": [],
+          "images": [
+            { "key": "petlovers", "hover": "right", "h": "1200", "w": "556", "url": "/img/petLovers.png" }
+          ],
+          "stack": [
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+            { "key": "css3", "name": "CSS", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Agenxi Welcome",
+          "url": "https://welcome.agenxi.com/",
+          "repo": "Privado",
+          "descriptionTitle": "Landing page corporativa de bienvenida con diseño profesional y moderno.",
+          "description": "Landing page corporativa de bienvenida con diseño profesional y moderno.",
+          "keyFeatures": [
+            "Diseño corporativo elegante y profesional.",
+            "Animaciones suaves y experiencia de usuario optimizada.",
+            "Secciones informativas sobre servicios empresariales."
+          ],
+          "techStack": "Nuxt",
+          "imageOptions": [],
+          "images": [
+            { "key": "agenxi", "hover": "right", "h": "1200", "w": "556", "url": "/img/agenxi.png" }
+          ],
+          "stack": [
+            { "key": "nuxtjs", "name": "Nuxt", "type": "devicon" },
+            { "key": "vuejs", "name": "Vue.js", "type": "devicon" },
+            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
           ]
         }
       ]
