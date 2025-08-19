@@ -116,6 +116,20 @@ export const Header = () => {
 };
 
 export const ProductCard = ({ product, translate }) => {
+  // Verificar si el proyecto tiene URL y si es externa
+  const hasUrl = product.link && product.link !== "#" && product.link !== null;
+  const isExternalUrl = hasUrl && (product.link.startsWith("http://") || product.link.startsWith("https://"));
+
+  const cardContent = (
+    <Image
+      src={product.thumbnail}
+      height="600"
+      width="600"
+      className="object-cover object-left-top absolute h-full w-full inset-0 rounded-lg"
+      alt={product.title}
+    />
+  );
+
   return (
     <motion.div
       style={{
@@ -125,20 +139,24 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0 hero-parallax-card"
+      className={`group/product h-96 w-[30rem] relative flex-shrink-0 hero-parallax-card ${
+        hasUrl ? "cursor-pointer" : "cursor-default"
+      }`}
     >
-      <Link
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0 rounded-lg"
-          alt={product.title}
-        />
-      </Link>
+      {hasUrl ? (
+        <Link
+          href={product.link}
+          target={isExternalUrl ? "_blank" : "_self"}
+          rel={isExternalUrl ? "noopener noreferrer" : undefined}
+          className="block group-hover/product:shadow-2xl"
+        >
+          {cardContent}
+        </Link>
+      ) : (
+        <div className="block group-hover/product:shadow-2xl">
+          {cardContent}
+        </div>
+      )}
 
       {/* Overlay con gradiente del tema */}
       <div
@@ -149,7 +167,7 @@ export const ProductCard = ({ product, translate }) => {
       ></div>
 
       {/* Contenido del card */}
-      <div className="absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover/product:opacity-100 transition-opacity duration-300">
+      <div className={`absolute inset-0 p-6 flex flex-col justify-between opacity-0 group-hover/product:opacity-100 transition-opacity duration-300 ${hasUrl ? "pointer-events-none" : ""}`}>
         <div>
           <h2
             className="text-xl font-bold mb-3"
@@ -166,6 +184,33 @@ export const ProductCard = ({ product, translate }) => {
             >
               {product.description}
             </p>
+          )}
+
+          {/* Indicador de enlace si tiene URL */}
+          {hasUrl && (
+            <div className="flex items-center gap-2 mb-4">
+              <span
+                className="text-xs font-medium flex items-center gap-1"
+                style={{ color: "var(--secondary)" }}
+              >
+                {isExternalUrl ? (
+                  <>
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-3.5a.75.75 0 011.5 0v3.5A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h3.5a.75.75 0 010 1.5h-3.5z" />
+                      <path fillRule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" />
+                    </svg>
+                    Ver proyecto
+                  </>
+                ) : (
+                  <>
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" />
+                    </svg>
+                    Ver detalles
+                  </>
+                )}
+              </span>
+            </div>
           )}
         </div>
 

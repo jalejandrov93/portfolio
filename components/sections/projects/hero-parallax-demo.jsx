@@ -9,7 +9,7 @@ export function HeroParallaxDemo() {
   // Adaptar los datos de proyectos al formato requerido por HeroParallax
   const products = allProjects.map((project) => ({
     title: project.project,
-    link: project.url || "#",
+    link: project.url && project.url !== "#" ? project.url : null,
     thumbnail:
       project.images && project.images[0]
         ? project.images[0].url

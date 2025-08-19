@@ -146,6 +146,19 @@ $background: 	--background-dim2;
 	padding-bottom: var(--padding-bottom);
 }
 
+.noBackground {
+	&.fullContainer {
+		background: transparent;
+		border-top: none;
+	}
+	
+	.item {
+		&:after {
+			background: transparent;
+		}
+	}
+}
+
 @include media($max: $mobile) {
 	.list {
 		&.methods {

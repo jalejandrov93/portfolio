@@ -113,44 +113,70 @@
         {
           "title": "Artemisa - Plataforma Educativa",
           "period": "2023 - Presente",
-          "description": "Aplicación web con IA para gestión curricular y apoyo docente",
-          "technologies": ["Next.js", "PostgreSQL", "TypeScript", "Tailwind CSS"]
+          "description": "Herramienta educativa con IA desarrollada con equipo de innovación del Liceo Taller San Miguel para gestión curricular y apoyo docente, integrando métricas para pruebas piloto",
+          "url": "https://arts.liceotallersanmiguel.edu.co",
+          "technologies": [
+            "Next.js",
+            "PostgreSQL",
+            "TypeScript",
+            "Tailwind CSS"
+          ]
         },
         {
-          "title": "AgentXI - Plataforma de Agentes IA",
-          "period": "2024 - 2025",
-          "description": "Sistema de gestión de agentes de inteligencia artificial para automatización empresarial",
-          "technologies": ["React", "Node.js", "MongoDB", "OpenAI API"]
+          "title": "ESP Tribunas Corcega - Rediseño",
+          "period": "2022 - Presente",
+          "description": "Rediseño integral de plataforma de servicios públicos con Google Analytics, scripts PHP automatizados y optimización de pagos",
+          "url": "https://esptribunas.com.co",
+          "technologies": [
+            "WordPress",
+            "PHP",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Google Analytics"
+          ]
         },
         {
-          "title": "Pet Lovers - Red Social de Mascotas",
-          "period": "2024",
-          "description": "Plataforma social para conectar dueños de mascotas y compartir experiencias",
-          "technologies": ["Vue.js", "Firebase", "Tailwind CSS", "PWA"]
+          "title": "Bella Nova Surgery - Sitio Médico",
+          "period": "2024 - Presente",
+          "description": "Sitio web especializado para cirugía estética con prototipo en Figma y diseño premium para experiencia médica exclusiva",
+          "url": "https://bellanovasurgery.com",
+          "technologies": ["Figma", "WordPress", "HTML", "CSS"]
+        },
+        {
+          "title": "Herramientas Educativas LTSM",
+          "period": "2023 - Presente",
+          "description": "Suite de aplicaciones web para gestión institucional: Insights (evaluación docente con IA), Angel (seguimiento estudiantil) y despliegue con n8n",
+          "url": "https://github.com/JalejandroV93",
+          "technologies": [
+            "Next.js",
+            "Supabase",
+            "TypeScript",
+            "PostgreSQL",
+            "Docker",
+            "n8n"
+          ]
         },
         {
           "title": "Café Boutique - E-commerce",
-          "period": "2023 - Present",
-          "description": "Tienda online especializada en café gourmet con sistema de suscripciones",
-          "technologies": ["Next.js", "Stripe", "Sanity CMS", "Tailwind CSS"]
+          "period": "2023 - Presente",
+          "description": "Plataforma e-commerce moderna para café boutique con experiencia premium, catálogo interactivo y sistema de pagos integrado",
+          "url": "https://www.javm.tech/",
+          "technologies": ["Next.js", "Stripe", "Tailwind CSS"]
         },
         {
-          "title": "ESP Tribunas Corcega",
-          "period": "2022 - Present",
-          "description": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas",
-          "technologies": ["WordPress", "HTML", "CSS", "JavaScript"]
+          "title": "Pet Lovers - Landing Veterinaria",
+          "period": "2024",
+          "description": "Landing page moderna para servicios veterinarios con diseño responsivo e integración directa con WhatsApp",
+          "url": "https://petlovers.javm.tech/",
+          "technologies": ["Next.js", "Tailwind CSS", "JavaScript"]
         },
         {
-          "title": "Territorio Vichero",
-          "period": "2024 - 2025",
-          "description": "Plataforma turística y cultural para la región de Vichada",
-          "technologies": ["React", "Tailwind CSS", "JavaScript"]
-        },
-        {
-          "title": "Tecnovolta - App Corporativa",
-          "period": "2020 - Present",
-          "description": "Aplicación corporativa interna para seguimiento de procesos y reportes",
-          "technologies": ["Vue.js", "FastAPI", "PostgreSQL", "Tailwind CSS"]
+          "title": "Agenxi Welcome - Landing Corporativa",
+          "period": "2024",
+          "description": "Landing page corporativa de bienvenida con diseño profesional, animaciones suaves y secciones informativas empresariales",
+          "url": "https://welcome.agenxi.com/",
+          "technologies": ["Nuxt", "Vue.js", "JavaScript"]
         }
       ]
     }
@@ -169,16 +195,23 @@
           "project": "Artemisa",
           "url": "https://arts.liceotallersanmiguel.edu.co",
           "repo": "Privado",
-          "descriptionTitle": "Aplicación web en desarrollo para gestión curricular y apoyo docente.",
-          "description": "Aplicación web en desarrollo para gestión curricular y apoyo docente.",
+          "descriptionTitle": "Plataforma educativa colaborativa con IA para gestión curricular.",
+          "description": "Herramienta indispensable desarrollada con el equipo de innovación en tecnología educativa del Liceo Taller San Miguel, ayudando a docentes en la planificación de clases e integrando métricas y estadísticas para pruebas piloto en múltiples colegios.",
           "keyFeatures": [
             "Agente de IA integrado para generación de contenido académico y planificación de clases.",
+            "Métricas y estadísticas avanzadas para pruebas piloto institucionales.",
             "Actualizaciones en tiempo real de planes de estudio y biblioteca de recursos."
           ],
           "techStack": "Next.js (monolito), PostgreSQL, Tailwind CSS, TypeScript",
           "imageOptions": [],
           "images": [
-            { "key": "artemisa", "hover": "right", "h": "1200", "w": "556", "url": "/img/Artemisa.png" }
+            {
+              "key": "artemisa",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/Artemisa.png"
+            }
           ],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
@@ -191,48 +224,95 @@
           "project": "ESP Tribunas Corcega",
           "url": "https://esptribunas.com.co",
           "repo": "Privado",
-          "descriptionTitle": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas.",
-          "description": "Rediseño de sitio de servicios públicos para mejorar experiencia de usuario y pagos de facturas.",
+          "descriptionTitle": "Rediseño integral de plataforma de servicios públicos con analítica avanzada.",
+          "description": "Rediseño completo del sitio de servicios públicos con integración de Google Analytics para recolección de datos, scripts PHP automatizados para actualizaciones de publicaciones periodísticas y optimización de funciones para pasarela de pagos y verificación de facturas.",
           "keyFeatures": [
-            "Flujos de pago optimizados y búsqueda de facturas.",
+            "Integración completa con Google Analytics para análisis de datos.",
+            "Scripts PHP automatizados para actualización de contenido periodístico.",
+            "Optimización avanzada de pasarela de pagos y verificación de facturas.",
             "Mayor responsividad móvil y tiempos de carga mejorados."
           ],
-          "techStack": "WordPress, HTML, CSS, JavaScript",
+          "techStack": "WordPress, PHP, HTML, CSS, JavaScript, Google Analytics",
           "imageOptions": [],
           "images": [
-            { "key": "esptribunas", "hover": "right", "h": "1200", "w": "556", "url": "/img/esptribunas.png" }
+            {
+              "key": "esptribunas",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/esptribunas.png"
+            }
           ],
           "stack": [
             { "key": "wordpress", "name": "WordPress", "type": "devicon" },
+            { "key": "php", "name": "PHP", "type": "devicon" },
             { "key": "html5", "name": "HTML", "type": "devicon" },
             { "key": "css3", "name": "CSS", "type": "devicon" },
             { "key": "javascript", "name": "JavaScript", "type": "devicon" }
           ]
         },
         {
-          "project": "Territorio Vichero",
-          "url": "https://www.territoriovichero.com/",
-          "repo": "Privado",
-          "descriptionTitle": "Plataforma turística y cultural para la región de Vichada.",
-          "description": "Plataforma turística y cultural que muestra la belleza y patrimonio de la región de Vichada.",
+          "project": "Bella Nova Surgery",
+          "url": "https://bellanovasurgery.com",
+          "repo": "En desarrollo",
+          "descriptionTitle": "Sitio web médico especializado con diseño premium en desarrollo.",
+          "description": "Sitio web especializado para cirugía estética en proceso de implementación, desarrollado con prototipo completo en Figma y tecnologías web modernas para ofrecer una experiencia premium a los usuarios.",
           "keyFeatures": [
-            "Guía turística interactiva y contenido cultural.",
-            "Diseño responsivo optimizado para usuarios móviles."
+            "Prototipo interactivo completo desarrollado en Figma.",
+            "Diseño premium especializado para sector médico-estético.",
+            "En proceso de implementación con WordPress personalizado.",
+            "Optimización para experiencia de usuario premium."
           ],
-          "techStack": "React, Tailwind CSS, JavaScript",
+          "techStack": "Figma, WordPress, HTML, CSS - En desarrollo",
           "imageOptions": [],
           "images": [
-            { "key": "territoriovichero", "hover": "right", "h": "1200", "w": "556", "url": "/img/territorioVichero.png" }
+            {
+              "key": "bellanova",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/bellanova.png"
+            }
           ],
           "stack": [
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
-            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
+            { "key": "figma", "name": "Figma", "type": "devicon" },
+            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
+            { "key": "html5", "name": "HTML", "type": "devicon" },
+            { "key": "css3", "name": "CSS", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Herramientas Educativas LTSM",
+          "url": "https://github.com/JalejandroV93",
+          "repo": "https://github.com/JalejandroV93",
+          "descriptionTitle": "Suite de herramientas educativas en producción para gestión institucional.",
+          "description": "Colección de aplicaciones web desarrolladas específicamente para el Liceo Taller San Miguel, incluyendo sistema de insights con IA, plataforma de seguimiento estudiantil y automatización con n8n en contenedores Docker.",
+          "keyFeatures": [
+            "Sistema Insights: Evaluación docente con retroalimentación IA y gráficos dinámicos.",
+            "Plataforma Angel: Seguimiento comportamental estudiantil en tiempo real.",
+            "Despliegue con n8n en servidor propio con contenedores Docker.",
+            "Integración completa con bases de datos PostgreSQL y Supabase."
+          ],
+          "techStack": "Next.js, Supabase, TypeScript, PostgreSQL, Docker, n8n",
+          "imageOptions": [],
+          "images": [
+            {
+              "key": "placeholder",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/project-placeholder.svg"
+            }
+          ],
+          "stack": [
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "docker", "name": "Docker", "type": "devicon" }
           ]
         },
         {
           "project": "Café Boutique (JAVM)",
-          "url": "https://www.javm.tech/",
           "repo": "Privado",
           "descriptionTitle": "Plataforma e-commerce moderna para café boutique con experiencia premium.",
           "description": "Plataforma e-commerce moderna para café boutique con experiencia premium.",
@@ -244,7 +324,13 @@
           "techStack": "Next.js, E-commerce",
           "imageOptions": [],
           "images": [
-            { "key": "cafeboutique", "hover": "right", "h": "1200", "w": "556", "url": "/img/cafeBoutique.png" }
+            {
+              "key": "cafeboutique",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/cafeBoutique.png"
+            }
           ],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
@@ -266,7 +352,13 @@
           "techStack": "Next.js, Landing Page",
           "imageOptions": [],
           "images": [
-            { "key": "petlovers", "hover": "right", "h": "1200", "w": "556", "url": "/img/petLovers.png" }
+            {
+              "key": "petlovers",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/petLovers.png"
+            }
           ],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
@@ -288,7 +380,13 @@
           "techStack": "Nuxt",
           "imageOptions": [],
           "images": [
-            { "key": "agenxi", "hover": "right", "h": "1200", "w": "556", "url": "/img/agenxi.png" }
+            {
+              "key": "agenxi",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/agenxi.png"
+            }
           ],
           "stack": [
             { "key": "nuxtjs", "name": "Nuxt", "type": "devicon" },
@@ -460,4 +558,4 @@
     "save": "Guardar",
     "cancel": "Cancelar"
   }
-} 
+}

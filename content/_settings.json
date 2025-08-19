@@ -1,15 +1,15 @@
 {
-	"name": "Alejandro Vasquez",
-	"logo": "",
-	
-	"username": {
-		"github": "JalejandroV93",
-		"medium": "@JalejandroV93"
-	},
+  "name": "Alejandro Vasquez",
+  "logo": "",
 
-	"portfolio": { 
-		"forkthis": "Tema por andrewnelson",
-		"repo_html": "https://www.github.com/atlamors/portfolio",
-		"repo_api": "https://api.github.com/repos/atlamors/portfolio"
-	}
+  "username": {
+    "github": "JalejandroV93",
+    "medium": "@JalejandroV93"
+  },
+
+  "portfolio": {
+    "forkthis": "Tema por andrewnelson",
+    "repo_html": "https://www.github.com/JalejandroV93/portfolio",
+    "repo_api": "https://api.github.com/repos/JalejandroV93/portfolio"
+  }
 }

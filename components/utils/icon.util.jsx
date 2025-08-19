@@ -56,3 +56,6 @@ export default function Icon({ icon }) {
 		<FontAwesomeIcon icon={[ mappedIconType, stateIconKey ]} />
 	)
 }
+
+
+
