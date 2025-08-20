@@ -14,6 +14,8 @@ import Section from "../../structure/section";
 import Badges from "../../utils/badge.list.util";
 import CareerArticle from "../articles/careerarticle";
 import CareerTimeline from "../articles/careertimeline";
+// UI components
+import { ScrollArea } from "../../ui/scroll-area";
 
 /**
  * Section: Career
@@ -138,43 +140,45 @@ export default function Career() {
                 {t("career.freelance.subtitle")}
               </p>
 
-              <div className={career.freelanceProjects}>
-                {t("career.freelance.projects", { returnObjects: true }).map(
-                  (project, index) => (
-                    <div key={index} className={career.freelanceProject}>
-                      <div className={career.projectHeader}>
-                        {project.url ? (
-                          <a
-                            href={project.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`${career.projectTitle} hover:opacity-80 transition-opacity`}
-                          >
-                            {project.title}
-                          </a>
-                        ) : (
-                          <h4 className={career.projectTitle}>
-                            {project.title}
-                          </h4>
-                        )}
-                        <span className={career.projectPeriod}>
-                          {project.period}
-                        </span>
-                      </div>
-                      <p className={career.projectDescription}>
-                        {project.description}
-                      </p>
-                      <div className={career.projectTech}>
-                        {project.technologies.map((tech, techIndex) => (
-                          <span key={techIndex} className={career.techBadge}>
-                            {tech}
+              <ScrollArea className={career.scrollableArea}>
+                <div className={career.freelanceProjects}>
+                  {t("career.freelance.projects", { returnObjects: true }).map(
+                    (project, index) => (
+                      <div key={index} className={career.freelanceProject}>
+                        <div className={career.projectHeader}>
+                          {project.url ? (
+                            <a
+                              href={project.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`${career.projectTitle} hover:opacity-80 transition-opacity`}
+                            >
+                              {project.title}
+                            </a>
+                          ) : (
+                            <h4 className={career.projectTitle}>
+                              {project.title}
+                            </h4>
+                          )}
+                          <span className={career.projectPeriod}>
+                            {project.period}
                           </span>
-                        ))}
+                        </div>
+                        <p className={career.projectDescription}>
+                          {project.description}
+                        </p>
+                        <div className={career.projectTech}>
+                          {project.technologies.map((tech, techIndex) => (
+                            <span key={techIndex} className={career.techBadge}>
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )
-                )}
-              </div>
+                    )
+                  )}
+                </div>
+              </ScrollArea>
             </div>
           </div>
         </section>

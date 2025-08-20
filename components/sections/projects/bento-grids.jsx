@@ -20,10 +20,7 @@ export const BentoGrids = () => {
   if (!Array.isArray(projects) || !projects.length) return null;
 
   return (
-    <section
-      className="relative mt-10 overflow-hidden rounded-2xl"
-      
-    >
+    <section className="relative mt-10 overflow-hidden rounded-2xl">
       {/* Decorative blobs */}
       <div className="absolute inset-0 pointer-events-none opacity-30 mix-blend-overlay">
         <div
@@ -56,7 +53,7 @@ export const BentoGrids = () => {
             {t("projects.featured.subtitle")}
           </p>
         </header>
-        <div className="grid max-w-6xl grid-cols-2 gap-4 mx-auto md:grid-cols-3 md:gap-6 lg:grid-cols-4">
+        <div className="grid max-w-6xl grid-cols-1 gap-4 mx-auto md:grid-cols-3 md:gap-6 lg:grid-cols-4">
           {projects.map((p, i) => (
             <ProjectCard
               key={p.project + i}

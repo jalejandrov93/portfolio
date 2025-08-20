@@ -222,12 +222,11 @@
 
 	// Freelance section styles
 	.freelanceSection {
-		position: sticky;
-		top: 2rem;
 		background: var(--background-dim2);
 		border: 1px solid var(--primary-dark);
 		border-radius: 1rem;
 		padding: 2rem;
+		height: fit-content;
 	}
 
 	.freelanceTitle {
@@ -242,10 +241,17 @@
 		margin-bottom: 2rem;
 	}
 
+	.scrollableArea {
+		height: 1075px; // Altura fija para que funcione el scroll
+		max-height: 1075px; // Altura máxima para que coincida con la columna de experiencias
+	}
+
 	.freelanceProjects {
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
+		padding-right: 1rem; // Más espacio para el scrollbar
+		height: 100%; // Asegurar que tome toda la altura disponible
 	}
 
 	.freelanceProject {
@@ -295,6 +301,35 @@
 		color: var(--primary-bright);
 		border-radius: 1rem;
 		font-weight: 500;
+	}
+
+	// Custom scrollbar styles
+	.scrollableArea {
+		// Estilos específicos para el div interno con scroll
+		> div {
+			&::-webkit-scrollbar {
+				width: 8px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: transparent;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: var(--primary-dark);
+				border-radius: 4px;
+				opacity: 0.7;
+			}
+
+			&::-webkit-scrollbar-thumb:hover {
+				background: var(--primary);
+				opacity: 1;
+			}
+
+			// Firefox
+			scrollbar-width: thin;
+			scrollbar-color: var(--primary-dark) transparent;
+		}
 	}
 }
 
@@ -381,6 +416,14 @@
 		.freelanceSection {
 			position: static;
 			padding: 1.5rem;
+		}
+
+		.scrollableArea {
+			max-height: none; // Remove height limit on mobile
+		}
+
+		.freelanceProjects {
+			padding-right: 0; // Remove padding for scrollbar on mobile
 		}
 
 		.freelanceTitle {
