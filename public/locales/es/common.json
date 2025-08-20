@@ -41,69 +41,69 @@
   "about": {
     "title": "Sobre mí",
     "preTitle": "Sinopsis",
-    "description": "Soy un profesional digital con habilidades en diseño UX/UI y desarrollo full stack, especializado en la creación de experiencias de usuario intuitivas y funcionales. Mi experiencia abarca tanto el frontend como el backend, lo que me permite ofrecer soluciones completas y eficientes. Además, como IT Manager apasionado por la tecnología, tengo una sólida experiencia en la gestión de infraestructuras tecnológicas y operativas, siempre buscando optimizar procesos y aprovechar la innovación para transformar digitalmente las organizaciones.",
+    "description": "Desarrollador de software e IT Manager con enfoque en frontend moderno y construcción de aplicaciones web escalables, responsivas y centradas en el usuario. Especializado en Next.js, React, TypeScript y Tailwind CSS, con experiencia integrando APIs externas (Google Sheets, Google Forms, Gemini) y desarrollando backends con FastAPI, Node.js y .NET. Combino una visión de producto (UX/UI, diseño de componentes, Figma) con liderazgo técnico e implementación de pipelines y automatización (Docker, n8n, GitHub Actions) para impulsar transformación digital y eficiencia operativa.",
     "softSkills": {
-      "title": "Habilidades blandas que pagan las cuentas",
-      "description": "Además de mi experiencia en diseño y tecnología, también tengo habilidades sólidas de liderazgo, gestión del tiempo y multitarea, desarrolladas a través de mi experiencia como líder de TI en un colegio privado. Fuera del trabajo, me gusta mantenerme activo practicando deportes como fútbol. Tengo confianza en mi capacidad para aportar pasión y valor a cualquier proyecto."
+      "title": "Habilidades clave y enfoque",
+      "description": "Liderazgo técnico, comunicación clara, mejora continua, priorización efectiva y mentalidad analítica. Experiencia guiando equipos, reduciendo tiempos operativos mediante automatización y facilitando adopción de nuevas herramientas. Equilibrio entre rigor de ingeniería y empatía por el usuario final."
     },
     "methods": {
-      "title": "Investigación y planificación",
-      "description": "Uno de los aspectos que más me gusta de la creación es planificar la arquitectura de un proyecto. Desde los sistemas de diseño hasta la estrategia de marca, disfruto trabajando con los muchos puntos de contacto de la experiencia del usuario."
+      "title": "Proceso y metodología",
+      "description": "Arquitectura primero: definición de dominios, diseño de componentes reutilizables (design systems + Storybook), integración incremental de APIs y medición continua (métricas y retroalimentación con IA). Priorizo iteraciones cortas, documentación pragmática y escalabilidad desde el diseño inicial."
     }
   },
   "technical": {
     "title": "Habilidades Técnicas",
     "preTitle": "Competencias",
-    "description": "Experiencia en desarrollo full-stack y gestión de infraestructura tecnológica, con enfoque en soluciones web modernas y automatización de procesos.",
+  "description": "Stack full‑stack moderno con foco en frontend (React / Next.js) y arquitectura escalable: integración de APIs, diseño de componentes reutilizables, optimización de performance y automatización de flujos de datos.",
     "categories": {
       "languages": {
         "title": "Lenguajes",
-        "description": "Lenguajes de programación con los que desarrollo soluciones eficientes y escalables."
+    "description": "Lenguajes principales usados para construir aplicaciones escalables y mantenibles."
       },
       "frameworks": {
         "title": "Frameworks y Librerías",
-        "description": "Frameworks y librerías para desarrollo de aplicaciones web modernas y APIs robustas."
+    "description": "Frameworks y librerías para UI moderna, APIs robustas, visualización y component-driven design."
       },
       "databases": {
         "title": "Bases de Datos",
-        "description": "Sistemas de gestión de bases de datos para almacenamiento y manipulación eficiente de datos."
+    "description": "SQL, tiempo real, caching y BaaS para persistencia eficiente y baja latencia."
       },
       "styling": {
         "title": "Styling y UI",
-        "description": "Herramientas para crear interfaces de usuario atractivas y responsivas."
+    "description": "Herramientas y sistemas para construir interfaces consistentes y accesibles."
       },
       "devops": {
         "title": "Automatización y DevOps",
-        "description": "Herramientas para automatización, control de versiones y mejores prácticas de desarrollo."
+    "description": "Automatización, CI/CD, orquestación y tooling que aceleran entregas confiables."
       }
     }
   },
   "career": {
     "title": "Experiencia",
     "preTitle": "Carrera",
-    "description": "Actualmente lidero el área de Tecnología en el Liceo Taller San Miguel, aportando con soluciones tecnológicas y digitales para la gestión de la institución.",
+    "description": "Experiencia híbrida en liderazgo TI y desarrollo full‑stack: automatización con IA, plataformas educativas y modernización de infraestructura para organizaciones educativas y proyectos freelance.",
     "current": {
       "company": "Liceo Taller San Miguel",
-      "position": "Líder de Tecnología",
+      "position": "IT Manager / Líder de Tecnología",
       "location": "Pereira, Colombia",
-      "description": "• Implementación de soluciones digitales para gestión académica y administrativa • Liderazgo de equipos de soporte tecnológico y modernización de infraestructura TI"
+      "description": "• Liderazgo de proyectos internos (IA, automatización, plataformas web) • Implementación pipelines de datos (Google Sheets API + Python) • Orquestación de servicios (n8n + Docker) • Modernización y supervisión de infraestructura TI"
     },
     "positions": [
       {
         "title": "Líder del Área de Tecnología",
-        "description": "• Administración de plataforma educativa y coordinación de equipos técnicos • Desarrollo e implementación de herramientas para optimización de procesos institucionales"
+        "description": "• Administración de plataformas educativas • Coordinación de equipo de soporte • Desarrollo de herramientas internas (seguimiento, evaluación, automatización) • Reducción de tiempos operativos con scripts e integraciones"
       },
       {
         "title": "Soporte Tecnopedagógico",
-        "description": "• Soporte tecnológico a docentes y estudiantes para integración de TI en aulas • Capacitación en herramientas educativas digitales y administración de plataformas LMS"
+        "description": "• Soporte a docentes y estudiantes • Capacitación en herramientas digitales • Administración LMS • Documentación para reducir incidencias repetitivas"
       }
     ],
     "previous": [
       {
         "company": "EcoTecnologia S.A.S",
-        "position": "Soporte Técnico",
+        "position": "Tecnólogo de TI / Soporte Técnico",
         "location": "Pereira, Colombia",
-        "description": "• Mantenimiento preventivo y correctivo de equipos de cómputo y redes • Atención técnica especializada a clientes corporativos"
+        "description": "• Configuración de servidores (on‑premise / VPS) • Despliegue y soporte de sistemas empresariales • Gestión de hosting compartido y servicios en la nube"
       }
     ],
     "freelance": {
@@ -125,7 +125,7 @@
         {
           "title": "ESP Tribunas Corcega - Rediseño",
           "period": "2022 - Presente",
-          "description": "Rediseño integral de plataforma de servicios públicos con Google Analytics, scripts PHP automatizados y optimización de pagos",
+          "description": "Rediseño integral de plataforma de servicios públicos con integración de Google Analytics, scripts PHP automatizados y optimización de pagos",
           "url": "https://esptribunas.com.co",
           "technologies": [
             "WordPress",
@@ -138,7 +138,7 @@
         },
         {
           "title": "Bella Nova Surgery - Sitio Médico",
-          "period": "2024 - Presente",
+          "period": "2025 - Presente",
           "description": "Sitio web especializado para cirugía estética con prototipo en Figma y diseño premium para experiencia médica exclusiva",
           "url": "https://bellanovasurgery.com",
           "technologies": ["Figma", "WordPress", "HTML", "CSS"]
@@ -158,25 +158,39 @@
           ]
         },
         {
-          "title": "Café Boutique - E-commerce",
-          "period": "2023 - Presente",
-          "description": "Plataforma e-commerce moderna para café boutique con experiencia premium, catálogo interactivo y sistema de pagos integrado",
-          "url": "https://www.javm.tech/",
-          "technologies": ["Next.js", "Stripe", "Tailwind CSS"]
+          "title": "Insights - Evaluación Docente",
+          "period": "2024 - Presente",
+          "description": "Plataforma mejorada con IA que ingiere Google Forms para generar retroalimentación docente y dashboards",
+          "url": "https://insights.liceotallersanmiguel.edu.co",
+          "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Redis"]
         },
         {
-          "title": "Pet Lovers - Landing Veterinaria",
-          "period": "2024",
-          "description": "Landing page moderna para servicios veterinarios con diseño responsivo e integración directa con WhatsApp",
-          "url": "https://petlovers.javm.tech/",
-          "technologies": ["Next.js", "Tailwind CSS", "JavaScript"]
+          "title": "Angel - Seguimiento Estudiantil",
+          "period": "2024 - Presente",
+          "description": "Sistema de seguimiento de comportamiento y disciplina con métricas de puntuación de encuestas",
+          "url": "https://angel.liceotallersanmiguel.edu.co",
+          "technologies": ["Next.js", "TypeScript", "PostgreSQL"]
         },
         {
-          "title": "Agenxi Welcome - Landing Corporativa",
-          "period": "2024",
-          "description": "Landing page corporativa de bienvenida con diseño profesional, animaciones suaves y secciones informativas empresariales",
-          "url": "https://welcome.agenxi.com/",
-          "technologies": ["Nuxt", "Vue.js", "JavaScript"]
+          "title": "LTSM Internal Systems",
+          "period": "2021 - 2023",
+          "description": "Sistemas internos legacy en PHP + Bootstrap para procesos académicos y administrativos",
+          "url": "https://ltsm.com.co/",
+          "technologies": ["PHP", "Bootstrap", "MySQL"]
+        },
+        {
+          "title": "ESP Tribunas Internal App",
+          "period": "2023 - 2024",
+          "description": "App interna React + Firebase para monitoreo operativo y reportes",
+          "url": "https://app.esptribunas.com.co",
+          "technologies": ["React", "Firebase", "JavaScript"]
+        },
+        {
+          "title": "SmileX - Clínica Dental",
+          "period": "2023",
+          "description": "Proyecto universitario: sistema .NET para citas y historia de pacientes",
+          "url": "https://github.com/JalejandroV93/SmileX",
+          "technologies": [".NET", "SQL Server", "HTML", "CSS"]
         }
       ]
     }
@@ -195,14 +209,15 @@
           "project": "Artemisa",
           "url": "https://arts.liceotallersanmiguel.edu.co",
           "repo": "Privado",
-          "descriptionTitle": "Plataforma educativa colaborativa con IA para gestión curricular.",
-          "description": "Herramienta indispensable desarrollada con el equipo de innovación en tecnología educativa del Liceo Taller San Miguel, ayudando a docentes en la planificación de clases e integrando métricas y estadísticas para pruebas piloto en múltiples colegios.",
+          "descriptionTitle": "Plataforma con IA para apoyar la planeación docente.",
+          "description": "Plataforma educativa desarrollada con el equipo de innovación del Liceo Taller San Miguel. Frontend responsivo con Next.js + TypeScript + Tailwind, componentes reutilizables ShadCN UI desde prototipos Figma, integración Gemini API para contenido educativo y backend FastAPI + PostgreSQL + Redis.",
           "keyFeatures": [
-            "Agente de IA integrado para generación de contenido académico y planificación de clases.",
-            "Métricas y estadísticas avanzadas para pruebas piloto institucionales.",
-            "Actualizaciones en tiempo real de planes de estudio y biblioteca de recursos."
+            "Reducción del 30% en tiempo de planeación docente mediante IA generativa.",
+            "Sistema modular adaptable a distintos cursos y asignaturas.",
+            "Integración completa con Gemini API para generación de contenido educativo.",
+            "Despliegues automatizados con Docker y persistencia optimizada."
           ],
-          "techStack": "Next.js (monolito), PostgreSQL, Tailwind CSS, TypeScript",
+          "techStack": "Next.js, TypeScript, Tailwind CSS, ShadCN UI, FastAPI, PostgreSQL, Redis, Docker, Gemini API",
           "imageOptions": [],
           "images": [
             {
@@ -210,29 +225,150 @@
               "hover": "right",
               "h": "1200",
               "w": "556",
-              "url": "/img/Artemisa.png"
+              "url": "/img/featured/picasso_ltsm.jpg"
             }
           ],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
             { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
-            { "key": "typescript", "name": "TypeScript", "type": "devicon" }
+            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "redis", "name": "Redis", "type": "devicon" },
+            { "key": "docker", "name": "Docker", "type": "devicon" }
           ]
         },
         {
-          "project": "ESP Tribunas Corcega",
+          "project": "Insights LTSM",
+          "url": "https://insights.liceotallersanmiguel.edu.co",
+          "repo": "Privado",
+          "descriptionTitle": "Herramienta para evaluación docente con retroalimentación automática.",
+          "description": "Sistema que conecta con Google Forms API para recolección automática de datos, desarrolla dashboards dinámicos en React + Firebase y procesa datos generando feedback personalizado con IA. Logró reducir 60% el tiempo de consolidación de evaluaciones.",
+          "keyFeatures": [
+            "Conexión automática a Google Forms API para recolección de datos.",
+            "Dashboards dinámicos con visualizaciones en tiempo real.",
+            "Procesamiento de datos y generación de feedback con IA.",
+            "Reducción del 60% en tiempo de consolidación de evaluaciones."
+          ],
+          "techStack": "React, Firebase, Google Forms API, Chart.js, Node.js",
+          "imageOptions": [],
+          "images": [
+            {
+              "key": "placeholder",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/featured/evdocente_ltsm.jpg"
+            }
+          ],
+          "stack": [
+            { "key": "react", "name": "React", "type": "devicon" },
+            { "key": "firebase", "name": "Firebase", "type": "devicon" },
+            { "key": "chartjs", "name": "Chart.js", "type": "devicon" },
+            { "key": "nodejs", "name": "Node.js", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Angel LTSM",
+          "url": "https://angel.liceotallersanmiguel.edu.co",
+          "repo": "Privado",
+          "descriptionTitle": "Sistema de seguimiento disciplinario estudiantil.",
+          "description": "Aplicación para recolección y procesamiento de encuestas en línea con integración a Google Sheets API para centralizar métricas e interfaz intuitiva de consulta de indicadores. Mejoró en 70% la eficiencia en seguimiento disciplinario estudiantil.",
+          "keyFeatures": [
+            "Recolección automática y procesamiento de encuestas en línea.",
+            "Integración con Google Sheets API para centralización de métricas.",
+            "Interfaz intuitiva para consulta de indicadores disciplinarios.",
+            "Mejora del 70% en eficiencia del seguimiento disciplinario."
+          ],
+          "techStack": "React, Google Sheets API, Node.js, Bootstrap",
+          "imageOptions": [],
+          "images": [
+            {
+              "key": "placeholder",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/featured/angel-ltsm.jpg"
+            }
+          ],
+          "stack": [
+            { "key": "react", "name": "React", "type": "devicon" },
+            { "key": "nodejs", "name": "Node.js", "type": "devicon" },
+            { "key": "bootstrap", "name": "Bootstrap", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "ESP Tribunas Internal App",
+          "url": "https://app.esptribunas.com.co",
+          "repo": "Privado",
+          "descriptionTitle": "Aplicación web para gestión de reportes de agua y mantenimientos.",
+          "description": "Sistema interno desarrollado en React con dashboards responsivos y conexión Firebase para almacenamiento en la nube. Incluye integración de notificaciones y módulos de mantenimiento, reduciendo la carga manual en 50% con reportes automatizados.",
+          "keyFeatures": [
+            "Frontend React con dashboards responsivos y optimizados.",
+            "Conexión con Firebase para almacenamiento seguro en la nube.",
+            "Sistema de notificaciones y módulos de mantenimiento integrados.",
+            "Reducción del 50% en carga manual mediante reportes automatizados."
+          ],
+          "techStack": "React, Firebase, Firestore, Node.js",
+          "imageOptions": [],
+          "images": [
+            {
+              "key": "placeholder",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/featured/muestras_esp.jpg"
+            }
+          ],
+          "stack": [
+            { "key": "react", "name": "React", "type": "devicon" },
+            { "key": "firebase", "name": "Firebase", "type": "devicon" },
+            { "key": "nodejs", "name": "Node.js", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "Bella Nova Surgery",
+          "url": "https://bellanovasurgery.com",
+          "repo": "En desarrollo",
+          "descriptionTitle": "Sitio corporativo implementado según diseño Figma con optimización SEO.",
+          "description": "Implementación de sitio corporativo en WordPress + Elementor siguiendo diseño específico de Figma. Incluye optimización SEO completa, mejoras de performance y experiencia de usuario premium para el sector médico-estético.",
+          "keyFeatures": [
+            "Implementación fiel al prototipo diseñado en Figma.",
+            "WordPress + Elementor para gestión de contenido optimizada.",
+            "Optimización SEO técnica y mejoras de performance.",
+            "Experiencia de usuario premium para sector médico."
+          ],
+          "techStack": "WordPress, Elementor, HTML, CSS, Figma",
+          "imageOptions": [],
+          "images": [
+            {
+              "key": "bellanova",
+              "hover": "right",
+              "h": "1200",
+              "w": "556",
+              "url": "/img/bellanova.png"
+            }
+          ],
+          "stack": [
+            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
+            { "key": "html5", "name": "HTML", "type": "devicon" },
+            { "key": "css3", "name": "CSS", "type": "devicon" },
+            { "key": "figma", "name": "Figma", "type": "devicon" }
+          ]
+        },
+        {
+          "project": "ESP Tribunas Web",
           "url": "https://esptribunas.com.co",
           "repo": "Privado",
-          "descriptionTitle": "Rediseño integral de plataforma de servicios públicos con analítica avanzada.",
-          "description": "Rediseño completo del sitio de servicios públicos con integración de Google Analytics para recolección de datos, scripts PHP automatizados para actualizaciones de publicaciones periodísticas y optimización de funciones para pasarela de pagos y verificación de facturas.",
+          "descriptionTitle": "Rediseño en WordPress para mejorar UX y digitalizar consultas/pagos.",
+          "description": "Rediseño completo del sitio web de servicios públicos en WordPress para mejorar experiencia de usuario y digitalizar procesos de consultas y pagos. Aumentó en 25% la interacción de usuarios con integración de analíticas y optimización de procesos.",
           "keyFeatures": [
-            "Integración completa con Google Analytics para análisis de datos.",
-            "Scripts PHP automatizados para actualización de contenido periodístico.",
-            "Optimización avanzada de pasarela de pagos y verificación de facturas.",
-            "Mayor responsividad móvil y tiempos de carga mejorados."
+            "Rediseño completo centrado en mejora de experiencia de usuario.",
+            "Digitalización de procesos de consultas y pagos online.",
+            "Aumento del 25% en interacción de usuarios registrados.",
+            "Integración de analíticas y optimización de conversiones."
           ],
-          "techStack": "WordPress, PHP, HTML, CSS, JavaScript, Google Analytics",
+          "techStack": "WordPress, PHP, CSS3, Figma",
           "imageOptions": [],
           "images": [
             {
@@ -246,54 +382,23 @@
           "stack": [
             { "key": "wordpress", "name": "WordPress", "type": "devicon" },
             { "key": "php", "name": "PHP", "type": "devicon" },
-            { "key": "html5", "name": "HTML", "type": "devicon" },
             { "key": "css3", "name": "CSS", "type": "devicon" },
-            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
+            { "key": "figma", "name": "Figma", "type": "devicon" }
           ]
         },
         {
-          "project": "Bella Nova Surgery",
-          "url": "https://bellanovasurgery.com",
-          "repo": "En desarrollo",
-          "descriptionTitle": "Sitio web médico especializado con diseño premium en desarrollo.",
-          "description": "Sitio web especializado para cirugía estética en proceso de implementación, desarrollado con prototipo completo en Figma y tecnologías web modernas para ofrecer una experiencia premium a los usuarios.",
+          "project": "SmileX",
+          "url": "https://github.com/JalejandroV93/SmileX",
+          "repo": "GitHub",
+          "descriptionTitle": "Proyecto Universitario - Sistema de gestión odontológica.",
+          "description": "Sistema integral de gestión para clínica odontológica desarrollado en .NET + Razor Pages. Incluye módulo de agendamiento con validaciones dinámicas para evitar duplicidad de citas, historial clínico completo y funciones administrativas organizadas por roles.",
           "keyFeatures": [
-            "Prototipo interactivo completo desarrollado en Figma.",
-            "Diseño premium especializado para sector médico-estético.",
-            "En proceso de implementación con WordPress personalizado.",
-            "Optimización para experiencia de usuario premium."
+            "Módulo de agendamiento con validaciones dinámicas anti-duplicidad.",
+            "Sistema completo de historial clínico y seguimiento pacientes.",
+            "Funciones administrativas organizadas por roles de usuario.",
+            "Arquitectura .NET + Razor Pages para desarrollo universitario."
           ],
-          "techStack": "Figma, WordPress, HTML, CSS - En desarrollo",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "bellanova",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/bellanova.png"
-            }
-          ],
-          "stack": [
-            { "key": "figma", "name": "Figma", "type": "devicon" },
-            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
-            { "key": "html5", "name": "HTML", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "Herramientas Educativas LTSM",
-          "url": "https://github.com/JalejandroV93",
-          "repo": "https://github.com/JalejandroV93",
-          "descriptionTitle": "Suite de herramientas educativas en producción para gestión institucional.",
-          "description": "Colección de aplicaciones web desarrolladas específicamente para el Liceo Taller San Miguel, incluyendo sistema de insights con IA, plataforma de seguimiento estudiantil y automatización con n8n en contenedores Docker.",
-          "keyFeatures": [
-            "Sistema Insights: Evaluación docente con retroalimentación IA y gráficos dinámicos.",
-            "Plataforma Angel: Seguimiento comportamental estudiantil en tiempo real.",
-            "Despliegue con n8n en servidor propio con contenedores Docker.",
-            "Integración completa con bases de datos PostgreSQL y Supabase."
-          ],
-          "techStack": "Next.js, Supabase, TypeScript, PostgreSQL, Docker, n8n",
+          "techStack": ".NET, Razor Pages, C#, HTML5, CSS3",
           "imageOptions": [],
           "images": [
             {
@@ -301,96 +406,43 @@
               "hover": "right",
               "h": "1200",
               "w": "556",
-              "url": "/img/project-placeholder.svg"
+              "url": "/img/featured/smilex.png"
             }
           ],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
-            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
-            { "key": "docker", "name": "Docker", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "Café Boutique (JAVM)",
-          "repo": "Privado",
-          "descriptionTitle": "Plataforma e-commerce moderna para café boutique con experiencia premium.",
-          "description": "Plataforma e-commerce moderna para café boutique con experiencia premium.",
-          "keyFeatures": [
-            "Catálogo de productos interactivo con filtros avanzados.",
-            "Sistema de pagos integrado y carrito de compras optimizado.",
-            "Panel de administración para gestión de inventario."
-          ],
-          "techStack": "Next.js, E-commerce",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "cafeboutique",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/cafeBoutique.png"
-            }
-          ],
-          "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+            { "key": "dot-net", "name": ".NET", "type": "devicon" },
+            { "key": "csharp", "name": "C#", "type": "devicon" },
+            { "key": "html5", "name": "HTML", "type": "devicon" },
             { "key": "css3", "name": "CSS", "type": "devicon" }
           ]
         },
         {
-          "project": "Pet Lovers (JAVM)",
-          "url": "https://petlovers.javm.tech/",
+          "project": "LTSM Internal Systems",
+          "url": "https://ltsm.com.co/",
           "repo": "Privado",
-          "descriptionTitle": "Landing page moderna para servicios veterinarios y cuidado de mascotas.",
-          "description": "Landing page moderna para servicios veterinarios y cuidado de mascotas.",
+          "descriptionTitle": "Portal institucional administrativo - Digitalización de procesos.",
+          "description": "Portal institucional para digitalización de formularios y procesos internos administrativos. Desarrollo de módulos de gestión en PHP + Bootstrap con reducción del 40% en uso de papel y optimización de flujos de trabajo institucionales.",
           "keyFeatures": [
-            "Diseño responsivo optimizado para dispositivos móviles.",
-            "Integración directa con WhatsApp para consultas.",
-            "Secciones informativas sobre servicios veterinarios."
+            "Digitalización completa de formularios y procesos administrativos.",
+            "Módulos de gestión desarrollados en PHP + Bootstrap.",
+            "Reducción del 40% en uso de papel institucional.",
+            "Optimización integral de flujos de trabajo administrativos."
           ],
-          "techStack": "Next.js, Landing Page",
+          "techStack": "PHP, Bootstrap, MySQL, JavaScript",
           "imageOptions": [],
           "images": [
             {
-              "key": "petlovers",
+              "key": "placeholder",
               "hover": "right",
               "h": "1200",
               "w": "556",
-              "url": "/img/petLovers.png"
+              "url": "/img/featured/tools_ltsm.jpg"
             }
           ],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "javascript", "name": "JavaScript", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "Agenxi Welcome",
-          "url": "https://welcome.agenxi.com/",
-          "repo": "Privado",
-          "descriptionTitle": "Landing page corporativa de bienvenida con diseño profesional y moderno.",
-          "description": "Landing page corporativa de bienvenida con diseño profesional y moderno.",
-          "keyFeatures": [
-            "Diseño corporativo elegante y profesional.",
-            "Animaciones suaves y experiencia de usuario optimizada.",
-            "Secciones informativas sobre servicios empresariales."
-          ],
-          "techStack": "Nuxt",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "agenxi",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/agenxi.png"
-            }
-          ],
-          "stack": [
-            { "key": "nuxtjs", "name": "Nuxt", "type": "devicon" },
-            { "key": "vuejs", "name": "Vue.js", "type": "devicon" },
+            { "key": "php", "name": "PHP", "type": "devicon" },
+            { "key": "bootstrap", "name": "Bootstrap", "type": "devicon" },
+            { "key": "mysql", "name": "MySQL", "type": "devicon" },
             { "key": "javascript", "name": "JavaScript", "type": "devicon" }
           ]
         }

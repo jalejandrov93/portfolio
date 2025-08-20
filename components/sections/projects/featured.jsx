@@ -1,5 +1,5 @@
-import { HeroParallaxDemo } from "./hero-parallax-demo";
+import { BentoGrids } from "./bento-grids";
 
 export default function FeaturedProjects() {
-  return <HeroParallaxDemo />;
+  return <BentoGrids />;
 }
