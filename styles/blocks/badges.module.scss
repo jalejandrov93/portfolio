@@ -35,7 +35,7 @@ $background: 	--background-dim2;
 		@include buttonPadding( var(--size-3-) );
 		text-transform: uppercase;
 
-		color: var(--primary-dim);
+		color: var(--primary-bright);
 		
 		i, svg {
 			display: flex;
@@ -62,6 +62,8 @@ $background: 	--background-dim2;
 		.title {
 			flex-grow: 1;
 			text-align: center;
+			color: var(--primary-bright);
+			font-weight: 700;
 		}
 		
 		&:before {

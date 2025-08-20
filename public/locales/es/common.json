@@ -2,7 +2,6 @@
   "nav": {
     "projects": "Proyectos",
     "articles": "Artículos",
-    "pricing": "Precios",
     "about": "Acerca de",
     "contact": "Contacto"
   },
@@ -101,9 +100,15 @@
     "previous": [
       {
         "company": "EcoTecnologia S.A.S",
-        "position": "Tecnólogo de TI / Soporte Técnico",
+        "position": "Tecnólogo de TI",
         "location": "Pereira, Colombia",
-        "description": "• Configuración de servidores (on‑premise / VPS) • Despliegue y soporte de sistemas empresariales • Gestión de hosting compartido y servicios en la nube"
+        "description": "• Soporte técnico y despliegue de sistemas empresariales • Configuración y mantenimiento de servidores • Configuración de servicios en la Nube • Adquisición y configuración de servicios en hostings web compartidos • Configuración de Servidores VPS"
+      },
+      {
+        "company": "Liceo Taller San Miguel",
+        "position": "IT Support Technician",
+        "location": "Colombia",
+        "description": "• Soporte a usuarios finales, redes, hardware y software • Documentación y reducción de incidentes repetitivos • Implementación Software para monitoreo de la Red"
       }
     ],
     "freelance": {
@@ -112,85 +117,74 @@
       "projects": [
         {
           "title": "Artemisa - Plataforma Educativa",
-          "period": "2023 - Presente",
-          "description": "Herramienta educativa con IA desarrollada con equipo de innovación del Liceo Taller San Miguel para gestión curricular y apoyo docente, integrando métricas para pruebas piloto",
+          "period": "2024 - Presente",
+          "description": "Plataforma con IA para apoyar la planeación docente. Frontend responsivo con Next.js + TypeScript + Tailwind. Componentes reutilizables con ShadCN UI. Integración con Gemini API. Backend en FastAPI, PostgreSQL + Redis, despliegues con Docker",
           "url": "https://arts.liceotallersanmiguel.edu.co",
           "technologies": [
             "Next.js",
             "PostgreSQL",
             "TypeScript",
-            "Tailwind CSS"
+            "Tailwind CSS",
+            "ShadCN UI",
+            "FastAPI",
+            "Redis",
+            "Docker",
+            "Gemini API"
           ]
         },
         {
           "title": "ESP Tribunas Corcega - Rediseño",
-          "period": "2022 - Presente",
-          "description": "Rediseño integral de plataforma de servicios públicos con integración de Google Analytics, scripts PHP automatizados y optimización de pagos",
+          "period": "2023 - 2024",
+          "description": "Aplicación web para gestión de reportes de agua y mantenimientos. Frontend en React con dashboards responsivos. Conexión con Firebase para almacenamiento en la nube",
           "url": "https://esptribunas.com.co",
           "technologies": [
-            "WordPress",
-            "PHP",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Google Analytics"
+            "React",
+            "Firebase",
+            "Firestore",
+            "Node.js"
           ]
         },
         {
           "title": "Bella Nova Surgery - Sitio Médico",
-          "period": "2025 - Presente",
-          "description": "Sitio web especializado para cirugía estética con prototipo en Figma y diseño premium para experiencia médica exclusiva",
+          "period": "2025",
+          "description": "Implementación de sitio corporativo en WordPress + Elementor según diseño Figma. Optimización SEO y performance",
           "url": "https://bellanovasurgery.com",
-          "technologies": ["Figma", "WordPress", "HTML", "CSS"]
+          "technologies": ["WordPress", "Elementor", "HTML", "CSS", "Figma"]
         },
         {
-          "title": "Herramientas Educativas LTSM",
-          "period": "2023 - Presente",
-          "description": "Suite de aplicaciones web para gestión institucional: Insights (evaluación docente con IA), Angel (seguimiento estudiantil) y despliegue con n8n",
-          "url": "https://github.com/JalejandroV93",
-          "technologies": [
-            "Next.js",
-            "Supabase",
-            "TypeScript",
-            "PostgreSQL",
-            "Docker",
-            "n8n"
-          ]
+          "title": "ESP Tribunas Web",
+          "period": "2023",
+          "description": "Rediseño en WordPress para mejorar UX y digitalizar consultas/pagos. Aumento en un 25% la interacción de usuarios",
+          "url": "https://esptribunas.com.co",
+          "technologies": ["WordPress", "PHP", "CSS3", "Figma"]
         },
         {
           "title": "Insights - Evaluación Docente",
-          "period": "2024 - Presente",
-          "description": "Plataforma mejorada con IA que ingiere Google Forms para generar retroalimentación docente y dashboards",
+          "period": "2024",
+          "description": "Herramienta para evaluación docente con retroalimentación automática. Conexión a Google Forms API. Dashboards dinámicos en React + Firebase. Reducción del 60% en tiempo de consolidación",
           "url": "https://insights.liceotallersanmiguel.edu.co",
-          "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Redis"]
+          "technologies": ["React", "Firebase", "Google Forms API", "Chart.js", "Node.js"]
         },
         {
           "title": "Angel - Seguimiento Estudiantil",
-          "period": "2024 - Presente",
-          "description": "Sistema de seguimiento de comportamiento y disciplina con métricas de puntuación de encuestas",
-          "url": "https://angel.liceotallersanmiguel.edu.co",
-          "technologies": ["Next.js", "TypeScript", "PostgreSQL"]
-        },
-        {
-          "title": "LTSM Internal Systems",
-          "period": "2021 - 2023",
-          "description": "Sistemas internos legacy en PHP + Bootstrap para procesos académicos y administrativos",
-          "url": "https://ltsm.com.co/",
-          "technologies": ["PHP", "Bootstrap", "MySQL"]
-        },
-        {
-          "title": "ESP Tribunas Internal App",
-          "period": "2023 - 2024",
-          "description": "App interna React + Firebase para monitoreo operativo y reportes",
-          "url": "https://app.esptribunas.com.co",
-          "technologies": ["React", "Firebase", "JavaScript"]
-        },
-        {
-          "title": "SmileX - Clínica Dental",
           "period": "2023",
-          "description": "Proyecto universitario: sistema .NET para citas y historia de pacientes",
+          "description": "Sistema de seguimiento disciplinario estudiantil. Recolección y procesamiento de encuestas en línea. Integración con Google Sheets API. Mejoré en un 70% la eficiencia en el seguimiento",
+          "url": "https://angel.liceotallersanmiguel.edu.co",
+          "technologies": ["React", "Google Sheets API", "Node.js", "Bootstrap"]
+        },
+        {
+          "title": "SmileX - Proyecto Universitario",
+          "period": "2023",
+          "description": "Sistema de gestión odontológica. Desarrollo de módulo de agendamiento en .NET + Razor Pages. Validaciones dinámicas para evitar duplicidad de citas",
           "url": "https://github.com/JalejandroV93/SmileX",
-          "technologies": [".NET", "SQL Server", "HTML", "CSS"]
+          "technologies": [".NET", "Razor Pages", "C#", "HTML5", "CSS3"]
+        },
+        {
+          "title": "Sistemas Internos LTSM",
+          "period": "2021",
+          "description": "Portal institucional administrativo. Digitalización de formularios y procesos internos. Desarrollo de módulos de gestión en PHP + Bootstrap. Disminución del uso de papel en un 40%",
+          "url": "https://ltsm.com.co/",
+          "technologies": ["PHP", "Bootstrap", "MySQL", "JavaScript"]
         }
       ]
     }

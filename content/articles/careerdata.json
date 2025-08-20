@@ -6,17 +6,17 @@
   },
   "currentPosition": {
     "company": "Liceo Taller San Miguel",
-    "position": "Líder de Tecnología",
-    "startDate": "2020-03-01",
+    "position": "IT Manager",
+    "startDate": "2022-08-01",
     "endDate": null,
     "location": "Pereira, Colombia",
-    "description": "• Implementación de soluciones digitales para gestión académica y administrativa • Liderazgo de equipos de soporte tecnológico y modernización de infraestructura TI",
+    "description": "• Lidero proyectos internos de automatización con IA y sistemas web escalables • Implementación de pipelines de datos con Google Sheets API + Python • Supervisión de infraestructura tecnológica y adopción de arquitecturas modernas • Lidero el equipo de Tecnología de la institución, garantizando la continuidad de los diferentes servicios • Implementación de servicios cloud como N8N en contenedores Docker para la automatización de tareas",
     "logo": "/img/company-logoi.png"
   },
   "positions": [
     {
       "title": "Líder del Área de Tecnología",
-      "startDate": "2022-01-01",
+      "startDate": "2022-08-01",
       "endDate": null,
       "description": "• Administración de plataforma educativa y coordinación de equipos técnicos • Desarrollo e implementación de herramientas para optimización de procesos institucionales",
       "achievements": null,
@@ -29,10 +29,10 @@
       ]
     },
     {
-      "title": "Soporte Tecnopedagógico",
-      "startDate": "2020-03-01",
-      "endDate": "2021-12-31",
-      "description": "• Soporte tecnológico a docentes y estudiantes para integración de TI en aulas • Capacitación en herramientas educativas digitales y administración de plataformas LMS",
+      "title": "IT Support Technician",
+      "startDate": "2018-01-01",
+      "endDate": "2018-12-31",
+      "description": "• Soporte a usuarios finales, redes, hardware y software • Documentación y reducción de incidentes repetitivos • Implementación Software para monitoreo de la Red",
       "achievements": null,
       "badges": [
         { "key": "html5", "name": "HTML", "type": "devicon" },
@@ -45,11 +45,11 @@
   "previousPositions": [
     {
       "company": "EcoTecnologia S.A.S",
-      "position": "Soporte Técnico",
-      "startDate": "2018-06-01",
-      "endDate": "2020-02-28",
+      "position": "Tecnólogo de TI",
+      "startDate": "2019-09-01",
+      "endDate": "2022-08-31",
       "location": "Pereira, Colombia",
-      "description": "• Mantenimiento preventivo y correctivo de equipos de cómputo y redes • Atención técnica especializada a clientes corporativos",
+      "description": "• Soporte técnico y despliegue de sistemas empresariales • Configuración y mantenimiento de servidores • Configuración de servicios en la Nube • Adquisición y configuración de servicios en hostings web compartidos • Configuración de Servidores VPS",
       "logo": "/img/logos/ecotecnologia.png",
       "badges": [
         [

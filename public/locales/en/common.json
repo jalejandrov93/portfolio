@@ -2,7 +2,6 @@
   "nav": {
     "projects": "Projects",
     "articles": "Articles",
-    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact"
   },
@@ -101,9 +100,15 @@
     "previous": [
       {
         "company": "EcoTecnologia S.A.S",
-        "position": "IT Technician / Technical Support",
+        "position": "IT Technologist",
         "location": "Pereira, Colombia",
-        "description": "• Server configuration (on‑prem / VPS) • Deployment & support of business systems • Shared hosting & cloud services management"
+        "description": "• Technical support and deployment of business systems • Server configuration and maintenance • Cloud services configuration • Shared web hosting acquisition and setup • VPS server configuration"
+      },
+      {
+        "company": "Liceo Taller San Miguel",
+        "position": "IT Support Technician",
+        "location": "Colombia",
+        "description": "• End-user support, networks, hardware and software • Documentation and reduction of repetitive incidents • Network monitoring software implementation"
       }
     ],
     "freelance": {
@@ -112,85 +117,74 @@
       "projects": [
         {
           "title": "Artemisa - Educational Platform",
-          "period": "2023 - Present",
-          "description": "AI-powered educational tool developed with Liceo Taller San Miguel innovation team for curriculum management and teacher support, integrating metrics for pilot testing",
+          "period": "2024 - Present",
+          "description": "AI platform to support teacher planning. Responsive frontend with Next.js + TypeScript + Tailwind. Reusable components with ShadCN UI. Gemini API integration. FastAPI backend, PostgreSQL + Redis, Docker deployments",
           "url": "https://arts.liceotallersanmiguel.edu.co",
           "technologies": [
             "Next.js",
             "PostgreSQL",
             "TypeScript",
-            "Tailwind CSS"
-          ]
-        },
-        {
-          "title": "ESP Tribunas Corcega - Redesign",
-          "period": "2022 - Present",
-          "description": "Comprehensive redesign of public services platform with Google Analytics integration, automated PHP scripts and payment optimization",
-          "url": "https://esptribunas.com.co",
-          "technologies": [
-            "WordPress",
-            "PHP",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Google Analytics"
-          ]
-        },
-        {
-          "title": "Bella Nova Surgery - Medical Website",
-          "period": "2025 - Present",
-          "description": "Specialized website for aesthetic surgery with Figma prototype and premium design for exclusive medical experience",
-          "url": "https://bellanovasurgery.com",
-          "technologies": ["Figma", "WordPress", "HTML", "CSS"]
-        },
-        {
-          "title": "LTSM Educational Tools",
-          "period": "2023 - Present",
-          "description": "Suite of web applications for institutional management: Insights (teacher evaluation with AI), Angel (student tracking) and n8n deployment",
-          "url": "https://github.com/JalejandroV93",
-          "technologies": [
-            "Next.js",
-            "Supabase",
-            "TypeScript",
-            "PostgreSQL",
+            "Tailwind CSS",
+            "ShadCN UI",
+            "FastAPI",
+            "Redis",
             "Docker",
-            "n8n"
+            "Gemini API"
           ]
-        },
-        {
-          "title": "Insights - Teacher Evaluation",
-          "period": "2024 - Present",
-          "description": "AI-enhanced platform ingesting Google Forms to generate teacher feedback and dashboards",
-          "url": "https://insights.liceotallersanmiguel.edu.co",
-          "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Redis"]
-        },
-        {
-          "title": "Angel - Student Tracking",
-          "period": "2024 - Present",
-          "description": "Behavior & discipline tracking system with survey scoring metrics",
-          "url": "https://angel.liceotallersanmiguel.edu.co",
-          "technologies": ["Next.js", "TypeScript", "PostgreSQL"]
-        },
-        {
-          "title": "LTSM Internal Systems",
-          "period": "2021 - 2023",
-          "description": "Legacy PHP + Bootstrap internal systems for academic & admin processes",
-          "url": "https://ltsm.com.co/",
-          "technologies": ["PHP", "Bootstrap", "MySQL"]
         },
         {
           "title": "ESP Tribunas Internal App",
           "period": "2023 - 2024",
-          "description": "Internal React + Firebase app for operational monitoring & reports",
-          "url": "https://app.esptribunas.com.co",
-          "technologies": ["React", "Firebase", "JavaScript"]
+          "description": "Web application for water reports and maintenance management. React frontend with responsive dashboards. Firebase connection for cloud storage",
+          "url": "https://esptribunas.com.co",
+          "technologies": [
+            "React",
+            "Firebase",
+            "Firestore",
+            "Node.js"
+          ]
         },
         {
-          "title": "SmileX - Dental Clinic",
+          "title": "Bella Nova Surgery - Medical Website",
+          "period": "2025",
+          "description": "Corporate website implementation in WordPress + Elementor following Figma design. SEO and performance optimization",
+          "url": "https://bellanovasurgery.com",
+          "technologies": ["WordPress", "Elementor", "HTML", "CSS", "Figma"]
+        },
+        {
+          "title": "ESP Tribunas Web",
           "period": "2023",
-          "description": "University project: .NET system for appointments and patient history",
+          "description": "WordPress redesign to improve UX and digitize consultations/payments. 25% increase in user interaction",
+          "url": "https://esptribunas.com.co",
+          "technologies": ["WordPress", "PHP", "CSS3", "Figma"]
+        },
+        {
+          "title": "Insights - Teacher Evaluation",
+          "period": "2024",
+          "description": "Tool for teacher evaluation with automatic feedback. Google Forms API connection. Dynamic dashboards in React + Firebase. 60% reduction in consolidation time",
+          "url": "https://insights.liceotallersanmiguel.edu.co",
+          "technologies": ["React", "Firebase", "Google Forms API", "Chart.js", "Node.js"]
+        },
+        {
+          "title": "Angel - Student Tracking",
+          "period": "2023",
+          "description": "Student disciplinary tracking system. Collection and processing of online surveys. Google Sheets API integration. 70% improvement in tracking efficiency",
+          "url": "https://angel.liceotallersanmiguel.edu.co",
+          "technologies": ["React", "Google Sheets API", "Node.js", "Bootstrap"]
+        },
+        {
+          "title": "SmileX - University Project",
+          "period": "2023",
+          "description": "Dental management system. Development of appointment scheduling module in .NET + Razor Pages. Dynamic validations to avoid appointment duplication",
           "url": "https://github.com/JalejandroV93/SmileX",
-          "technologies": [".NET", "SQL Server", "HTML", "CSS"]
+          "technologies": [".NET", "Razor Pages", "C#", "HTML5", "CSS3"]
+        },
+        {
+          "title": "LTSM Internal Systems",
+          "period": "2021",
+          "description": "Administrative institutional portal. Digitization of forms and internal processes. Development of management modules in PHP + Bootstrap. 40% reduction in paper usage",
+          "url": "https://ltsm.com.co/",
+          "technologies": ["PHP", "Bootstrap", "MySQL", "JavaScript"]
         }
       ]
     }
