@@ -1,28 +1,36 @@
-import { useState } 		from 'react';
-import { TypeAnimation } 	from 'react-type-animation';
-import { useTranslation } 	from 'next-i18next';
+import { useState } from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import { useTranslation } from 'next-i18next';
+import { motion } from 'framer-motion';
+import { IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
 
-import button 		from '../../../styles/blocks/button.module.scss';
-import hero 		from '../../../styles/sections/index/hero.module.scss';
-import HeroBg		from '../../blocks/hero.bg/bg-color-1';
-import Container 	from '../../structure/container';
-import Section 		from '../../structure/section';
-import Icon 		from '../../utils/icon.util'
-import space		from '../../utils/spacing.util';
+import button from '../../../styles/blocks/button.module.scss';
+import hero from '../../../styles/sections/index/hero.module.scss';
+import HeroBg from '../../blocks/hero.bg/bg-color-1';
+import Container from '../../structure/container';
+import Section from '../../structure/section';
+import space from '../../utils/spacing.util';
 
-/**
- * TO DO LIST
- *
- * - Create a typog.modules.scss
- *   Load this module onto every component, and use predefined typography classes to keep typography consistent
- *
- * - space.modules.scss
- *   Load this module onto every component, and use predefined spacial classes to keep geometry consistent
- */
+const fadeUp = {
+	hidden: { opacity: 0, y: 24 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } },
+};
+
+const wordReveal = {
+	hidden: { opacity: 0, y: 12 },
+	show: (i) => ({
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1], delay: 0.4 + i * 0.025 },
+	}),
+};
 
 export default function Hero() {
 	const { t } = useTranslation('common');
-	const [typingStatus, setTypingStatus] = useState('Initializing');
+	const [, setTypingStatus] = useState('Initializing');
+
+	const description = t('hero.description');
+	const words = description.split(' ');
 
 	return (
 		<Section classProp={`${hero.section}`}>
@@ -30,13 +38,13 @@ export default function Hero() {
 				<TypeAnimation className={`${hero.preHeader}`}
 					sequence={[
 						t('hero.intro.startDelay'),
-						() => { setTypingStatus('typing') },
+						() => { setTypingStatus('typing'); },
 						t('hero.intro.start'),
-						() => {	setTypingStatus('typed') },
+						() => { setTypingStatus('typed'); },
 						t('hero.intro.deleteDelay'),
-						() => {	setTypingStatus('deleting') },
+						() => { setTypingStatus('deleting'); },
 						t('hero.intro.end'),
-						() => {	setTypingStatus('deleted') },
+						() => { setTypingStatus('deleted'); },
 						t('hero.intro.restartDelay'),
 					]}
 					speed={t('hero.intro.speed')}
@@ -44,31 +52,56 @@ export default function Hero() {
 					wrapper={t('hero.intro.wrapper')}
 					repeat={Infinity}
 				/>
-				<section>
-					<h1 className={hero.header}>
+				<motion.section initial="hidden" animate="show">
+					<motion.h1 className={hero.header} variants={fadeUp}>
 						{t('hero.name')}
-						</h1>
-					<h1 className={`${hero.header} ${hero.primaryDim}`}>
+					</motion.h1>
+					<motion.h1
+						className={`${hero.header} ${hero.primaryDim}`}
+						variants={fadeUp}
+						transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+					>
 						{t('hero.tagline')}
-					</h1>
-				</section>
+					</motion.h1>
+				</motion.section>
 				<section>
 					<p className={`${hero.primaryBright} subtitle ${space(["verticalLrg"])}`}>
-						{t('hero.description')}
-					</p>					
+						{words.map((word, i) => (
+							<motion.span
+								key={`${word}-${i}`}
+								custom={i}
+								variants={wordReveal}
+								initial="hidden"
+								animate="show"
+								style={{ display: 'inline-block', marginRight: '0.25em' }}
+							>
+								{word}
+							</motion.span>
+						))}
+					</p>
 				</section>
-				<section>
-					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = t('hero.buttons.primary.url') } >
-						{t('hero.buttons.primary.title')}
+				<motion.section
+					initial={{ opacity: 0, y: 16 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+				>
+					<button
+						className={`button ${button.primary}`}
+						onClick={() => window.open(t('hero.buttons.primary.url'), '_blank', 'noopener,noreferrer')}
+					>
+						<IconBrandLinkedin className={button.icon} stroke={1.6} />
+						<span>{t('hero.buttons.primary.title')}</span>
 					</button>
-					<button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open(t('hero.buttons.secondary.url'), "_blank") } >
-						{t('hero.buttons.secondary.title')}
+					<button
+						className={`button ${button.secondary} leaveSite`}
+						onClick={() => window.open(t('hero.buttons.secondary.url'), '_blank', 'noopener,noreferrer')}
+					>
+						<IconBrandGithub className={button.icon} stroke={1.6} />
+						<span>{t('hero.buttons.secondary.title')}</span>
 					</button>
-				</section>
+				</motion.section>
 			</Container>
 			<HeroBg theme="bg-color-1" />
 		</Section>
-	)
+	);
 }

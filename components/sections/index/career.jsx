@@ -12,6 +12,7 @@ import Container from "../../structure/container";
 // Section structure
 import Section from "../../structure/section";
 import Badges from "../../utils/badge.list.util";
+import Reveal, { Stagger, StaggerItem } from "../../utils/reveal.util";
 import CareerArticle from "../articles/careerarticle";
 import CareerTimeline from "../articles/careertimeline";
 // UI components
@@ -33,22 +34,33 @@ export default function Career() {
   return (
     <Section classProp={`${career.section} borderBottom`}>
       <Container spacing={["verticalXXXLrg"]}>
-        <SectionTitle
-          title={t("career.title")}
-          preTitle={t("career.preTitle")}
-          subTitle={t("career.description")}
-        />
+        <Reveal>
+          <SectionTitle
+            title={t("career.title")}
+            preTitle={t("career.preTitle")}
+            subTitle={t("career.description")}
+          />
+        </Reveal>
         <section className={`${career.area} ${career.splitLayout}`}>
           {/* Experiencia laboral - Lado izquierdo */}
-          <div className={career.leftColumn}>
+          <Stagger className={career.leftColumn}>
             {/* Posición actual */}
-            <div className={career.currentPosition}>
+            <StaggerItem className={career.currentPosition}>
               <div className={career.positionHeader}>
                 <h3 className={career.companyName}>
                   {currentPosition.company}
+                  <span className={career.currentChip} aria-label="Current role">
+                    Current
+                  </span>
                 </h3>
                 <span className={career.location}>
                   {currentPosition.location}
+                  {currentPosition.period && (
+                    <>
+                      <span className={career.locationDivider}>·</span>
+                      {currentPosition.period}
+                    </>
+                  )}
                 </span>
               </div>
               <h4 className={career.positionTitle}>
@@ -57,8 +69,6 @@ export default function Career() {
               <p className={career.positionDescription}>
                 {currentPosition.description}
               </p>
-
-              {/* Badges para posición actual */}
               <div className={career.techStack}>
                 <Badges
                   list={organizedTechStack.frontend.slice(0, 4)}
@@ -68,20 +78,21 @@ export default function Career() {
                   background={false}
                 />
               </div>
-            </div>
+            </StaggerItem>
 
             {/* Timeline de posiciones */}
-            <div className={career.timeline}>
-              {positions.map((position, index) => (
-                <div key={index} className={career.timelineItem}>
-                  <h4 className={career.positionTitle}>{position.title}</h4>
-                  <p className={career.positionDescription}>
-                    {position.description}
-                  </p>
-
-                  {/* Badges específicos para cada posición */}
-                  <div className={career.techStack}>
-                    {index === 0 && (
+            {positions.length > 0 && (
+              <StaggerItem className={career.timeline}>
+                {positions.map((position, index) => (
+                  <div key={index} className={career.timelineItem}>
+                    <h4 className={career.positionTitle}>{position.title}</h4>
+                    {position.period && (
+                      <span className={career.location}>{position.period}</span>
+                    )}
+                    <p className={career.positionDescription}>
+                      {position.description}
+                    </p>
+                    <div className={career.techStack}>
                       <Badges
                         list={organizedTechStack.backend.slice(0, 5)}
                         block="stack"
@@ -89,34 +100,31 @@ export default function Career() {
                         color={false}
                         background={false}
                       />
-                    )}
-                    {index === 1 && (
-                      <Badges
-                        list={organizedTechStack.frontend.slice(0, 4)}
-                        block="stack"
-                        fullContainer="fullContainer"
-                        color={false}
-                        background={false}
-                      />
-                    )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </StaggerItem>
+            )}
 
             {/* Posiciones anteriores */}
             {previousPositions.map((position, index) => (
-              <div key={index} className={career.previousPosition}>
+              <StaggerItem key={index} className={career.previousPosition}>
                 <div className={career.positionHeader}>
                   <h3 className={career.companyName}>{position.company}</h3>
-                  <span className={career.location}>{position.location}</span>
+                  <span className={career.location}>
+                    {position.location}
+                    {position.period && (
+                      <>
+                        <span className={career.locationDivider}>·</span>
+                        {position.period}
+                      </>
+                    )}
+                  </span>
                 </div>
                 <h4 className={career.positionTitle}>{position.position}</h4>
                 <p className={career.positionDescription}>
                   {position.description}
                 </p>
-
-                {/* Badges para posiciones anteriores */}
                 <div className={career.techStack}>
                   <Badges
                     list={organizedTechStack.operatingSystems}
@@ -126,9 +134,9 @@ export default function Career() {
                     background={false}
                   />
                 </div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
 
           {/* Proyectos Freelance - Lado derecho */}
           <div className={career.rightColumn}>

@@ -24,23 +24,23 @@
     },
     "greeting": "Hola, mi nombre es",
     "name": "Alejandro Vásquez",
-    "tagline": "Diseño y construyo experiencias significativas.",
-    "description": "Soy un apasionado por la tecnología y un creador digital en constante evolución, impulsado por mi interés en el aprendizaje continuo y un fuerte deseo de dejar un impacto duradero a través de cada uno de mis proyectos.",
+    "tagline": "Desarrollador full‑stack que construye sistemas escalables y automatización de procesos.",
+    "description": "Full Stack Developer y Technology Manager con 5+ años construyendo plataformas web, portales administrativos, automatización de flujos y herramientas data‑driven — con foco en arquitectura escalable, usabilidad e impacto operativo.",
     "buttons": {
       "primary": {
-        "title": "Contáctame",
-        "url": "mailto:javam2639@gmail.com"
+        "title": "Conectemos en LinkedIn",
+        "url": "https://www.linkedin.com/in/javasquez26/"
       },
       "secondary": {
-        "title": "LinkedIn",
-        "url": "https://www.linkedin.com/in/javasquez26/"
+        "title": "Ver GitHub",
+        "url": "https://github.com/JalejandroV93"
       }
     }
   },
   "about": {
     "title": "Sobre mí",
     "preTitle": "Sinopsis",
-    "description": "Desarrollador de software e IT Manager con enfoque en frontend moderno y construcción de aplicaciones web escalables, responsivas y centradas en el usuario. Especializado en Next.js, React, TypeScript y Tailwind CSS, con experiencia integrando APIs externas (Google Sheets, Google Forms, Gemini) y desarrollando backends con FastAPI, Node.js y .NET. Combino una visión de producto (UX/UI, diseño de componentes, Figma) con liderazgo técnico e implementación de pipelines y automatización (Docker, n8n, GitHub Actions) para impulsar transformación digital y eficiencia operativa.",
+    "description": "Full Stack Developer y Technology Manager enfocado en plataformas web escalables e impacto operativo. Hands‑on con Next.js, React, TypeScript, Prisma, PostgreSQL, Redis, Docker y JWT/RBAC. Visión de producto (UX/UI, design systems, Figma) combinada con ingeniería backend y automatización de flujos (Python/FastAPI, n8n, GitHub Actions).",
     "softSkills": {
       "title": "Habilidades clave y enfoque",
       "description": "Liderazgo técnico, comunicación clara, mejora continua, priorización efectiva y mentalidad analítica. Experiencia guiando equipos, reduciendo tiempos operativos mediante automatización y facilitando adopción de nuevas herramientas. Equilibrio entre rigor de ingeniería y empatía por el usuario final."
@@ -83,32 +83,25 @@
     "description": "Experiencia híbrida en liderazgo TI y desarrollo full‑stack: automatización con IA, plataformas educativas y modernización de infraestructura para organizaciones educativas y proyectos freelance.",
     "current": {
       "company": "Liceo Taller San Miguel",
-      "position": "IT Manager / Líder de Tecnología",
-      "location": "Pereira, Colombia",
-      "description": "• Liderazgo de proyectos internos (IA, automatización, plataformas web) • Implementación pipelines de datos (Google Sheets API + Python) • Orquestación de servicios (n8n + Docker) • Modernización y supervisión de infraestructura TI"
+      "position": "Technology Manager / Full Stack Developer",
+      "location": "Remote · Colombia",
+      "period": "2021 — Presente",
+      "description": "• Liderazgo de la estrategia tecnológica, operaciones TI y desarrollo de software interno para procesos académicos y administrativos • Diseño e implementación de ANGEL/Tracking, Insights y portales internos para mejorar el seguimiento estudiantil y automatizar reportes de evaluación docente • Integración de datos de Google Sheets, Google Forms y Phidias mediante sincronizaciones programadas, scripts en Python y automatizaciones con Docker/n8n • Coordinación de adopción, documentación y capacitación a usuarios"
     },
     "positions": [
       {
-        "title": "Líder del Área de Tecnología",
-        "description": "• Administración de plataformas educativas • Coordinación de equipo de soporte • Desarrollo de herramientas internas (seguimiento, evaluación, automatización) • Reducción de tiempos operativos con scripts e integraciones"
-      },
-      {
-        "title": "Soporte Tecnopedagógico",
-        "description": "• Soporte a docentes y estudiantes • Capacitación en herramientas digitales • Administración LMS • Documentación para reducir incidencias repetitivas"
+        "title": "Senior Full Stack Developer — Servicio Nacional de Aprendizaje (SENA)",
+        "period": "2025 · Contrato por proyecto",
+        "description": "• Construcción de un portal administrativo con RBAC, permisos por rol, tablas modulares, validación de datos y data virtualization • CMS headless para gestión dinámica con un editor TipTap personalizado y workflows de calendario de eventos • Backend con Next.js API Routes, PostgreSQL/Prisma, Redis cache (TTL) y JWT; UI con React, TypeScript y Tailwind"
       }
     ],
     "previous": [
       {
-        "company": "EcoTecnologia S.A.S",
-        "position": "Tecnólogo de TI",
-        "location": "Pereira, Colombia",
-        "description": "• Soporte técnico y despliegue de sistemas empresariales • Configuración y mantenimiento de servidores • Configuración de servicios en la Nube • Adquisición y configuración de servicios en hostings web compartidos • Configuración de Servidores VPS"
-      },
-      {
-        "company": "Liceo Taller San Miguel",
-        "position": "IT Support Technician",
-        "location": "Colombia",
-        "description": "• Soporte a usuarios finales, redes, hardware y software • Documentación y reducción de incidentes repetitivos • Implementación Software para monitoreo de la Red"
+        "company": "EcoTecnologia S.A.S.",
+        "position": "Técnico en Sistemas TI",
+        "location": "Remote · Colombia",
+        "period": "2019 — 2020",
+        "description": "• Configuración de servidores Linux/Ubuntu, VPS, hosting compartido, dominios, servicios web, bases de datos y respaldos • Soporte a redes, hardware, software y servicios en la nube para clientes empresariales"
       }
     ],
     "freelance": {
@@ -143,13 +136,6 @@
             "Firestore",
             "Node.js"
           ]
-        },
-        {
-          "title": "Bella Nova Surgery - Sitio Médico",
-          "period": "2025",
-          "description": "Implementación de sitio corporativo en WordPress + Elementor según diseño Figma. Optimización SEO y performance",
-          "url": "https://bellanovasurgery.com",
-          "technologies": ["WordPress", "Elementor", "HTML", "CSS", "Figma"]
         },
         {
           "title": "ESP Tribunas Web",
@@ -200,244 +186,151 @@
       "subtitle": "Centrados en la experiencia, impulsados por la ingeniería.",
       "items": [
         {
-          "project": "Artemisa",
-          "url": "https://arts.liceotallersanmiguel.edu.co",
-          "repo": "Privado",
-          "descriptionTitle": "Plataforma con IA para apoyar la planeación docente.",
-          "description": "Plataforma educativa desarrollada con el equipo de innovación del Liceo Taller San Miguel. Frontend responsivo con Next.js + TypeScript + Tailwind, componentes reutilizables ShadCN UI desde prototipos Figma, integración Gemini API para contenido educativo y backend FastAPI + PostgreSQL + Redis.",
+          "project": "ANGEL + Tracking LTSM",
+          "visibility": "internal",
+          "icon": "users",
+          "accent": "blue",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Plataforma de seguimiento estudiantil con sincronización Phidias.",
+          "description": "Plataforma interna extendida con tracking.liceotallersanmiguel.edu.co para sincronizar reportes de inasistencia desde Phidias y ayudar a docentes, coordinadores y psicólogos a gestionar ausencias, anotaciones disciplinarias e indicadores por nivel/grado.",
+          "problem": "Seguimiento manual de inasistencias y disciplina lento por nivel y grado.",
+          "solution": "Auto‑sync con Phidias + UI por rol con evidencia fotográfica por caso.",
+          "outcome": "70% más rápido el flujo de seguimiento disciplinario.",
+          "architecture": [
+            { "label": "Phidias", "type": "source" },
+            { "label": "PostgreSQL", "type": "db" },
+            { "label": "Redis", "type": "cache" },
+            { "label": "Next.js API", "type": "api" },
+            { "label": "Docentes · Coordinadores", "type": "consumer" }
+          ],
           "keyFeatures": [
-            "Reducción del 30% en tiempo de planeación docente mediante IA generativa.",
-            "Sistema modular adaptable a distintos cursos y asignaturas.",
-            "Integración completa con Gemini API para generación de contenido educativo.",
-            "Despliegues automatizados con Docker y persistencia optimizada."
+            "Sincronización programada con Phidias en un modelo normalizado, con evidencia fotográfica.",
+            "Acceso por rol (docentes, coordinadores, psicólogos) con permisos por módulo.",
+            "Indicadores disciplinarios consolidados por nivel y grado.",
+            "Despliegue contenedorizado con Docker y almacenamiento en MinIO."
           ],
-          "techStack": "Next.js, TypeScript, Tailwind CSS, ShadCN UI, FastAPI, PostgreSQL, Redis, Docker, Gemini API",
+          "techStack": "Next.js, Prisma, PostgreSQL, Docker, MinIO, Redis, Phidias integration",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "artemisa",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/picasso_ltsm.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
-            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
-            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+            { "key": "prisma", "name": "Prisma", "type": "devicon" },
             { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
             { "key": "redis", "name": "Redis", "type": "devicon" },
             { "key": "docker", "name": "Docker", "type": "devicon" }
           ]
         },
         {
-          "project": "Insights LTSM",
-          "url": "https://insights.liceotallersanmiguel.edu.co",
-          "repo": "Privado",
-          "descriptionTitle": "Herramienta para evaluación docente con retroalimentación automática.",
-          "description": "Sistema que conecta con Google Forms API para recolección automática de datos, desarrolla dashboards dinámicos en React + Firebase y procesa datos generando feedback personalizado con IA. Logró reducir 60% el tiempo de consolidación de evaluaciones.",
+          "project": "Sample Management — Acueducto Tribunas Córcega",
+          "visibility": "internal",
+          "icon": "droplet",
+          "accent": "cyan",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Refactor de la app de gestión de muestras con RBAC y captura de evidencia móvil.",
+          "description": "Refactor de una aplicación existente de gestión de muestras para mejorar arquitectura, seguridad y módulos operativos. Se agregó validación por rol, evidencia fotográfica en los registros y una experiencia mobile‑first para operadores en campo.",
+          "problem": "App heredada de gestión de muestras sin validación por rol ni UX móvil para operadores en campo.",
+          "solution": "Refactor con RBAC, evidencia fotográfica y una interfaz mobile‑first.",
+          "outcome": "Operadores capturan y auditan muestras en el sitio sin papel.",
           "keyFeatures": [
-            "Conexión automática a Google Forms API para recolección de datos.",
-            "Dashboards dinámicos con visualizaciones en tiempo real.",
-            "Procesamiento de datos y generación de feedback con IA.",
-            "Reducción del 60% en tiempo de consolidación de evaluaciones."
+            "Refactor de arquitectura con límites de módulo y validación claras.",
+            "Control de acceso por rol y autorización en cada operación.",
+            "Evidencia fotográfica capturada y persistida junto a cada registro.",
+            "UI mobile‑first optimizada para uso en campo."
           ],
-          "techStack": "React, Firebase, Google Forms API, Chart.js, Node.js",
+          "techStack": "Next.js, RBAC, photo records, mobile optimization",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/evdocente_ltsm.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
             { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "firebase", "name": "Firebase", "type": "devicon" },
-            { "key": "chartjs", "name": "Chart.js", "type": "devicon" },
-            { "key": "nodejs", "name": "Node.js", "type": "devicon" }
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
           ]
         },
         {
-          "project": "Angel LTSM",
-          "url": "https://angel.liceotallersanmiguel.edu.co",
-          "repo": "Privado",
-          "descriptionTitle": "Sistema de seguimiento disciplinario estudiantil.",
-          "description": "Aplicación para recolección y procesamiento de encuestas en línea con integración a Google Sheets API para centralizar métricas e interfaz intuitiva de consulta de indicadores. Mejoró en 70% la eficiencia en seguimiento disciplinario estudiantil.",
+          "project": "Artemisa + Insights LTSM",
+          "visibility": "internal",
+          "icon": "brain",
+          "accent": "purple",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Herramientas de planeación y evaluación docente asistidas por IA.",
+          "description": "Suite de planeación y evaluación docente asistida por IA con componentes reutilizables, dashboards y feedback automatizado para reducir el trabajo manual de consolidación. Conecta con Google Forms para recolección y con Gemini para generación de contenido.",
+          "problem": "Consolidación manual de evaluaciones docentes y documentos de planeación.",
+          "solution": "Suite asistida por IA con componentes compartidos, servicios FastAPI e integración con Gemini.",
+          "outcome": "60% menos tiempo de consolidación, feedback automatizado por docente.",
           "keyFeatures": [
-            "Recolección automática y procesamiento de encuestas en línea.",
-            "Integración con Google Sheets API para centralización de métricas.",
-            "Interfaz intuitiva para consulta de indicadores disciplinarios.",
-            "Mejora del 70% en eficiencia del seguimiento disciplinario."
+            "Librería de componentes reutilizables compartida entre planeación y evaluación.",
+            "Consolidación automatizada de datos de evaluación docente.",
+            "Generación de contenido con Gemini API para apoyar la planeación.",
+            "Servicios FastAPI respaldados por PostgreSQL y Redis."
           ],
-          "techStack": "React, Google Sheets API, Node.js, Bootstrap",
+          "techStack": "Next.js, TypeScript, FastAPI, PostgreSQL, Redis, Firebase, Google Forms API",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/angel-ltsm.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "nodejs", "name": "Node.js", "type": "devicon" },
-            { "key": "bootstrap", "name": "Bootstrap", "type": "devicon" }
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "redis", "name": "Redis", "type": "devicon" }
           ]
         },
         {
-          "project": "ESP Tribunas Internal App",
-          "url": "https://app.esptribunas.com.co",
-          "repo": "Privado",
-          "descriptionTitle": "Aplicación web para gestión de reportes de agua y mantenimientos.",
-          "description": "Sistema interno desarrollado en React con dashboards responsivos y conexión Firebase para almacenamiento en la nube. Incluye integración de notificaciones y módulos de mantenimiento, reduciendo la carga manual en 50% con reportes automatizados.",
+          "project": "Portal Administrativo SENA",
+          "visibility": "internal",
+          "icon": "shield",
+          "accent": "emerald",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Portal administrativo con RBAC y CMS headless personalizado.",
+          "description": "Portal administrativo con permisos por rol, tablas modulares y data virtualization. Incluye un CMS headless con un editor TipTap personalizado y workflows de calendario de eventos a la medida de la institución.",
+          "problem": "Operación administrativa institucional bloqueada por planillas y herramientas ad‑hoc.",
+          "solution": "Portal admin con RBAC, CMS headless con TipTap y APIs cacheadas en Redis.",
+          "outcome": "Operación administrativa centralizada con auditoría por rol.",
           "keyFeatures": [
-            "Frontend React con dashboards responsivos y optimizados.",
-            "Conexión con Firebase para almacenamiento seguro en la nube.",
-            "Sistema de notificaciones y módulos de mantenimiento integrados.",
-            "Reducción del 50% en carga manual mediante reportes automatizados."
+            "RBAC con permisos por rol granulares a través de los módulos.",
+            "CMS headless con editor TipTap personalizado.",
+            "Backend con Next.js API Routes, PostgreSQL/Prisma y Redis cache (TTL).",
+            "Autenticación JWT y autorización por rol de extremo a extremo."
           ],
-          "techStack": "React, Firebase, Firestore, Node.js",
+          "techStack": "Next.js, Prisma, PostgreSQL, Redis (TTL), JWT/RBAC, TipTap, Tailwind",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/muestras_esp.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "firebase", "name": "Firebase", "type": "devicon" },
-            { "key": "nodejs", "name": "Node.js", "type": "devicon" }
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+            { "key": "prisma", "name": "Prisma", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "redis", "name": "Redis", "type": "devicon" }
           ]
         },
         {
-          "project": "Bella Nova Surgery",
-          "url": "https://bellanovasurgery.com",
-          "repo": "En desarrollo",
-          "descriptionTitle": "Sitio corporativo implementado según diseño Figma con optimización SEO.",
-          "description": "Implementación de sitio corporativo en WordPress + Elementor siguiendo diseño específico de Figma. Incluye optimización SEO completa, mejoras de performance y experiencia de usuario premium para el sector médico-estético.",
-          "keyFeatures": [
-            "Implementación fiel al prototipo diseñado en Figma.",
-            "WordPress + Elementor para gestión de contenido optimizada.",
-            "Optimización SEO técnica y mejoras de performance.",
-            "Experiencia de usuario premium para sector médico."
-          ],
-          "techStack": "WordPress, Elementor, HTML, CSS, Figma",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "bellanova",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/bellanova.png"
-            }
-          ],
-          "stack": [
-            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
-            { "key": "html5", "name": "HTML", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" },
-            { "key": "figma", "name": "Figma", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "ESP Tribunas Web",
+          "project": "Sitio Web Acueducto Tribunas Córcega",
+          "visibility": "public",
+          "icon": "world",
+          "accent": "amber",
           "url": "https://esptribunas.com.co",
-          "repo": "Privado",
-          "descriptionTitle": "Rediseño en WordPress para mejorar UX y digitalizar consultas/pagos.",
-          "description": "Rediseño completo del sitio web de servicios públicos en WordPress para mejorar experiencia de usuario y digitalizar procesos de consultas y pagos. Aumentó en 25% la interacción de usuarios con integración de analíticas y optimización de procesos.",
+          "repo": null,
+          "descriptionTitle": "Modernización del sitio público con navegación más clara y UX mobile‑friendly.",
+          "description": "Modernización del sitio público hacia una experiencia más clara, intuitiva y mobile‑friendly, mejorando la estructura de información, la navegación y la experiencia general del usuario.",
+          "problem": "Sitio público heredado con navegación confusa y mala UX móvil.",
+          "solution": "Arquitectura de información modernizada, responsive mobile‑first sobre Next.js.",
+          "outcome": "Navegación más clara, experiencia móvil más rápida y mejor base SEO.",
           "keyFeatures": [
-            "Rediseño completo centrado en mejora de experiencia de usuario.",
-            "Digitalización de procesos de consultas y pagos online.",
-            "Aumento del 25% en interacción de usuarios registrados.",
-            "Integración de analíticas y optimización de conversiones."
+            "Arquitectura de información reconstruida alrededor de tareas del usuario.",
+            "Diseño responsivo mobile‑first con mejor rendimiento.",
+            "Patrones de navegación más claros y jerarquía de contenido.",
+            "Construido sobre Next.js para SEO y Core Web Vitals."
           ],
-          "techStack": "WordPress, PHP, CSS3, Figma",
+          "techStack": "Next.js, UX/UI, sitio responsivo moderno",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "esptribunas",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/esptribunas.png"
-            }
-          ],
+          "images": [],
           "stack": [
-            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
-            { "key": "php", "name": "PHP", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" },
-            { "key": "figma", "name": "Figma", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "SmileX",
-          "url": "https://github.com/JalejandroV93/SmileX",
-          "repo": "GitHub",
-          "descriptionTitle": "Proyecto Universitario - Sistema de gestión odontológica.",
-          "description": "Sistema integral de gestión para clínica odontológica desarrollado en .NET + Razor Pages. Incluye módulo de agendamiento con validaciones dinámicas para evitar duplicidad de citas, historial clínico completo y funciones administrativas organizadas por roles.",
-          "keyFeatures": [
-            "Módulo de agendamiento con validaciones dinámicas anti-duplicidad.",
-            "Sistema completo de historial clínico y seguimiento pacientes.",
-            "Funciones administrativas organizadas por roles de usuario.",
-            "Arquitectura .NET + Razor Pages para desarrollo universitario."
-          ],
-          "techStack": ".NET, Razor Pages, C#, HTML5, CSS3",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/smilex.png"
-            }
-          ],
-          "stack": [
-            { "key": "dot-net", "name": ".NET", "type": "devicon" },
-            { "key": "csharp", "name": "C#", "type": "devicon" },
-            { "key": "html5", "name": "HTML", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "LTSM Internal Systems",
-          "url": "https://ltsm.com.co/",
-          "repo": "Privado",
-          "descriptionTitle": "Portal institucional administrativo - Digitalización de procesos.",
-          "description": "Portal institucional para digitalización de formularios y procesos internos administrativos. Desarrollo de módulos de gestión en PHP + Bootstrap con reducción del 40% en uso de papel y optimización de flujos de trabajo institucionales.",
-          "keyFeatures": [
-            "Digitalización completa de formularios y procesos administrativos.",
-            "Módulos de gestión desarrollados en PHP + Bootstrap.",
-            "Reducción del 40% en uso de papel institucional.",
-            "Optimización integral de flujos de trabajo administrativos."
-          ],
-          "techStack": "PHP, Bootstrap, MySQL, JavaScript",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/tools_ltsm.jpg"
-            }
-          ],
-          "stack": [
-            { "key": "php", "name": "PHP", "type": "devicon" },
-            { "key": "bootstrap", "name": "Bootstrap", "type": "devicon" },
-            { "key": "mysql", "name": "MySQL", "type": "devicon" },
-            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "react", "name": "React", "type": "devicon" },
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
           ]
         }
       ]

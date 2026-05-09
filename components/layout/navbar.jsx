@@ -7,11 +7,12 @@ import LanguageSwitcher from '../utils/language-switcher'
 import settings from '../../content/_settings.json'
 import css from '../../styles/structure/navbar.module.scss'
 
+const SECTION_IDS = ['about', 'featured-projects', 'technical', 'career']
+
 export default function Navbar() {
   const router = useRouter()
   const [menuState, menuToggle] = useState(false)
-
-  
+  const [activeSection, setActiveSection] = useState('')
 
   useEffect(() => {
     menuToggle(false)
@@ -29,26 +30,68 @@ export default function Navbar() {
     }
   }, [router.events])
 
+  useEffect(() => {
+    if (router.pathname !== '/') {
+      setActiveSection('')
+      return
+    }
+
+    const sections = SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter(Boolean)
+
+    if (!sections.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+        if (visible) {
+          setActiveSection(visible.target.id)
+        }
+      },
+      { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [router.pathname])
+
   const toggleMenu = () => {
     menuToggle(!menuState)
   }
 
   const handleNavigation = (e, url) => {
     e.preventDefault()
-    
+
     if (url.startsWith('/#')) {
-      // Navegación interna
       const targetId = url.substring(2)
       const targetElement = document.getElementById(targetId)
-      
+
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: 'smooth' })
         menuToggle(false)
       }
     } else {
-      // Navegación externa
       router.push(url)
     }
+  }
+
+  const navLink = (id, labelEn, labelEs) => {
+    const isActive = activeSection === id
+    return (
+      <li>
+        <Link
+          href={`/#${id}`}
+          onClick={(e) => handleNavigation(e, `/#${id}`)}
+          data-active={isActive ? 'true' : undefined}
+          aria-current={isActive ? 'true' : undefined}
+        >
+          {router.locale === 'en' ? labelEn : labelEs}
+        </Link>
+      </li>
+    )
   }
 
   return (
@@ -67,32 +110,10 @@ export default function Navbar() {
         </li>
         <li data-open={menuState} className={css.menuContent}>
           <ul>
-            {/* Usar directamente los textos por ahora hasta actualizar las traducciones */}
-            <li>
-              <Link href="/#about" onClick={(e) => handleNavigation(e, "/#about")}>
-                {router.locale === 'en' ? 'About' : 'Sobre mí'}
-              </Link>
-            </li>
-            <li>
-              <Link href="/#featured-projects" onClick={(e) => handleNavigation(e, "/#featured-projects")}>
-                {router.locale === 'en' ? 'Projects' : 'Proyectos'}
-              </Link>
-            </li>
-            <li>
-              <Link href="/#technical" onClick={(e) => handleNavigation(e, "/#technical")}>
-                {router.locale === 'en' ? 'Skills' : 'Habilidades'}
-              </Link>
-            </li>
-            <li>
-              <Link href="/#career" onClick={(e) => handleNavigation(e, "/#career")}>
-                {router.locale === 'en' ? 'Experience' : 'Experiencia'}
-              </Link>
-            </li>
-            {/* <li>
-              <Link href="/#pricing" onClick={(e) => handleNavigation(e, "/#pricing")}>
-                {router.locale === 'en' ? 'Pricing' : 'Precios'}
-              </Link>
-            </li> */}
+            {navLink('about', 'About', 'Sobre mí')}
+            {navLink('featured-projects', 'Projects', 'Proyectos')}
+            {navLink('technical', 'Skills', 'Habilidades')}
+            {navLink('career', 'Experience', 'Experiencia')}
             <li>
               <LanguageSwitcher />
             </li>

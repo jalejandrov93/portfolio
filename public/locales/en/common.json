@@ -24,23 +24,23 @@
     },
     "greeting": "Hello, my name is",
     "name": "Alejandro Vásquez",
-    "tagline": "I design and build meaningful experiences.",
-    "description": "I'm passionate about technology and a constantly evolving digital creator, driven by my interest in continuous learning and a strong desire to leave a lasting impact through each of my projects.",
+    "tagline": "Full‑stack developer building scalable systems and process automation.",
+    "description": "Full Stack Developer and Technology Manager with 5+ years building web platforms, administrative portals, workflow automation and data‑driven tools — focused on scalable architecture, usability and operational impact.",
     "buttons": {
       "primary": {
-        "title": "Contact Me",
-        "url": "mailto:javam2639@gmail.com"
+        "title": "Let's connect on LinkedIn",
+        "url": "https://www.linkedin.com/in/javasquez26/"
       },
       "secondary": {
-        "title": "LinkedIn",
-        "url": "https://www.linkedin.com/in/javasquez26/"
+        "title": "View GitHub",
+        "url": "https://github.com/JalejandroV93"
       }
     }
   },
   "about": {
     "title": "About me",
     "preTitle": "Synopsis",
-    "description": "Software developer & IT Manager focused on modern frontend and building scalable, user‑centric web applications. Specialized in Next.js, React, TypeScript and Tailwind CSS, integrating external APIs (Google Sheets, Google Forms, Gemini) and building backends with FastAPI, Node.js and .NET. I blend product thinking (UX/UI, component systems, Figma) with technical leadership and automation (Docker, n8n, GitHub Actions) to drive digital transformation and operational efficiency.",
+    "description": "Full Stack Developer and Technology Manager focused on scalable web platforms and operational impact. Hands‑on with Next.js, React, TypeScript, Prisma, PostgreSQL, Redis, Docker and JWT/RBAC. Strong product thinking (UX/UI, design systems, Figma) combined with backend engineering and workflow automation (Python/FastAPI, n8n, GitHub Actions).",
     "softSkills": {
       "title": "Core soft skills & focus",
       "description": "Technical leadership, clear communication, continuous improvement mindset, effective prioritization and analytical problem solving. Experience guiding teams, reducing operational time through automation, and enabling adoption of new tooling while keeping empathy for end users."
@@ -83,32 +83,25 @@
     "description": "Hybrid background in IT leadership and full‑stack development: AI automation, educational platforms and infrastructure modernization for educational organizations and freelance projects.",
     "current": {
       "company": "Liceo Taller San Miguel",
-      "position": "IT Manager / Technology Lead",
-      "location": "Pereira, Colombia",
-      "description": "• Lead internal projects (AI, automation, web platforms) • Data pipelines (Google Sheets API + Python) • Service orchestration (n8n + Docker) • Infrastructure modernization & supervision"
+      "position": "Technology Manager / Full Stack Developer",
+      "location": "Remote · Colombia",
+      "period": "2021 — Present",
+      "description": "• Lead technology strategy, IT operations and internal software development for academic and administrative processes • Designed and implemented ANGEL/Tracking, Insights and internal portals to improve student follow‑up and automate teacher‑evaluation reporting • Integrated data from Google Sheets, Google Forms and Phidias via scheduled sync, Python scripts and Docker/n8n automations • Coordinate adoption, documentation and user training"
     },
     "positions": [
       {
-        "title": "Technology Area Leader",
-        "description": "• Educational platforms administration • Support team coordination • Internal tools (tracking, evaluation, automation) • Operational time reduction via scripts & integrations"
-      },
-      {
-        "title": "Technopedagogical Support",
-        "description": "• Teacher & student support • Training in digital tools • LMS administration • Documentation reducing repetitive incidents"
+        "title": "Senior Full Stack Developer — Servicio Nacional de Aprendizaje (SENA)",
+        "period": "2025 · Project Contract",
+        "description": "• Built an administrative portal with RBAC, role‑based permissions, module‑based tables, data validation and data virtualization • Headless CMS for dynamic content with a customized TipTap rich‑text editor and event‑calendar workflows • Backend with Next.js API Routes, PostgreSQL/Prisma, Redis cache (TTL) and JWT; UI in React, TypeScript and Tailwind"
       }
     ],
     "previous": [
       {
-        "company": "EcoTecnologia S.A.S",
-        "position": "IT Technologist",
-        "location": "Pereira, Colombia",
-        "description": "• Technical support and deployment of business systems • Server configuration and maintenance • Cloud services configuration • Shared web hosting acquisition and setup • VPS server configuration"
-      },
-      {
-        "company": "Liceo Taller San Miguel",
-        "position": "IT Support Technician",
-        "location": "Colombia",
-        "description": "• End-user support, networks, hardware and software • Documentation and reduction of repetitive incidents • Network monitoring software implementation"
+        "company": "EcoTecnologia S.A.S.",
+        "position": "IT Systems Technician",
+        "location": "Remote · Colombia",
+        "period": "2019 — 2020",
+        "description": "• Configured Linux/Ubuntu servers, VPS, shared hosting, domains, web services, databases and backups • Supported networks, hardware, software and cloud services for business clients"
       }
     ],
     "freelance": {
@@ -143,13 +136,6 @@
             "Firestore",
             "Node.js"
           ]
-        },
-        {
-          "title": "Bella Nova Surgery - Medical Website",
-          "period": "2025",
-          "description": "Corporate website implementation in WordPress + Elementor following Figma design. SEO and performance optimization",
-          "url": "https://bellanovasurgery.com",
-          "technologies": ["WordPress", "Elementor", "HTML", "CSS", "Figma"]
         },
         {
           "title": "ESP Tribunas Web",
@@ -200,244 +186,151 @@
       "subtitle": "Experience-centered, engineering-driven.",
       "items": [
         {
-          "project": "Artemisa",
-          "url": "https://arts.liceotallersanmiguel.edu.co",
-          "repo": "Private",
-          "descriptionTitle": "AI-powered platform to support teacher planning.",
-          "description": "Educational platform developed with Liceo Taller San Miguel innovation team. Responsive frontend with Next.js + TypeScript + Tailwind, reusable ShadCN UI components from Figma prototypes, Gemini API integration for educational content, and FastAPI + PostgreSQL + Redis backend.",
+          "project": "ANGEL + Tracking LTSM",
+          "visibility": "internal",
+          "icon": "users",
+          "accent": "blue",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Student tracking platform with Phidias data sync.",
+          "description": "Internal platform extended with tracking.liceotallersanmiguel.edu.co to synchronize absence reports from Phidias and help teachers, coordinators and psychologists track absences, disciplinary notes and counts by level/grade.",
+          "problem": "Manual absence tracking and slow disciplinary follow-up across grades.",
+          "solution": "Phidias auto-sync + role-based UI with photo evidence per case.",
+          "outcome": "70% faster disciplinary tracking workflow.",
+          "architecture": [
+            { "label": "Phidias", "type": "source" },
+            { "label": "PostgreSQL", "type": "db" },
+            { "label": "Redis", "type": "cache" },
+            { "label": "Next.js API", "type": "api" },
+            { "label": "Teachers · Coordinators", "type": "consumer" }
+          ],
           "keyFeatures": [
-            "30% reduction in teacher planning time through generative AI.",
-            "Modular system adaptable to different courses and subjects.",
-            "Complete integration with Gemini API for educational content generation.",
-            "Automated deployments with Docker and optimized persistence."
+            "Scheduled Phidias sync into a normalized model with photographic evidence.",
+            "Role‑based access (teachers, coordinators, psychologists) with module‑based permissions.",
+            "Disciplinary indicators consolidated by level and grade.",
+            "Containerized deployment with Docker and MinIO storage."
           ],
-          "techStack": "Next.js, TypeScript, Tailwind CSS, ShadCN UI, FastAPI, PostgreSQL, Redis, Docker, Gemini API",
+          "techStack": "Next.js, Prisma, PostgreSQL, Docker, MinIO, Redis, Phidias integration",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "artemisa",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/picasso_ltsm.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
             { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
-            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" },
-            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+            { "key": "prisma", "name": "Prisma", "type": "devicon" },
             { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
             { "key": "redis", "name": "Redis", "type": "devicon" },
             { "key": "docker", "name": "Docker", "type": "devicon" }
           ]
         },
         {
-          "project": "Insights LTSM",
-          "url": "https://insights.liceotallersanmiguel.edu.co",
-          "repo": "Private",
-          "descriptionTitle": "Teacher evaluation tool with automatic feedback.",
-          "description": "System connecting to Google Forms API for automatic data collection, developing dynamic dashboards in React + Firebase and processing data to generate personalized AI feedback. Achieved 60% reduction in evaluation consolidation time.",
+          "project": "Sample Management — Acueducto Tribunas Córcega",
+          "visibility": "internal",
+          "icon": "droplet",
+          "accent": "cyan",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Refactored sample‑management application with RBAC and mobile evidence capture.",
+          "description": "Refactored an existing sample‑management application to improve architecture, security and operational modules. Added role validation, photographic evidence on records and a mobile‑first experience for field operators.",
+          "problem": "Legacy sample‑management code without role validation or mobile UX for field operators.",
+          "solution": "Refactor with RBAC, photographic evidence and a mobile‑first interface.",
+          "outcome": "Operators capture and audit samples on‑site without paperwork.",
           "keyFeatures": [
-            "Automatic connection to Google Forms API for data collection.",
-            "Dynamic dashboards with real-time visualizations.",
-            "Data processing and AI-generated feedback.",
-            "60% reduction in evaluation consolidation time."
+            "Architecture refactor with clear module boundaries and validation.",
+            "Role‑based access control and authorization on every operation.",
+            "Photographic evidence captured and persisted alongside each record.",
+            "Mobile‑first UI optimized for field use."
           ],
-          "techStack": "React, Firebase, Google Forms API, Chart.js, Node.js",
+          "techStack": "Next.js, RBAC, photo records, mobile optimization",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/evdocente_ltsm.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
             { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "firebase", "name": "Firebase", "type": "devicon" },
-            { "key": "chartjs", "name": "Chart.js", "type": "devicon" },
-            { "key": "nodejs", "name": "Node.js", "type": "devicon" }
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
           ]
         },
         {
-          "project": "Angel LTSM",
-          "url": "https://angel.liceotallersanmiguel.edu.co",
-          "repo": "Private",
-          "descriptionTitle": "Student disciplinary tracking system.",
-          "description": "Application for online survey collection and processing with Google Sheets API integration to centralize metrics and intuitive interface for indicator queries. Improved student disciplinary tracking efficiency by 70%.",
+          "project": "Artemisa + Insights LTSM",
+          "visibility": "internal",
+          "icon": "brain",
+          "accent": "purple",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "AI‑assisted teacher planning and evaluation tools.",
+          "description": "AI‑assisted teacher planning and evaluation suite with reusable UI components, dashboards and automated feedback to reduce manual consolidation work. Connects to Google Forms for collection and to Gemini for content generation.",
+          "problem": "Manual consolidation of teacher evaluation forms and planning docs.",
+          "solution": "AI‑assisted suite with shared components, FastAPI services and Gemini integration.",
+          "outcome": "60% less consolidation time, automated feedback per teacher.",
           "keyFeatures": [
-            "Automatic collection and processing of online surveys.",
-            "Google Sheets API integration for metrics centralization.",
-            "Intuitive interface for disciplinary indicator queries.",
-            "70% improvement in disciplinary tracking efficiency."
+            "Reusable component library shared across planning and evaluation.",
+            "Automated consolidation of teacher‑evaluation data.",
+            "Generative content with Gemini API to support planning.",
+            "FastAPI services backed by PostgreSQL and Redis."
           ],
-          "techStack": "React, Google Sheets API, Node.js, Bootstrap",
+          "techStack": "Next.js, TypeScript, FastAPI, PostgreSQL, Redis, Firebase, Google Forms API",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/angel-ltsm.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "nodejs", "name": "Node.js", "type": "devicon" },
-            { "key": "bootstrap", "name": "Bootstrap", "type": "devicon" }
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "redis", "name": "Redis", "type": "devicon" }
           ]
         },
         {
-          "project": "ESP Tribunas Internal App",
-          "url": "https://app.esptribunas.com.co",
-          "repo": "Private",
-          "descriptionTitle": "Web application for water reports and maintenance management.",
-          "description": "Internal system developed in React with responsive dashboards and Firebase connection for cloud storage. Includes notification integration and maintenance modules, reducing manual workload by 50% with automated reports.",
+          "project": "SENA Administrative Portal",
+          "visibility": "internal",
+          "icon": "shield",
+          "accent": "emerald",
+          "url": null,
+          "repo": null,
+          "descriptionTitle": "Administrative portal with RBAC and a custom headless CMS.",
+          "description": "Administrative portal with role‑based permissions, module‑based tables and data virtualization. Includes a headless CMS with a customized TipTap editor and event‑calendar workflows tailored to institutional needs.",
+          "problem": "Institutional admin work blocked by spreadsheets and ad‑hoc tools.",
+          "solution": "Admin portal with RBAC, headless TipTap CMS and Redis‑cached APIs.",
+          "outcome": "Centralized admin operations with audit‑ready role enforcement.",
           "keyFeatures": [
-            "React frontend with responsive and optimized dashboards.",
-            "Firebase connection for secure cloud storage.",
-            "Integrated notification system and maintenance modules.",
-            "50% reduction in manual workload through automated reports."
+            "RBAC with fine‑grained, role‑based permissions across modules.",
+            "Headless CMS with a customized TipTap rich‑text editor.",
+            "Backend on Next.js API Routes with PostgreSQL/Prisma and Redis cache (TTL).",
+            "JWT authentication and role‑based authorization end to end."
           ],
-          "techStack": "React, Firebase, Firestore, Node.js",
+          "techStack": "Next.js, Prisma, PostgreSQL, Redis (TTL), JWT/RBAC, TipTap, Tailwind",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/muestras_esp.jpg"
-            }
-          ],
+          "images": [],
           "stack": [
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "firebase", "name": "Firebase", "type": "devicon" },
-            { "key": "nodejs", "name": "Node.js", "type": "devicon" }
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+            { "key": "prisma", "name": "Prisma", "type": "devicon" },
+            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+            { "key": "redis", "name": "Redis", "type": "devicon" }
           ]
         },
         {
-          "project": "Bella Nova Surgery",
-          "url": "https://bellanovasurgery.com",
-          "repo": "In Development",
-          "descriptionTitle": "Corporate website implemented according to Figma design with SEO optimization.",
-          "description": "Corporate website implementation in WordPress + Elementor following specific Figma design. Includes complete SEO optimization, performance improvements and premium user experience for the medical-aesthetic sector.",
-          "keyFeatures": [
-            "Faithful implementation to Figma-designed prototype.",
-            "WordPress + Elementor for optimized content management.",
-            "Technical SEO optimization and performance improvements.",
-            "Premium user experience for medical sector."
-          ],
-          "techStack": "WordPress, Elementor, HTML, CSS, Figma",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "bellanova",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/bellanova.png"
-            }
-          ],
-          "stack": [
-            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
-            { "key": "html5", "name": "HTML", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" },
-            { "key": "figma", "name": "Figma", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "ESP Tribunas Web",
+          "project": "Acueducto Tribunas Córcega Website",
+          "visibility": "public",
+          "icon": "world",
+          "accent": "amber",
           "url": "https://esptribunas.com.co",
-          "repo": "Private",
-          "descriptionTitle": "WordPress redesign to improve UX and digitize queries/payments.",
-          "description": "Complete redesign of public services website in WordPress to improve user experience and digitize query and payment processes. Increased user interaction by 25% with analytics integration and process optimization.",
+          "repo": null,
+          "descriptionTitle": "Modernized public website with clearer navigation and mobile‑friendly UX.",
+          "description": "Modernized the public website into a clearer, more intuitive and mobile‑friendly experience, improving information structure, navigation and overall user experience.",
+          "problem": "Legacy public site with confusing navigation and poor mobile UX.",
+          "solution": "Modernized information architecture, mobile‑first responsive on Next.js.",
+          "outcome": "Cleaner navigation, faster mobile experience, better SEO base.",
           "keyFeatures": [
-            "Complete redesign focused on user experience improvement.",
-            "Digitization of online query and payment processes.",
-            "25% increase in registered user interaction.",
-            "Analytics integration and conversion optimization."
+            "Information architecture rebuilt around user tasks.",
+            "Mobile‑first responsive design with improved performance.",
+            "Clearer navigation patterns and content hierarchy.",
+            "Built on Next.js for SEO and Core Web Vitals."
           ],
-          "techStack": "WordPress, PHP, CSS3, Figma",
+          "techStack": "Next.js, UX/UI, modern responsive site",
           "imageOptions": [],
-          "images": [
-            {
-              "key": "esptribunas",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/esptribunas.png"
-            }
-          ],
+          "images": [],
           "stack": [
-            { "key": "wordpress", "name": "WordPress", "type": "devicon" },
-            { "key": "php", "name": "PHP", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" },
-            { "key": "figma", "name": "Figma", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "SmileX",
-          "url": "https://github.com/JalejandroV93/SmileX",
-          "repo": "GitHub",
-          "descriptionTitle": "University Project - Dental clinic management system.",
-          "description": "Comprehensive management system for dental clinic developed in .NET + Razor Pages. Includes scheduling module with dynamic validations to prevent appointment duplications, complete clinical history and administrative functions organized by roles.",
-          "keyFeatures": [
-            "Scheduling module with dynamic anti-duplication validations.",
-            "Complete clinical history and patient tracking system.",
-            "Administrative functions organized by user roles.",
-            ".NET + Razor Pages architecture for university development."
-          ],
-          "techStack": ".NET, Razor Pages, C#, HTML5, CSS3",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/smilex.png"
-            }
-          ],
-          "stack": [
-            { "key": "dot-net", "name": ".NET", "type": "devicon" },
-            { "key": "csharp", "name": "C#", "type": "devicon" },
-            { "key": "html5", "name": "HTML", "type": "devicon" },
-            { "key": "css3", "name": "CSS", "type": "devicon" }
-          ]
-        },
-        {
-          "project": "LTSM Internal Systems",
-          "url": "https://ltsm.com.co/",
-          "repo": "Private",
-          "descriptionTitle": "Administrative institutional portal - Process digitization.",
-          "description": "Institutional portal for digitizing forms and internal administrative processes. Development of management modules in PHP + Bootstrap with 40% reduction in paper usage and optimization of institutional workflows.",
-          "keyFeatures": [
-            "Complete digitization of administrative forms and processes.",
-            "Management modules developed in PHP + Bootstrap.",
-            "40% reduction in institutional paper usage.",
-            "Comprehensive optimization of administrative workflows."
-          ],
-          "techStack": "PHP, Bootstrap, MySQL, JavaScript",
-          "imageOptions": [],
-          "images": [
-            {
-              "key": "placeholder",
-              "hover": "right",
-              "h": "1200",
-              "w": "556",
-              "url": "/img/featured/tools_ltsm.jpg"
-            }
-          ],
-          "stack": [
-            { "key": "php", "name": "PHP", "type": "devicon" },
-            { "key": "bootstrap", "name": "Bootstrap", "type": "devicon" },
-            { "key": "mysql", "name": "MySQL", "type": "devicon" },
-            { "key": "javascript", "name": "JavaScript", "type": "devicon" }
+            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+            { "key": "react", "name": "React", "type": "devicon" },
+            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
           ]
         }
       ]

@@ -13,6 +13,7 @@ import SectionTitle from '../../blocks/section.title.block'
 import Container from '../../structure/container';
 // Section structure
 import Section from '../../structure/section';
+import Reveal, { Stagger, StaggerItem } from '../../utils/reveal.util';
 
 /**
  * Section: About
@@ -25,39 +26,40 @@ export default function About() {
 	const { t } = useTranslation('common');
 
 	return (
-		<Section classProp={about.section}>	
+		<Section classProp={about.section}>
 			<Container spacing={['verticalXXXLrg']}>
-				<SectionTitle
-					title={t('about.title')}
-					preTitle={t('about.preTitle')}
-					subTitle={t('about.description')}
-				/>
-				<section className={about.content}>
-					<div className={about.image}>
+				<Reveal>
+					<SectionTitle
+						title={t('about.title')}
+						preTitle={t('about.preTitle')}
+						subTitle={t('about.description')}
+					/>
+				</Reveal>
+				<Stagger className={about.content}>
+					<StaggerItem className={about.image}>
 						<Image src="/img/me.jpg" alt="Foto Saludando" width={600} height={800}/>
-						{/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
-					</div>
-					<div className={about.copy} >
-						<CopyBlock 
+					</StaggerItem>
+					<StaggerItem className={about.copy}>
+						<CopyBlock
 							title={t('about.softSkills.title')}
 							containerClass={about.container}
 							iconClass={about.icon}
 							icon={[ 'fat', 'ear-listen' ]}
 							copy={t('about.softSkills.description')}
 						/>
-						<BadgesBlock 
-							title={t('about.methods.title')} 
+						<BadgesBlock
+							title={t('about.methods.title')}
 							containerClass={about.container}
-							list={methods} 
+							list={methods}
 							fullContainer="fullContainer"
-							block="methods" 
+							block="methods"
 							icon="fingerprint"
 							copy={t('about.methods.description')}
 							invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>
-					</div>
-				</section>	
+					</StaggerItem>
+				</Stagger>
 			</Container>
 		</Section>
 	)

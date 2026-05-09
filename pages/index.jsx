@@ -2,7 +2,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import About from "../components/sections/index/about";
 import Career from "../components/sections/index/career";
 import Hero from "../components/sections/index/hero";
-import Looking from "../components/sections/index/looking";
 import Technical from "../components/sections/index/technical";
 import FeaturedProjects from "../components/sections/projects/featured";
 import PricingTable from "../components/sections/pricing/pricing-table";
