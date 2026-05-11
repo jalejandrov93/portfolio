@@ -96,14 +96,14 @@ function IconModule({ iconKey, iconType, color }) {
   }
 
   switch (iconType) {
-    case "far":
-    case "fad":
-    case "fat":
-    case "fas":
-      return <Icon icon={[iconType, iconKey]} />;
+    case "tabler":
+      return <Icon icon={["tabler", iconKey]} />;
     case "devicon":
       return <i className={`devicon-${iconKey}-plain ${colored}`} />;
+    // Legacy FA types (fas/far/fab/fat/fal/fad) — Phase 4B dropped the FA
+    // pipeline. Any data still using these keys silently renders nothing
+    // so the badge label still shows. Migrate the data to type:'tabler'.
     default:
-      return "";
+      return null;
   }
 }

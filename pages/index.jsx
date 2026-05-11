@@ -1,20 +1,26 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import About from "../components/sections/index/about";
-import Career from "../components/sections/index/career";
+import dynamic from "next/dynamic";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+// Above-the-fold — load eagerly for first paint.
 import Hero from "../components/sections/index/hero";
-import Looking from "../components/sections/index/looking";
-import Technical from "../components/sections/index/technical";
 import FeaturedProjects from "../components/sections/projects/featured";
-import PricingTable from "../components/sections/pricing/pricing-table";
+
 import Color from "../components/utils/page.colors.util";
 import colors from "../content/index/_colors.json";
 
-//
+// Below-the-fold — code-split so they don't block the recruiter's 5-second
+// moment. ssr:true keeps SEO + zero-FOUC; only the JS chunk is deferred.
+// Pricing lives at /pricing now (freelance funnel) — the home flow stays
+// recruiter-focused: Hero → Featured → About → Technical → Career.
+const About = dynamic(() => import("../components/sections/index/about"), { ssr: true });
+const Technical = dynamic(() => import("../components/sections/index/technical"), { ssr: true });
+const Career = dynamic(() => import("../components/sections/index/career"), { ssr: true });
+
 export default function HomePage() {
   return (
     <>
       <Color colors={colors} />
-      <Hero/>
+      <Hero />
       <section id="featured-projects">
         <FeaturedProjects />
       </section>
@@ -26,9 +32,6 @@ export default function HomePage() {
       </section>
       <section id="career">
         <Career />
-      </section>
-      <section id="pricing">
-        <PricingTable />
       </section>
     </>
   );

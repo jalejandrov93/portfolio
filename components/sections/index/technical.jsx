@@ -13,6 +13,7 @@ import SectionTitle from "../../blocks/section.title.block";
 import Container from "../../structure/container";
 // Section structure
 import Section from "../../structure/section";
+import Reveal, { Stagger, StaggerItem, Marquee } from "../../utils/reveal.util";
 
 /**
  * Section: Technical
@@ -27,64 +28,76 @@ export default function Technical() {
   return (
     <Section classProp={`${about.section} borderBottom`}>
       <Container spacing={["verticalXXXLrg"]}>
-        <SectionTitle
-          title={t("technical.title")}
-          preTitle={t("technical.preTitle")}
-          subTitle={t("technical.description")}
-        />
+        <Reveal>
+          <SectionTitle
+            title={t("technical.title")}
+            preTitle={t("technical.preTitle")}
+            subTitle={t("technical.description")}
+          />
+        </Reveal>
         <section className={`${about.content} ${about.container}`}>
-          <div className={about.copy}>
-            <BadgesBlock
-              title={t("technical.categories.languages.title")}
-              copy={t("technical.categories.languages.description")}
-              list={languages}
-              block="languages"
-              fullContainer="fullContainer"
-              icon="code"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <BadgesBlock
-              title={t("technical.categories.frameworks.title")}
-              copy={t("technical.categories.frameworks.description")}
-              list={frameworks}
-              block="frameworks"
-              fullContainer="fullContainer"
-              icon="cubes"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <BadgesBlock
-              title={t("technical.categories.databases.title")}
-              copy={t("technical.categories.databases.description")}
-              list={databases}
-              block="databases"
-              fullContainer="fullContainer"
-              icon="database"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <BadgesBlock
-              title={t("technical.categories.styling.title")}
-              copy={t("technical.categories.styling.description")}
-              list={styling}
-              block="styling"
-              fullContainer="fullContainer"
-              icon="palette"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <BadgesBlock
-              title={t("technical.categories.devops.title")}
-              copy={t("technical.categories.devops.description")}
-              list={devops}
-              block="devops"
-              fullContainer="fullContainer"
-              icon="rocket"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-          </div>
+          <Stagger className={about.copy}>
+            <StaggerItem>
+              <BadgesBlock
+                title={t("technical.categories.languages.title")}
+                copy={t("technical.categories.languages.description")}
+                list={languages}
+                block="languages"
+                fullContainer="fullContainer"
+                icon="code"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <BadgesBlock
+                title={t("technical.categories.frameworks.title")}
+                copy={t("technical.categories.frameworks.description")}
+                list={frameworks}
+                block="frameworks"
+                fullContainer="fullContainer"
+                icon="cubes"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <BadgesBlock
+                title={t("technical.categories.databases.title")}
+                copy={t("technical.categories.databases.description")}
+                list={databases}
+                block="databases"
+                fullContainer="fullContainer"
+                icon="database"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <BadgesBlock
+                title={t("technical.categories.styling.title")}
+                copy={t("technical.categories.styling.description")}
+                list={styling}
+                block="styling"
+                fullContainer="fullContainer"
+                icon="palette"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+            </StaggerItem>
+            <StaggerItem>
+              <BadgesBlock
+                title={t("technical.categories.devops.title")}
+                copy={t("technical.categories.devops.description")}
+                list={devops}
+                block="devops"
+                fullContainer="fullContainer"
+                icon="rocket"
+                containerClass={about.container}
+                headerIcon={about.icon}
+              />
+            </StaggerItem>
+          </Stagger>
           <div className={`${about.image} ${about.technicalSvg}`}>
             <Image
               src="/img/dataism-24.svg"
@@ -94,6 +107,22 @@ export default function Technical() {
             />
           </div>
         </section>
+
+        {/* Full-width marquee accent — sweeping logo ticker of all devicon-
+            backed technologies. Vercel/Resend "we use these" pattern. The
+            Marquee preset already applies edge fade masks. */}
+        <Reveal>
+          <div className={about.marqueeAccent} aria-hidden="true">
+            <Marquee speed={45} gap="2.75rem">
+              {allDeviconLogos.map(({ key, name }) => (
+                <span key={key} className={about.marqueeItem}>
+                  <i className={`devicon-${key}-plain colored`} />
+                  <span>{name}</span>
+                </span>
+              ))}
+            </Marquee>
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );
@@ -115,11 +144,11 @@ const frameworks = [
   { key: "fastapi", name: "FastAPI", type: "devicon" },
   { key: "nodejs", name: "Node.js", type: "devicon" },
   { key: "express", name: "Express", type: "devicon" },
-  { key: "dotnet", name: ".NET Core", type: "devicon" },
+  { key: "prisma", name: "Prisma", type: "devicon" },
   { key: "chartjs", name: "Chart.js", type: "devicon" },
-  { key: "storybook", name: "Storybook", type: "devicon" },
-  // Librerías sin ícono en devicon -> usar FontAwesome
-  { key: "layer-group", name: "ShadCN UI", type: "fas" },
+  // Libraries with no devicon glyph fall back to Tabler.
+  { key: "stack-2", name: "ShadCN UI", type: "tabler" },
+  { key: "feather", name: "TipTap", type: "tabler" },
 ];
 
 // Databases & Storage
@@ -128,13 +157,12 @@ const databases = [
   { key: "mysql", name: "MySQL", type: "devicon" },
   { key: "firebase", name: "Firebase", type: "devicon" },
   { key: "redis", name: "Redis", type: "devicon" },
-  { key: "supabase", name: "Supabase", type: "devicon" },
+  { key: "archive", name: "MinIO", type: "tabler" },
 ];
 
 // Styling, UI & Design
 const styling = [
   { key: "tailwindcss", name: "Tailwind CSS", type: "devicon" },
-  { key: "bootstrap", name: "Bootstrap", type: "devicon" },
   { key: "css3", name: "CSS3", type: "devicon" },
   { key: "figma", name: "Figma", type: "devicon" },
 ];
@@ -144,6 +172,19 @@ const devops = [
   { key: "git", name: "Git", type: "devicon" },
   { key: "docker", name: "Docker", type: "devicon" },
   { key: "github", name: "GitHub Actions", type: "devicon" },
-  { key: "vite", name: "Vite", type: "devicon" },
-  { key: "postman", name: "Postman", type: "devicon" },
+  { key: "linux", name: "Linux / VPS", type: "devicon" },
+  { key: "topology-star-3", name: "n8n", type: "tabler" },
+  { key: "shield-half", name: "JWT / RBAC", type: "tabler" },
 ];
+
+// Devicon-only logos compiled from all categories — these are the only ones
+// with brand icons available for the marquee ticker. FA/Tabler-typed items
+// (ShadCN UI, TipTap, n8n, etc.) skip the marquee because the brand-icon
+// set lacks them; they still show up in the category grids above.
+const allDeviconLogos = [
+  ...languages,
+  ...frameworks,
+  ...databases,
+  ...styling,
+  ...devops,
+].filter((item) => item.type === "devicon");

@@ -2,59 +2,48 @@
   "sectionInfo": {
     "title": "Experiencia",
     "preTitle": "Carrera",
-    "subTitle": "Experiencia profesional en desarrollo de soluciones tecnológicas y gestión de infraestructura TI en organizaciones educativas y empresariales."
+    "subTitle": "5+ años construyendo plataformas web, portales administrativos, automatización de flujos y herramientas data‑driven con foco en arquitectura escalable e impacto operativo."
   },
   "currentPosition": {
     "company": "Liceo Taller San Miguel",
-    "position": "IT Manager",
-    "startDate": "2022-08-01",
+    "position": "Technology Manager / Full Stack Developer",
+    "startDate": "2021-08-01",
     "endDate": null,
-    "location": "Pereira, Colombia",
-    "description": "• Lidero proyectos internos de automatización con IA y sistemas web escalables • Implementación de pipelines de datos con Google Sheets API + Python • Supervisión de infraestructura tecnológica y adopción de arquitecturas modernas • Lidero el equipo de Tecnología de la institución, garantizando la continuidad de los diferentes servicios • Implementación de servicios cloud como N8N en contenedores Docker para la automatización de tareas",
+    "location": "Remote · Colombia",
+    "description": "• Liderazgo de la estrategia tecnológica, operaciones TI y desarrollo de software interno • Diseño e implementación de ANGEL/Tracking, Insights y portales internos • Integración de datos de Google Sheets, Google Forms y Phidias mediante sincronizaciones programadas, scripts en Python y automatizaciones con Docker/n8n • Coordinación de adopción, documentación y capacitación a usuarios",
     "logo": "/img/company-logoi.png"
   },
   "positions": [
     {
-      "title": "Líder del Área de Tecnología",
-      "startDate": "2022-08-01",
-      "endDate": null,
-      "description": "• Administración de plataforma educativa y coordinación de equipos técnicos • Desarrollo e implementación de herramientas para optimización de procesos institucionales",
+      "title": "Senior Full Stack Developer — SENA",
+      "startDate": "2025-01-01",
+      "endDate": "2025-12-31",
+      "description": "• Portal administrativo con RBAC, permisos por rol, tablas modulares, validación de datos y data virtualization • CMS headless con editor TipTap personalizado y workflows de calendario de eventos • Backend con Next.js API Routes, PostgreSQL/Prisma, Redis cache (TTL) y JWT • UI con React, TypeScript y Tailwind",
       "achievements": null,
       "badges": [
-        { "key": "javascript", "name": "JavaScript", "type": "devicon" },
-        { "key": "react", "name": "React", "type": "devicon" },
         { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-        { "key": "python", "name": "Python", "type": "devicon" },
-        { "key": "docker", "name": "Docker", "type": "devicon" }
-      ]
-    },
-    {
-      "title": "IT Support Technician",
-      "startDate": "2018-01-01",
-      "endDate": "2018-12-31",
-      "description": "• Soporte a usuarios finales, redes, hardware y software • Documentación y reducción de incidentes repetitivos • Implementación Software para monitoreo de la Red",
-      "achievements": null,
-      "badges": [
-        { "key": "html5", "name": "HTML", "type": "devicon" },
-        { "key": "css3", "name": "CSS", "type": "devicon" },
-        { "key": "javascript", "name": "JavaScript", "type": "devicon" },
-        { "key": "mysql", "name": "MySQL", "type": "devicon" }
+        { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+        { "key": "prisma", "name": "Prisma", "type": "devicon" },
+        { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
+        { "key": "redis", "name": "Redis", "type": "devicon" },
+        { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
       ]
     }
   ],
   "previousPositions": [
     {
-      "company": "EcoTecnologia S.A.S",
-      "position": "Tecnólogo de TI",
+      "company": "EcoTecnologia S.A.S.",
+      "position": "Técnico en Sistemas TI",
       "startDate": "2019-09-01",
-      "endDate": "2022-08-31",
-      "location": "Pereira, Colombia",
-      "description": "• Soporte técnico y despliegue de sistemas empresariales • Configuración y mantenimiento de servidores • Configuración de servicios en la Nube • Adquisición y configuración de servicios en hostings web compartidos • Configuración de Servidores VPS",
+      "endDate": "2020-12-31",
+      "location": "Remote · Colombia",
+      "description": "• Configuración de servidores Linux/Ubuntu, VPS, hosting compartido, dominios, servicios web, bases de datos y respaldos • Soporte a redes, hardware, software y servicios en la nube para clientes empresariales",
       "logo": "/img/logos/ecotecnologia.png",
       "badges": [
         [
           { "key": "linux", "name": "Linux", "type": "devicon" },
-          { "key": "windows8", "name": "Windows", "type": "devicon" }
+          { "key": "ubuntu", "name": "Ubuntu", "type": "devicon" },
+          { "key": "docker", "name": "Docker", "type": "devicon" }
         ]
       ]
     }

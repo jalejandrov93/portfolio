@@ -198,18 +198,84 @@
 
 	// Timeline styles
 	.timeline {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		margin-bottom: 1rem;
 	}
 
+	// Vertical gradient line on the left edge — Stripe-style "this happened
+	// over time" cue. Sits behind the cards via z-index:0 and renders only
+	// on desktop (mobile cards lose the left margin so the line would float).
+	.timelineTrack {
+		position: absolute;
+		left: calc(var(--grid-32) * 2 - 8px);
+		top: 0.75rem;
+		bottom: 0.75rem;
+		width: 2px;
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--secondary) 80%, transparent) 0%,
+			color-mix(in srgb, var(--neon-1-1) 60%, transparent) 50%,
+			transparent 100%
+		);
+		z-index: 0;
+		pointer-events: none;
+	}
+
 	.timelineItem {
+		position: relative;
 		border: 1px solid var(--primary-dark);
 		border-radius: 1rem;
 		padding: 1.5rem;
 		background: var(--background-dim);
 		margin-left: calc(var(--grid-32) * 2);
+	}
+
+	// Pulsing dot anchored at each timeline item — visually unifies the
+	// chip+pulse pattern from .currentChip across the whole career section.
+	.timelineDot {
+		position: absolute;
+		left: -13px;
+		top: 1.5rem;
+		width: 10px;
+		height: 10px;
+		border-radius: 99rem;
+		background: var(--neon-1-1);
+		box-shadow: 0 0 12px color-mix(in srgb, var(--neon-1-1) 60%, transparent);
+		z-index: 1;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: 99rem;
+			background: var(--neon-1-1);
+			animation: pulse-dot 2s ease-in-out infinite;
+		}
+	}
+
+	// Status dot for the current + previous position cards — same shape as
+	// .timelineDot but emits its own glow palette. Sits inside the
+	// .positionHeader so it appears next to the company name.
+	.statusDot {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-right: 0.5rem;
+		border-radius: 99rem;
+		vertical-align: 0.05em;
+		background: var(--neon-1-1);
+		box-shadow: 0 0 8px var(--neon-1-1);
+		animation: pulse-dot 2s ease-in-out infinite;
+
+		&.statusDotDim {
+			background: var(--primary-dim);
+			box-shadow: none;
+			animation: none;
+			opacity: 0.5;
+		}
 	}
 
 	// Previous position styles
@@ -408,6 +474,13 @@
 			margin-left: 0;
 		}
 
+		// Hide the desktop-anchored timeline indicators on mobile — the
+		// cards lose the left margin that the dot/track align to.
+		.timelineTrack,
+		.timelineDot {
+			display: none;
+		}
+
 		// Mobile styles for freelance section
 		.rightColumn {
 			flex: 1;
@@ -447,4 +520,40 @@
 			padding: 0.2rem 0.6rem;
 		}
 	}
+}
+.currentChip {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 0.6rem;
+	padding: 0.18rem 0.55rem;
+	font-size: 0.65rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	border-radius: 99rem;
+	color: var(--background);
+	background-image: linear-gradient(135deg, var(--secondary) 0%, var(--neon-1-1) 100%);
+	position: relative;
+	top: -1px;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		margin-right: 0.4rem;
+		border-radius: 99rem;
+		background: currentColor;
+		animation: pulse-dot 1.6s ease-in-out infinite;
+	}
+}
+
+.locationDivider {
+	margin: 0 0.4rem;
+	opacity: 0.5;
+}
+
+@keyframes pulse-dot {
+	0%, 100% { opacity: 1; transform: scale(1); }
+	50% { opacity: 0.4; transform: scale(0.8); }
 }

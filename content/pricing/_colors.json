@@ -1,0 +1,20 @@
+{
+	"dark": {
+		"mesh__secondaryDark": 	"#040608",
+		"mesh__secondaryLight": "#06110d",
+		"mesh__primaryDark": 	"#05080a",
+		"mesh__primaryLight": 	"#0a1418"
+	},
+	"light": {
+		"mesh__secondaryDark": 	"#a7f3d0",
+		"mesh__secondaryLight": "#d1fae5",
+		"mesh__primaryDark": 	"#fde68a",
+		"mesh__primaryLight": 	"#fef3c7"
+	},
+	"unicorn": {
+		"mesh__secondaryDark": 	"#bef264",
+		"mesh__secondaryLight": "#d9f99d",
+		"mesh__primaryDark": 	"#f9a8d4",
+		"mesh__primaryLight": 	"#fbcfe8"
+	}
+}

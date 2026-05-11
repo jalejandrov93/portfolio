@@ -6,9 +6,15 @@
 		"mesh__secondaryLight": "#090408"
 	},
 	"light": {
-
+		"mesh__primaryDark": 	"#b8c5d6",
+		"mesh__primaryLight": 	"#c8d6e8",
+		"mesh__secondaryDark": 	"#e8eef7",
+		"mesh__secondaryLight": "#f4f7fb"
 	},
 	"unicorn": {
-		
+		"mesh__primaryDark": 	"#ffc8b8",
+		"mesh__primaryLight": 	"#ffd4e5",
+		"mesh__secondaryDark": 	"#ffe0d4",
+		"mesh__secondaryLight": "#fff0e8"
 	}
 }

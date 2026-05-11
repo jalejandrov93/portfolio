@@ -9,12 +9,15 @@
 html {
 	font-size: 16px;
 	font-family: var(--font-sans);
+	font-feature-settings: var(--font-features-sans);
+	font-variant-ligatures: common-ligatures contextual;
 
 	color: var(--primary-dim);
 	background: var(--background);
-	
+
 	text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #__next {
@@ -49,18 +52,22 @@ button.button {
 }
 
 h1 {
-	font-size: var(--font-xl);
+	font-size: var(--font-3xl);
 	font-family: var(--font-sans);
+	font-feature-settings: var(--font-features-display);
 	font-weight: 600;
-	letter-spacing: -.1rem;
+	line-height: var(--leading-display);
+	letter-spacing: var(--tracking-display);
 }
 
 h2 {
 	color: var(--primary);
-	font-size: var(--font-xl);
+	font-size: var(--font-2xl);
 	font-family: var(--font-sans);
+	font-feature-settings: var(--font-features-display);
 	font-weight: 700;
-    letter-spacing: -.05rem;
+	line-height: var(--leading-tight);
+	letter-spacing: var(--tracking-tighter);
 }
 
 h3 {
@@ -162,6 +169,39 @@ a {
 
 .borderBottom {
 	border-bottom: 1px solid var(--primary-dark);
+}
+
+// Editorial typography utilities — pair with the display scale tokens
+.display {
+	font-family: var(--font-sans);
+	font-feature-settings: var(--font-features-display);
+	font-size: var(--font-4xl);
+	font-weight: 700;
+	line-height: var(--leading-display);
+	letter-spacing: var(--tracking-display);
+	color: var(--primary-bright);
+}
+
+.eyebrow {
+	font-family: var(--font-accent);
+	font-size: var(--font-xs);
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--primary-dim);
+}
+
+.lead {
+	font-family: var(--font-sans);
+	font-size: var(--font-m);
+	line-height: var(--leading-relaxed);
+	letter-spacing: var(--tracking-tight);
+	color: var(--primary);
+}
+
+.mono {
+	font-family: var(--font-accent);
+	font-feature-settings: "calt", "ss01";
 }
 
 #gradient-canvas {

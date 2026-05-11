@@ -1,5 +1,27 @@
 @import '../scss/_mixins';
 
+// Scroll progress bar — thin gradient strip at the very top of the viewport.
+// scaleX is driven from JS (useSpring on useScroll().scrollYProgress) so it
+// reads as a natural rather than mechanical progress indicator.
+.scrollProgress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	z-index: 1000; // above .container (999) and below modal overlays
+	background: linear-gradient(
+		90deg,
+		var(--secondary) 0%,
+		var(--neon-1-1) 50%,
+		var(--secondary-bright) 100%
+	);
+	transform-origin: 0 50%;
+	transform: scaleX(0);
+	pointer-events: none;
+	box-shadow: 0 0 12px color-mix(in srgb, var(--secondary) 40%, transparent);
+}
+
 .container {
 	position: fixed;
 	z-index: 999;
@@ -41,26 +63,47 @@
 	}
 
 	.menu {
-		display: flex;	
+		display: flex;
 		justify-content: space-between;
 		max-width: var(--reading-width);
 		margin: 1rem auto;
 		border-radius: 1rem;
 		position: relative;
-		backdrop-filter: blur(10px);
-		border-radius: 1rem;
+		backdrop-filter: blur(16px) saturate(140%);
+		-webkit-backdrop-filter: blur(16px) saturate(140%);
+		border: 1px solid var(--primary-dim2);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
 
 		a {
 			font-family: var(--font-accent);
 			font-weight: 700;
 			color: var(--primary);
 			white-space: nowrap;
+			position: relative;
+			transition: color 200ms ease;
 
 			&:hover {
 				color: var(--primary-bright);
 			}
+
+			&[data-active="true"] {
+				color: var(--primary-bright);
+			}
+
+			&[data-active="true"]::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -6px;
+				height: 2px;
+				border-radius: 2px;
+				background: linear-gradient(to right, var(--neon-1-1), var(--neon-1-2));
+				transform-origin: left;
+				animation: navLinkUnderlineIn 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+			}
 		}
-		
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -70,7 +113,7 @@
 			right: 0;
 			bottom: 0;
 			background: var(--primary-dark);
-			opacity: 50%;
+			opacity: 40%;
 			border-radius: 1rem;
 		}
 	}
@@ -172,6 +215,17 @@
 		
 	}
 	
+}
+
+@keyframes navLinkUnderlineIn {
+	from { transform: scaleX(0); opacity: 0; }
+	to   { transform: scaleX(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.scrollProgress {
+		transition: none;
+	}
 }
 
 @include media($max: $mobile) {
