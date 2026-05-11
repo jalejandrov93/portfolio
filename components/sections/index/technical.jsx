@@ -146,9 +146,9 @@ const frameworks = [
   { key: "express", name: "Express", type: "devicon" },
   { key: "prisma", name: "Prisma", type: "devicon" },
   { key: "chartjs", name: "Chart.js", type: "devicon" },
-  // Librerías sin ícono en devicon -> usar FontAwesome
-  { key: "layer-group", name: "ShadCN UI", type: "fas" },
-  { key: "feather-pointed", name: "TipTap", type: "fas" },
+  // Libraries with no devicon glyph fall back to Tabler.
+  { key: "stack-2", name: "ShadCN UI", type: "tabler" },
+  { key: "feather", name: "TipTap", type: "tabler" },
 ];
 
 // Databases & Storage
@@ -157,7 +157,7 @@ const databases = [
   { key: "mysql", name: "MySQL", type: "devicon" },
   { key: "firebase", name: "Firebase", type: "devicon" },
   { key: "redis", name: "Redis", type: "devicon" },
-  { key: "box-archive", name: "MinIO", type: "fas" },
+  { key: "archive", name: "MinIO", type: "tabler" },
 ];
 
 // Styling, UI & Design
@@ -173,8 +173,8 @@ const devops = [
   { key: "docker", name: "Docker", type: "devicon" },
   { key: "github", name: "GitHub Actions", type: "devicon" },
   { key: "linux", name: "Linux / VPS", type: "devicon" },
-  { key: "diagram-project", name: "n8n", type: "fas" },
-  { key: "shield-halved", name: "JWT / RBAC", type: "fas" },
+  { key: "topology-star-3", name: "n8n", type: "tabler" },
+  { key: "shield-half", name: "JWT / RBAC", type: "tabler" },
 ];
 
 // Devicon-only logos compiled from all categories — these are the only ones

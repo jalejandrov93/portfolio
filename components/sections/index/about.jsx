@@ -50,7 +50,7 @@ export default function About() {
 							title={t('about.softSkills.title')}
 							containerClass={about.container}
 							iconClass={about.icon}
-							icon={[ 'fat', 'ear-listen' ]}
+							icon={[ 'tabler', 'headphones' ]}
 							copy={t('about.softSkills.description')}
 						/>
 						<BadgesBlock

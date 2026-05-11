@@ -10,11 +10,6 @@
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.6",
     "@fontsource-variable/jetbrains-mono": "^5.2.6",
-    "@fortawesome/fontawesome-svg-core": "^7.0.0",
-    "@fortawesome/free-brands-svg-icons": "^7.0.0",
-    "@fortawesome/free-regular-svg-icons": "^7.0.0",
-    "@fortawesome/free-solid-svg-icons": "^7.0.0",
-    "@fortawesome/react-fontawesome": "^0.2.3",
     "@tabler/icons-react": "^3.34.1",
     "@uiw/react-markdown-preview": "^5.1.4",
     "@vercel/analytics": "^1.5.0",
