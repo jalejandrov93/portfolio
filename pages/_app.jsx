@@ -13,11 +13,11 @@ import Layout from '../components/layout/layout'
 import "../node_modules/the-new-css-reset/css/reset.css"
 
 // Fontsource local font import (https://github.com/fontsource/fontsource)
-import "@fontsource/fira-code/400.css"
-import "@fontsource/fira-code/600.css"
-import "@fontsource/inter/400.css"
-import "@fontsource/inter/700.css"
-import "@fontsource/inter/800.css"
+// Variable fonts ship every weight/axis in one file — single network request, smaller
+// total payload than discrete 400/700/800 weights, and unlocks editorial features
+// (font-feature-settings ss01/cv11/cv03) without extra requests.
+import "@fontsource-variable/inter"
+import "@fontsource-variable/jetbrains-mono"
 
 // Devicon import (https://github.com/devicons/devicon)
 import '../node_modules/devicon/devicon.min.css'

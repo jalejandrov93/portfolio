@@ -1,39 +1,42 @@
-import { useState, useEffect } from "react"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Recent 		from '../../components/sections/articles/recent'
+import Recent from "../../components/sections/articles/recent";
+import Color from "../../components/utils/page.colors.util";
 
-import Color 	from '../../components/utils/page.colors.util'
+import colors from "../../content/articles/_colors.json";
+import settings from "../../content/_settings.json";
 
-import colors 		from '../../content/articles/_colors.json'
-import settings 	from '../../content/_settings.json'
+const ISR_REVALIDATE_SECONDS = 3600; // Medium RSS update cadence is generous.
 
-//
 export default function Articles({ mediumArticles }) {
 	return (
 		<>
 			<Color colors={colors} />
-			<Recent mediumArticles={mediumArticles}/>
+			<Recent mediumArticles={mediumArticles} />
 		</>
-	)
+	);
 }
 
-// This gets called on every request
-export async function getServerSideProps({ res }) {
+// ISR — same hourly cache pattern as /projects. rss2json is unauthenticated and
+// rate-limited; SSR was a daily-traffic liability.
+export async function getStaticProps({ locale }) {
+	let mediumArticles = null;
 
-	res.setHeader(
-		'Cache-Control',
-		'public, s-maxage=600, stale-while-revalidate=59'
-	)
+	try {
+		const mediumRSS = await fetch(
+			`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${settings.username.medium}`
+		);
+		mediumArticles = await mediumRSS.json();
+	} catch (err) {
+		console.error("[articles/getStaticProps] Medium RSS fetch failed:", err);
+		mediumArticles = { items: [] };
+	}
 
-	console.log(settings.username.medium)
-
-	const [ mediumRSS ] = await Promise.all( [
-		fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${settings.username.medium}`),
-	] )
-	
-	let [ mediumArticles ] = await Promise.all( [
-		mediumRSS.json(),
-	] )
-
-	return { props: { mediumArticles } }
+	return {
+		props: {
+			mediumArticles,
+			...(await serverSideTranslations(locale, ["common"])),
+		},
+		revalidate: ISR_REVALIDATE_SECONDS,
+	};
 }

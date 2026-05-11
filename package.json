@@ -4,11 +4,12 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"test": "jest --watch"
+		"test": "jest --watch",
+		"analyze": "ANALYZE=true next build"
 	},
 	"dependencies": {
-		"@fontsource/fira-code": "^5.2.6",
-		"@fontsource/inter": "^5.2.6",
+		"@fontsource-variable/inter": "^5.2.6",
+		"@fontsource-variable/jetbrains-mono": "^5.2.6",
 		"@fortawesome/fontawesome-svg-core": "^7.0.0",
 		"@fortawesome/free-brands-svg-icons": "^7.0.0",
 		"@fortawesome/free-regular-svg-icons": "^7.0.0",
@@ -37,6 +38,7 @@
 		"uuid": "^11.1.0"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^15.4.4",
 		"@testing-library/jest-dom": "^6.6.4",
 		"@testing-library/react": "^16.3.0",
 		"eslint": "9.32.0",

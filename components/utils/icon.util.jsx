@@ -1,61 +1,96 @@
 // Core packages
 import { useEffect, useState } from 'react'
 
-// Font Awesome packages
-const { library, config } = require('@fortawesome/fontawesome-svg-core')
+// Font Awesome packages (kept for backwards compat with existing JSON content
+// that still references fas/far/fab/fat/fal/fad keys; dropped in Phase 4).
+const { library } = require('@fortawesome/fontawesome-svg-core')
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-// Load icons into library
-// Note: Using only free FontAwesome icons (solid, regular, brands)
-// Pro icons (thin, light, duotone) replaced with solid/regular alternatives
+// Tabler icons — preferred system for new callers; consistent stroke weight,
+// tree-shaken on import (only the icons referenced in render paths ship).
+import * as TablerIcons from '@tabler/icons-react'
+
+// Load FA icons into library
 library.add(fas, far, fab)
 
+const FA_FAMILIES = new Set(['fas', 'far', 'fab', 'fat', 'fal', 'fad'])
+
+// Map pro icon types to free alternatives (existing behavior — JSON content
+// authored against FA pro keys keeps rendering).
+const mapFaFamily = (family) => {
+	switch (family) {
+		case 'fat': // pro-thin → regular
+		case 'fal': // pro-light → regular
+			return 'far'
+		case 'fad': // pro-duotone → solid
+			return 'fas'
+		default:
+			return family
+	}
+}
+
+// kebab-case → `IconPascalCase` so Tabler exports resolve by string name.
+// "user" → "IconUser", "brand-github" → "IconBrandGithub".
+const tablerComponentName = (name) =>
+	'Icon' +
+	name
+		.split('-')
+		.map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+		.join('')
+
+const resolveTabler = (name) =>
+	TablerIcons[tablerComponentName(name)] || TablerIcons.IconQuestionMark
+
 /**
- * Icon factory utility.
- * Generates icon JSX and returns it. Keeps all icon packages isolated in here
- * 
- * ! Using only free FontAwesome icons for distribution
- * ? Available icon types: 'fas' (solid), 'far' (regular), 'fab' (brands)
- * ? Pro icon types (fat, fal, fad) have been replaced with solid/regular alternatives
- * 
- * ! requiring the library will likely create a SSR issue
- * ! According to maintainers of @fortawesome the best solution will be to import the icon directly 
- * ! and avoid the library module all together which is inline with MD loading plans
- * * https://github.com/FortAwesome/Font-Awesome/issues/19348
+ * Icon factory utility — dual-accepts FA tuples and Tabler names.
  *
- * @param 	{array} icon request props [ iconType, iconKey ]
- * @returns {jsx} 	<Icon />
+ * Accepts either:
+ *   - Tuple [family, key] for Font Awesome:    <Icon icon={['fas', 'user']} />
+ *   - Tuple ['tabler', name] for Tabler:        <Icon icon={['tabler', 'user']} />
+ *   - Bare string (defaults to Tabler):         <Icon icon="brand-github" />
+ *
+ * Pro FA families (fat/fal/fad) silently fall back to free equivalents.
+ *
+ * @returns {jsx} <Icon />
  */
-export default function Icon({ icon }) {
+export default function Icon({ icon, size = 18, stroke = 1.6, className, ...rest }) {
+	// Bare string → Tabler
+	if (typeof icon === 'string') {
+		const Cmp = resolveTabler(icon)
+		return <Cmp size={size} stroke={stroke} className={className} {...rest} />
+	}
 
-	const [ iconType, iconKey ] = icon
+	if (Array.isArray(icon)) {
+		const [family, name] = icon
 
-	const [ stateIconKey, setIconKey ] = useState('fa-circle-o-notch')
+		// Tabler tuple
+		if (family === 'tabler') {
+			const Cmp = resolveTabler(name)
+			return <Cmp size={size} stroke={stroke} className={className} {...rest} />
+		}
 
-	useEffect( () => setIconKey( iconKey ), [ iconKey ] )
-
-	// Map pro icon types to free alternatives
-	const mapIconType = (type) => {
-		switch(type) {
-			case 'fat': // pro-thin -> solid
-			case 'fal': // pro-light -> regular  
-				return 'far'
-			case 'fad': // pro-duotone -> solid
-				return 'fas'
-			default:
-				return type
+		// Font Awesome tuple (preserve hydration-safe deferred set for SSR mismatch)
+		if (FA_FAMILIES.has(family)) {
+			return <FaIcon family={family} name={name} className={className} {...rest} />
 		}
 	}
 
-	const mappedIconType = mapIconType(iconType)
-
-	return (
-		<FontAwesomeIcon icon={[ mappedIconType, stateIconKey ]} />
-	)
+	return null
 }
 
-
-
+// FA subcomponent — keeps the original deferred-set hydration pattern so
+// existing FA renders behave identically.
+function FaIcon({ family, name, className, ...rest }) {
+	const [stateKey, setStateKey] = useState('fa-circle-o-notch')
+	useEffect(() => setStateKey(name), [name])
+	return (
+		<FontAwesomeIcon
+			icon={[mapFaFamily(family), stateKey]}
+			className={className}
+			{...rest}
+		/>
+	)
+}

@@ -2,8 +2,12 @@
 
 // Fonts
 :root {
-	--font-sans: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-	--font-accent: "Fira Code", monospace;
+	--font-sans: "Inter Variable", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	--font-accent: "JetBrains Mono Variable", "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	// Editorial feature flags for variable Inter (stylistic alternates + tabular numerics)
+	--font-features-sans: "ss01", "cv11", "cv03", "kern";
+	--font-features-display: "ss01", "ss03", "cv11", "cv02";
 }
 
 // Breakpoints and containers
@@ -14,7 +18,7 @@
 
 // Spatial sizing
 :root {
-	// Fonts sizes
+	// Fonts sizes (existing — kept stable for backwards compat)
 	--font-xx:  0.60rem;
 	--font-xs:	0.75rem;
 	--font-s: 	0.875rem;
@@ -24,7 +28,23 @@
 	--font-l: 	2.00rem;
 	--font-xl-l: 3.75rem;
 	--font-xl: 	3.75rem;
-	
+
+	// Display scale (new — Awwwards-tier editorial sizes, fluid via clamp)
+	--font-2xl: 4.5rem;                                  // section heroes
+	--font-3xl: clamp(2.75rem, 4.5vw + 1.25rem, 5.5rem); // hero h1
+	--font-4xl: clamp(3.25rem, 7vw + 1rem, 8rem);        // display-only
+
+	// Editorial typography axis (tracking + leading)
+	--tracking-loose: 0.02em;
+	--tracking-normal: 0em;
+	--tracking-tight: -0.02em;
+	--tracking-tighter: -0.04em;
+	--tracking-display: -0.06em;
+	--leading-display: 0.95;
+	--leading-tight: 1.1;
+	--leading-snug: 1.3;
+	--leading-relaxed: 1.6;
+
 	// Marging/padding sizes
 	--size-4-: 0.25rem;
 	--size-3-: 0.35rem;
@@ -51,6 +71,10 @@
 		--font-l: 	2.00rem;
 		--font-xl-l: 2.00rem;
 		--font-xl: 	2.75rem;
+
+		// Display scale collapses gracefully on mobile (clamp handles fluid scaling automatically;
+		// these values are floor anchors for predictability)
+		--font-2xl: 2.75rem;
 
 		// Marging/padding sizes
 		--size-4-: 0.25rem;
