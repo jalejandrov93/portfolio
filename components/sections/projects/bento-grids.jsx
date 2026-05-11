@@ -1,7 +1,6 @@
-"use client";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import { cn } from "@/lib/utils";
 import {
   IconAlertTriangle,
@@ -12,16 +11,13 @@ import {
 } from "@tabler/icons-react";
 
 import ArchitectureFlow from "./architecture-flow";
+import { Stagger, StaggerItem, Magnetic } from "../../utils/reveal.util";
+
+const PREMIUM_EASE = [0.16, 1, 0.3, 1];
 
 export const BentoGrids = () => {
   const { t } = useTranslation("common");
   const projects = t("projects.featured.items", { returnObjects: true });
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setMounted(true), 50);
-    return () => clearTimeout(timer);
-  }, []);
 
   if (!Array.isArray(projects) || !projects.length) return null;
 
@@ -37,85 +33,101 @@ export const BentoGrids = () => {
           style={{ backgroundColor: "var(--neon-1-2)", opacity: 0.1 }}
         />
       </div>
+
       <div className="relative z-10 px-4 py-12 mx-auto max-w-7xl sm:px-6 md:py-16 lg:px-8">
-        <header className="mb-10 text-center">
-          <p
-            className="text-sm font-medium tracking-wide"
+        <header className="mb-12 text-center">
+          <span
+            className="eyebrow inline-block"
             style={{ color: "var(--secondary)" }}
           >
             {t("projects.featured.preTitle")}
-          </p>
+          </span>
           <h2
-            className="mt-2 text-3xl font-bold tracking-tight md:text-4xl"
-            style={{ color: "var(--primary-bright)" }}
+            className="mt-3"
+            style={{
+              color: "var(--primary-bright)",
+              fontSize: "var(--font-2xl)",
+              fontFamily: "var(--font-sans)",
+              fontFeatureSettings: "var(--font-features-display)",
+              fontWeight: 700,
+              lineHeight: "var(--leading-tight)",
+              letterSpacing: "var(--tracking-tighter)",
+            }}
           >
             {t("projects.featured.title")}
           </h2>
           <p
-            className="max-w-2xl mx-auto mt-4 text-base"
-            style={{ color: "var(--primary)" }}
+            className="max-w-2xl mx-auto mt-4"
+            style={{
+              color: "var(--primary)",
+              fontSize: "var(--font-m)",
+              lineHeight: "var(--leading-relaxed)",
+              letterSpacing: "var(--tracking-tight)",
+            }}
           >
             {t("projects.featured.subtitle")}
           </p>
         </header>
-        <div className="grid max-w-6xl grid-cols-1 gap-4 mx-auto md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:auto-rows-[18rem]">
+
+        <Stagger
+          amount={0.1}
+          className="grid max-w-6xl grid-cols-1 gap-4 mx-auto md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:auto-rows-[18rem]"
+        >
           {projects.map((p, i) => (
             <ProjectCard
               key={p.project + i}
               project={p}
-              index={i}
-              mounted={mounted}
               featured={i === 0}
             />
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );
 };
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 24, scale: 0.98 },
-  animate: { opacity: 1, y: 0, scale: 1 },
+const cardVariants = {
+  hidden: { opacity: 0, y: 24, scale: 0.98 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.55, ease: PREMIUM_EASE },
+  },
 };
 
-const ProjectCard = ({ project, index, mounted, featured }) => {
+// Card uses StaggerItem (gets fade-in-y from parent Stagger) wrapped in
+// Magnetic ONLY for public/external cards — internal cards stay static
+// because they aren't clickable, magnetism would feel arbitrary.
+const ProjectCard = ({ project, featured }) => {
   const isInternal = project.visibility === "internal";
-  const delay = index * 0.07;
+  const hasArchitecture = Array.isArray(project.architecture) && project.architecture.length > 0;
 
-  const Wrapper = isInternal ? motion.div : motion.a;
-  const linkProps = isInternal
-    ? {}
-    : {
-        href: project.url || "#",
-        target: project.url?.startsWith("http") ? "_blank" : undefined,
-        rel: project.url?.startsWith("http") ? "noopener noreferrer" : undefined,
-      };
+  // Build the card body once; we'll wrap it differently based on visibility.
+  // NOTE: col-span/row-span live on the StaggerItem (direct grid child).
+  // The inner card just fills its slot via h-full.
+  const cardClasses = cn(
+    "project-card group relative flex flex-col gap-3 overflow-hidden rounded-xl border backdrop-blur-sm p-4 md:p-5 h-full",
+    "transition-all hover:-translate-y-1 hover:shadow-lg",
+    !isInternal &&
+      "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--secondary)]"
+  );
+  const cardStyle = {
+    backgroundColor: "var(--background-dim2)",
+    borderColor: "var(--primary-dim2)",
+  };
 
-  return (
-    <Wrapper
-      {...linkProps}
-      className={cn(
-        "project-card group relative flex flex-col gap-3 overflow-hidden rounded-xl border backdrop-blur-sm p-4 md:p-5",
-        "transition-all hover:-translate-y-1 hover:shadow-lg",
-        !isInternal &&
-          "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60",
-        featured && "lg:col-span-2 lg:row-span-2"
-      )}
-      style={{
-        backgroundColor: "var(--background-dim2)",
-        borderColor: "var(--primary-dim2)",
-      }}
-      initial="initial"
-      animate={mounted ? "animate" : "initial"}
-      variants={fadeInUp}
-      transition={{ duration: 0.5, ease: "easeOut", delay }}
-    >
-      {/* Header */}
+  const Body = (
+    <>
       <div className="flex items-start justify-between gap-3">
         <h3
-          className="text-sm font-semibold leading-snug tracking-tight md:text-base"
-          style={{ color: "var(--primary-bright)" }}
+          style={{
+            color: "var(--primary-bright)",
+            fontSize: featured ? "var(--font-m)" : "var(--font-r-s)",
+            fontWeight: 600,
+            lineHeight: "var(--leading-snug)",
+            letterSpacing: "var(--tracking-tight)",
+          }}
         >
           <span className="relative inline-block">
             {project.project}
@@ -130,12 +142,18 @@ const ProjectCard = ({ project, index, mounted, featured }) => {
         <VisibilityPill isInternal={isInternal} />
       </div>
 
-      {/* Architecture flow — featured only */}
-      {featured && Array.isArray(project.architecture) && project.architecture.length > 0 && (
+      {/* Architecture flow renders on featured cards always. Non-featured
+          cards that HAVE architecture data reveal it on hover for a quiet
+          "more under the surface" moment. */}
+      {featured && hasArchitecture && (
         <ArchitectureFlow nodes={project.architecture} />
       )}
+      {!featured && hasArchitecture && (
+        <div className="archHover overflow-hidden max-h-0 group-hover:max-h-40 transition-[max-height] duration-500 ease-out">
+          <ArchitectureFlow nodes={project.architecture} />
+        </div>
+      )}
 
-      {/* Story block (Problem / Solution / Outcome) */}
       <StoryBlock
         problem={project.problem}
         solution={project.solution}
@@ -143,17 +161,20 @@ const ProjectCard = ({ project, index, mounted, featured }) => {
         compact={!featured}
       />
 
-      {/* Stack badges */}
       {Array.isArray(project.stack) && project.stack.length > 0 && (
         <ul className="flex flex-wrap mt-auto pt-2 gap-1.5">
           {project.stack.slice(0, featured ? 6 : 3).map((s, i) => (
             <li
               key={s.key || s.name || i}
-              className="rounded-full px-2 py-0.5 text-[10px] font-medium tracking-wide border"
+              className="rounded-full px-2 py-0.5 border"
               style={{
                 backgroundColor: "var(--background)",
                 color: "var(--secondary)",
                 borderColor: "var(--primary-dim)",
+                fontSize: "var(--font-xx)",
+                fontFamily: "var(--font-accent)",
+                fontWeight: 600,
+                letterSpacing: "0.04em",
               }}
             >
               {s.name || s.key || s}
@@ -161,11 +182,15 @@ const ProjectCard = ({ project, index, mounted, featured }) => {
           ))}
           {project.stack.length > (featured ? 6 : 3) && (
             <li
-              className="rounded-full px-2 py-0.5 text-[10px] font-medium border"
+              className="rounded-full px-2 py-0.5 border"
               style={{
                 backgroundColor: "var(--background)",
                 color: "var(--secondary)",
                 borderColor: "var(--primary-dim)",
+                fontSize: "var(--font-xx)",
+                fontFamily: "var(--font-accent)",
+                fontWeight: 600,
+                letterSpacing: "0.04em",
               }}
             >
               +{project.stack.length - (featured ? 6 : 3)}
@@ -179,16 +204,66 @@ const ProjectCard = ({ project, index, mounted, featured }) => {
           box-shadow: 0 0 0 1.5px var(--secondary);
         }
       `}</style>
-    </Wrapper>
+    </>
+  );
+
+  const CardInner = isInternal ? (
+    <motion.div
+      className={cardClasses}
+      style={cardStyle}
+      variants={cardVariants}
+    >
+      {Body}
+    </motion.div>
+  ) : (
+    <motion.a
+      href={project.url || "#"}
+      target={project.url?.startsWith("http") ? "_blank" : undefined}
+      rel={project.url?.startsWith("http") ? "noopener noreferrer" : undefined}
+      className={cardClasses}
+      style={cardStyle}
+      variants={cardVariants}
+    >
+      {Body}
+    </motion.a>
+  );
+
+  // Public cards get magnetic pull. Internal cards stay still — they're not
+  // interactive targets, magnetism would lie about affordance.
+  if (!isInternal) {
+    return (
+      <StaggerItem className={cn("h-full", featured && "lg:col-span-2 lg:row-span-2")}>
+        <Magnetic
+          strength={0.12}
+          stiffness={180}
+          damping={20}
+          display="block"
+          style={{ height: "100%" }}
+        >
+          {CardInner}
+        </Magnetic>
+      </StaggerItem>
+    );
+  }
+
+  return (
+    <StaggerItem className={cn("h-full", featured && "lg:col-span-2 lg:row-span-2")}>
+      {CardInner}
+    </StaggerItem>
   );
 };
 
 const VisibilityPill = ({ isInternal }) => (
   <div
-    className="flex items-center gap-1.5 px-2 py-1 rounded-full text-[10px] font-medium tracking-wide backdrop-blur shrink-0"
+    className="flex items-center gap-1.5 px-2 py-1 rounded-full backdrop-blur shrink-0"
     style={{
       backgroundColor: "var(--background-dim)",
       color: "var(--primary)",
+      fontSize: "var(--font-xx)",
+      fontFamily: "var(--font-accent)",
+      fontWeight: 600,
+      letterSpacing: "0.08em",
+      textTransform: "uppercase",
     }}
   >
     {isInternal ? (
@@ -215,44 +290,37 @@ const storyRowVariants = {
   show: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.4, ease: PREMIUM_EASE },
   },
 };
+
+// Match a leading number with optional decimal + an optional unit/percent
+// at the front of the outcome string. "70% faster ..." → { num: 70, suffix: "%" }
+const NUMERIC_OUTCOME_RE = /^(\d+(?:\.\d+)?)\s*([%xX]|min|sec|h|hours?|days?|weeks?|months?)?\b(.*)$/;
 
 const StoryBlock = ({ problem, solution, outcome, compact }) => {
   if (!problem && !solution && !outcome) return null;
 
-  const labelClass = cn(
-    "tracking-[0.12em] font-semibold uppercase shrink-0",
-    compact ? "text-[9px]" : "text-[10px]"
-  );
-  const textClass = cn(
-    "leading-snug",
-    compact ? "text-[11px]" : "text-[12px] md:text-[13px]"
-  );
+  const labelStyle = (color) => ({
+    color,
+    fontFamily: "var(--font-accent)",
+    fontSize: compact ? "var(--font-xx)" : "var(--font-xs)",
+    fontWeight: 700,
+    letterSpacing: "0.12em",
+    textTransform: "uppercase",
+    flexShrink: 0,
+  });
+  const textStyle = {
+    color: "var(--primary)",
+    fontSize: compact ? "var(--font-xs)" : "var(--font-s)",
+    lineHeight: "var(--leading-snug)",
+    letterSpacing: "var(--tracking-tight)",
+  };
 
   const rows = [
-    {
-      key: "p",
-      label: "Problem",
-      text: problem,
-      Icon: IconAlertTriangle,
-      iconColor: "var(--secondary)",
-    },
-    {
-      key: "s",
-      label: "Solution",
-      text: solution,
-      Icon: IconBolt,
-      iconColor: "var(--neon-1-1)",
-    },
-    {
-      key: "o",
-      label: "Outcome",
-      text: outcome,
-      Icon: IconCheck,
-      iconColor: "var(--neon-1-2)",
-    },
+    { key: "p", label: "Problem", text: problem, Icon: IconAlertTriangle, iconColor: "var(--secondary)" },
+    { key: "s", label: "Solution", text: solution, Icon: IconBolt, iconColor: "var(--neon-1-1)" },
+    { key: "o", label: "Outcome", text: outcome, Icon: IconCheck, iconColor: "var(--neon-1-2)" },
   ].filter((r) => Boolean(r.text));
 
   return (
@@ -263,34 +331,81 @@ const StoryBlock = ({ problem, solution, outcome, compact }) => {
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
     >
-      {rows.map(({ key, label, text, Icon, iconColor }) => (
-        <motion.div
-          key={key}
-          className="flex items-start gap-2.5"
-          variants={storyRowVariants}
-        >
-          <Icon
-            className={cn("flex-shrink-0 mt-0.5", compact ? "w-3.5 h-3.5" : "w-4 h-4")}
-            stroke={1.8}
-            style={{ color: iconColor }}
-          />
-          <div className="flex flex-col gap-0.5 min-w-0">
-            <dt
-              className={labelClass}
-              style={{
-                fontFamily: "var(--font-accent)",
-                color: iconColor,
-              }}
-            >
-              {label}
-            </dt>
-            <dd className={textClass} style={{ color: "var(--primary)" }}>
-              {text}
-            </dd>
-          </div>
-        </motion.div>
-      ))}
+      {rows.map(({ key, label, text, Icon, iconColor }) => {
+        // Outcome rows get the count-up treatment when the text leads with a number.
+        const isOutcome = key === "o";
+        const match = isOutcome ? NUMERIC_OUTCOME_RE.exec(text) : null;
+
+        return (
+          <motion.div key={key} className="flex items-start gap-2.5" variants={storyRowVariants}>
+            <Icon
+              className={cn("flex-shrink-0 mt-0.5", compact ? "w-3.5 h-3.5" : "w-4 h-4")}
+              stroke={1.8}
+              style={{ color: iconColor }}
+            />
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <dt style={labelStyle(iconColor)}>{label}</dt>
+              <dd style={textStyle}>
+                {match ? (
+                  <>
+                    <CountUp
+                      to={parseFloat(match[1])}
+                      suffix={match[2] || ""}
+                      compact={compact}
+                      color={iconColor}
+                    />
+                    {match[3]}
+                  </>
+                ) : (
+                  text
+                )}
+              </dd>
+            </div>
+          </motion.div>
+        );
+      })}
     </motion.dl>
+  );
+};
+
+// CountUp — animates a numeric value from 0 → `to` once when in view.
+// Uses framer-motion's imperative `animate(from, to, opts)` API with an
+// onUpdate callback that pushes into local state. Plain <span> renders the
+// stringified value — MotionValues CANNOT be rendered as React children
+// directly (React sees them as unrecognized objects and throws).
+const CountUp = ({ to, suffix = "", duration = 1.4, compact, color }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.5 });
+  const isInt = Number.isInteger(to);
+  const [display, setDisplay] = useState(isInt ? 0 : "0.0");
+
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, to, {
+      duration,
+      ease: PREMIUM_EASE,
+      onUpdate: (latest) => {
+        setDisplay(isInt ? Math.round(latest) : latest.toFixed(1));
+      },
+    });
+    return () => controls.stop();
+  }, [inView, to, duration, isInt]);
+
+  return (
+    <span
+      ref={ref}
+      style={{
+        color,
+        fontFamily: "var(--font-sans)",
+        fontFeatureSettings: '"tnum","cv11"',
+        fontWeight: 700,
+        fontSize: compact ? "var(--font-s)" : "var(--font-m)",
+        marginRight: "0.15em",
+      }}
+    >
+      {display}
+      {suffix}
+    </span>
   );
 };
 

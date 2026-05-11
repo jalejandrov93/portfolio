@@ -13,7 +13,7 @@ import SectionTitle from "../../blocks/section.title.block";
 import Container from "../../structure/container";
 // Section structure
 import Section from "../../structure/section";
-import Reveal, { Stagger, StaggerItem } from "../../utils/reveal.util";
+import Reveal, { Stagger, StaggerItem, Marquee } from "../../utils/reveal.util";
 
 /**
  * Section: Technical
@@ -107,6 +107,22 @@ export default function Technical() {
             />
           </div>
         </section>
+
+        {/* Full-width marquee accent — sweeping logo ticker of all devicon-
+            backed technologies. Vercel/Resend "we use these" pattern. The
+            Marquee preset already applies edge fade masks. */}
+        <Reveal>
+          <div className={about.marqueeAccent} aria-hidden="true">
+            <Marquee speed={45} gap="2.75rem">
+              {allDeviconLogos.map(({ key, name }) => (
+                <span key={key} className={about.marqueeItem}>
+                  <i className={`devicon-${key}-plain colored`} />
+                  <span>{name}</span>
+                </span>
+              ))}
+            </Marquee>
+          </div>
+        </Reveal>
       </Container>
     </Section>
   );
@@ -160,3 +176,15 @@ const devops = [
   { key: "diagram-project", name: "n8n", type: "fas" },
   { key: "shield-halved", name: "JWT / RBAC", type: "fas" },
 ];
+
+// Devicon-only logos compiled from all categories — these are the only ones
+// with brand icons available for the marquee ticker. FA/Tabler-typed items
+// (ShadCN UI, TipTap, n8n, etc.) skip the marquee because the brand-icon
+// set lacks them; they still show up in the category grids above.
+const allDeviconLogos = [
+  ...languages,
+  ...frameworks,
+  ...databases,
+  ...styling,
+  ...devops,
+].filter((item) => item.type === "devicon");

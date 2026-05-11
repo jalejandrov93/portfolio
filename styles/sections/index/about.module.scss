@@ -124,6 +124,38 @@
 	}
 }
 
+// Full-width marquee accent strip — appears below the technical category
+// grids. Vercel/Resend "tech we ship with" pattern.
+.marqueeAccent {
+	margin-top: 4rem;
+	padding: 1.75rem 0;
+	border-top: 1px solid var(--primary-dark);
+	border-bottom: 1px solid var(--primary-dark);
+	background: color-mix(in srgb, var(--background-dim) 70%, transparent);
+}
+
+.marqueeItem {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-family: var(--font-accent);
+	font-size: var(--font-s);
+	font-weight: 600;
+	color: var(--primary-dim);
+	letter-spacing: var(--tracking-tight);
+	transition: color 200ms ease;
+	white-space: nowrap;
+
+	i {
+		font-size: 1.4rem;
+		line-height: 1;
+	}
+
+	&:hover {
+		color: var(--primary-bright);
+	}
+}
+
 @include media($max: $mobile) {
 	.section {
 		.content {

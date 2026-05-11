@@ -10,10 +10,11 @@ import colors from "../content/index/_colors.json";
 
 // Below-the-fold — code-split so they don't block the recruiter's 5-second
 // moment. ssr:true keeps SEO + zero-FOUC; only the JS chunk is deferred.
+// Pricing lives at /pricing now (freelance funnel) — the home flow stays
+// recruiter-focused: Hero → Featured → About → Technical → Career.
 const About = dynamic(() => import("../components/sections/index/about"), { ssr: true });
 const Technical = dynamic(() => import("../components/sections/index/technical"), { ssr: true });
 const Career = dynamic(() => import("../components/sections/index/career"), { ssr: true });
-const PricingTable = dynamic(() => import("../components/sections/pricing/pricing-table"), { ssr: true });
 
 export default function HomePage() {
   return (
@@ -31,9 +32,6 @@ export default function HomePage() {
       </section>
       <section id="career">
         <Career />
-      </section>
-      <section id="pricing">
-        <PricingTable />
       </section>
     </>
   );

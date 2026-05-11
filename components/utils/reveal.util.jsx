@@ -103,12 +103,16 @@ export function SlideIn({
 
 // Magnetic — pointer-following hover wrapper for CTAs and accent UI.
 // Uses springs so the return-to-rest feels alive, not robotic.
+// `display` defaults to inline-flex (CTA-friendly); pass `display="block"` or
+// any other value for grid/flex item callers like cards.
 export function Magnetic({
 	children,
 	strength = 0.3,
 	className,
 	stiffness = 150,
 	damping = 15,
+	display = 'inline-flex',
+	style: extraStyle,
 }) {
 	const x = useMotionValue(0);
 	const y = useMotionValue(0);
@@ -131,7 +135,7 @@ export function Magnetic({
 	return (
 		<motion.div
 			className={className}
-			style={{ x: springX, y: springY, display: 'inline-flex' }}
+			style={{ x: springX, y: springY, display, ...extraStyle }}
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
 		>

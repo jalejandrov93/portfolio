@@ -198,18 +198,84 @@
 
 	// Timeline styles
 	.timeline {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		margin-bottom: 1rem;
 	}
 
+	// Vertical gradient line on the left edge — Stripe-style "this happened
+	// over time" cue. Sits behind the cards via z-index:0 and renders only
+	// on desktop (mobile cards lose the left margin so the line would float).
+	.timelineTrack {
+		position: absolute;
+		left: calc(var(--grid-32) * 2 - 8px);
+		top: 0.75rem;
+		bottom: 0.75rem;
+		width: 2px;
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--secondary) 80%, transparent) 0%,
+			color-mix(in srgb, var(--neon-1-1) 60%, transparent) 50%,
+			transparent 100%
+		);
+		z-index: 0;
+		pointer-events: none;
+	}
+
 	.timelineItem {
+		position: relative;
 		border: 1px solid var(--primary-dark);
 		border-radius: 1rem;
 		padding: 1.5rem;
 		background: var(--background-dim);
 		margin-left: calc(var(--grid-32) * 2);
+	}
+
+	// Pulsing dot anchored at each timeline item — visually unifies the
+	// chip+pulse pattern from .currentChip across the whole career section.
+	.timelineDot {
+		position: absolute;
+		left: -13px;
+		top: 1.5rem;
+		width: 10px;
+		height: 10px;
+		border-radius: 99rem;
+		background: var(--neon-1-1);
+		box-shadow: 0 0 12px color-mix(in srgb, var(--neon-1-1) 60%, transparent);
+		z-index: 1;
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: 99rem;
+			background: var(--neon-1-1);
+			animation: pulse-dot 2s ease-in-out infinite;
+		}
+	}
+
+	// Status dot for the current + previous position cards — same shape as
+	// .timelineDot but emits its own glow palette. Sits inside the
+	// .positionHeader so it appears next to the company name.
+	.statusDot {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-right: 0.5rem;
+		border-radius: 99rem;
+		vertical-align: 0.05em;
+		background: var(--neon-1-1);
+		box-shadow: 0 0 8px var(--neon-1-1);
+		animation: pulse-dot 2s ease-in-out infinite;
+
+		&.statusDotDim {
+			background: var(--primary-dim);
+			box-shadow: none;
+			animation: none;
+			opacity: 0.5;
+		}
 	}
 
 	// Previous position styles
@@ -406,6 +472,13 @@
 
 		.timelineItem {
 			margin-left: 0;
+		}
+
+		// Hide the desktop-anchored timeline indicators on mobile — the
+		// cards lose the left margin that the dot/track align to.
+		.timelineTrack,
+		.timelineDot {
+			display: none;
 		}
 
 		// Mobile styles for freelance section

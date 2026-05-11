@@ -83,8 +83,10 @@ export default function Career() {
             {/* Timeline de posiciones */}
             {positions.length > 0 && (
               <StaggerItem className={career.timeline}>
+                <span className={career.timelineTrack} aria-hidden="true" />
                 {positions.map((position, index) => (
                   <div key={index} className={career.timelineItem}>
+                    <span className={career.timelineDot} aria-hidden="true" />
                     <h4 className={career.positionTitle}>{position.title}</h4>
                     {position.period && (
                       <span className={career.location}>{position.period}</span>
@@ -110,7 +112,13 @@ export default function Career() {
             {previousPositions.map((position, index) => (
               <StaggerItem key={index} className={career.previousPosition}>
                 <div className={career.positionHeader}>
-                  <h3 className={career.companyName}>{position.company}</h3>
+                  <h3 className={career.companyName}>
+                    <span
+                      className={`${career.statusDot} ${career.statusDotDim}`}
+                      aria-hidden="true"
+                    />
+                    {position.company}
+                  </h3>
                   <span className={career.location}>
                     {position.location}
                     {position.period && (

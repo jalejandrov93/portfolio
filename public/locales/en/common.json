@@ -3,13 +3,37 @@
     "projects": "Projects",
     "articles": "Articles",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "section": {
+      "about": "About",
+      "featuredProjects": "Projects",
+      "technical": "Skills",
+      "career": "Experience"
+    }
   },
   "footer": {
     "madeWith": "Made with",
     "nextjs": "Next.js",
     "github": "GitHub",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "cta": {
+      "eyebrow": "Let's talk",
+      "title": "Building something together?",
+      "description": "Open to senior full-stack roles and selected freelance work. Reach me on LinkedIn — I read every message.",
+      "primary": "Connect on LinkedIn",
+      "primaryUrl": "https://www.linkedin.com/in/javasquez26/"
+    },
+    "sections": {
+      "navigation": "Navigation",
+      "resources": "Resources",
+      "social": "Social"
+    },
+    "links": {
+      "pricing": "Services & Pricing",
+      "articles": "Articles",
+      "projects": "Projects"
+    },
+    "copyright": "© {{year}} Alejandro Vásquez. Crafted with Next.js."
   },
   "hero": {
     "intro": {
@@ -35,6 +59,11 @@
         "title": "View GitHub",
         "url": "https://github.com/JalejandroV93"
       }
+    },
+    "eyebrow": "Portfolio · Developer",
+    "status": {
+      "dot": "Open",
+      "label": "Available for new projects"
     }
   },
   "about": {
@@ -47,33 +76,65 @@
     },
     "methods": {
       "title": "Process & methodology",
-      "description": "Architecture first: domain boundaries, reusable component design (design systems + Storybook), incremental API integration and continuous measurement (metrics & AI feedback). I prioritize short iterations, pragmatic documentation and scalability from the initial design."
+      "description": "Architecture first: domain boundaries, reusable component design (design systems + Storybook), incremental API integration and continuous measurement (metrics & AI feedback). I prioritize short iterations, pragmatic documentation and scalability from the initial design.",
+      "items": [
+        {
+          "key": "search",
+          "name": "Research",
+          "type": "tabler"
+        },
+        {
+          "key": "qrcode",
+          "name": "Digital Strategy",
+          "type": "tabler"
+        },
+        {
+          "key": "browser",
+          "name": "Design Systems",
+          "type": "tabler"
+        },
+        {
+          "key": "box",
+          "name": "Product Strategy",
+          "type": "tabler"
+        },
+        {
+          "key": "stack-2",
+          "name": "Brand Strategy",
+          "type": "tabler"
+        },
+        {
+          "key": "orbit",
+          "name": "Operations",
+          "type": "tabler"
+        }
+      ]
     }
   },
   "technical": {
     "title": "Technical Skills",
     "preTitle": "Competencies",
-  "description": "Modern full‑stack stack focused on React / Next.js, scalable architecture, API integration, reusable component design, performance optimization and workflow automation.",
+    "description": "Modern full‑stack stack focused on React / Next.js, scalable architecture, API integration, reusable component design, performance optimization and workflow automation.",
     "categories": {
       "languages": {
         "title": "Languages",
-    "description": "Primary languages used to build scalable, maintainable applications."
+        "description": "Primary languages used to build scalable, maintainable applications."
       },
       "frameworks": {
         "title": "Frameworks & Libraries",
-    "description": "Frameworks & libraries for modern UI, robust APIs, visualization and component‑driven development."
+        "description": "Frameworks & libraries for modern UI, robust APIs, visualization and component‑driven development."
       },
       "databases": {
         "title": "Databases",
-    "description": "SQL, realtime, caching and BaaS solutions for efficient persistence and low latency."
+        "description": "SQL, realtime, caching and BaaS solutions for efficient persistence and low latency."
       },
       "styling": {
         "title": "Styling & UI",
-    "description": "Systems & tools to build consistent, accessible interfaces."
+        "description": "Systems & tools to build consistent, accessible interfaces."
       },
       "devops": {
         "title": "Automation & DevOps",
-    "description": "Automation, CI/CD, orchestration and tooling accelerating reliable delivery."
+        "description": "Automation, CI/CD, orchestration and tooling accelerating reliable delivery."
       }
     }
   },
@@ -142,35 +203,62 @@
           "period": "2023",
           "description": "WordPress redesign to improve UX and digitize consultations/payments. 25% increase in user interaction",
           "url": "https://esptribunas.com.co",
-          "technologies": ["WordPress", "PHP", "CSS3", "Figma"]
+          "technologies": [
+            "WordPress",
+            "PHP",
+            "CSS3",
+            "Figma"
+          ]
         },
         {
           "title": "Insights - Teacher Evaluation",
           "period": "2024",
           "description": "Tool for teacher evaluation with automatic feedback. Google Forms API connection. Dynamic dashboards in React + Firebase. 60% reduction in consolidation time",
           "url": "https://insights.liceotallersanmiguel.edu.co",
-          "technologies": ["React", "Firebase", "Google Forms API", "Chart.js", "Node.js"]
+          "technologies": [
+            "React",
+            "Firebase",
+            "Google Forms API",
+            "Chart.js",
+            "Node.js"
+          ]
         },
         {
           "title": "Angel - Student Tracking",
           "period": "2023",
           "description": "Student disciplinary tracking system. Collection and processing of online surveys. Google Sheets API integration. 70% improvement in tracking efficiency",
           "url": "https://angel.liceotallersanmiguel.edu.co",
-          "technologies": ["React", "Google Sheets API", "Node.js", "Bootstrap"]
+          "technologies": [
+            "React",
+            "Google Sheets API",
+            "Node.js",
+            "Bootstrap"
+          ]
         },
         {
           "title": "SmileX - University Project",
           "period": "2023",
           "description": "Dental management system. Development of appointment scheduling module in .NET + Razor Pages. Dynamic validations to avoid appointment duplication",
           "url": "https://github.com/JalejandroV93/SmileX",
-          "technologies": [".NET", "Razor Pages", "C#", "HTML5", "CSS3"]
+          "technologies": [
+            ".NET",
+            "Razor Pages",
+            "C#",
+            "HTML5",
+            "CSS3"
+          ]
         },
         {
           "title": "LTSM Internal Systems",
           "period": "2021",
           "description": "Administrative institutional portal. Digitization of forms and internal processes. Development of management modules in PHP + Bootstrap. 40% reduction in paper usage",
           "url": "https://ltsm.com.co/",
-          "technologies": ["PHP", "Bootstrap", "MySQL", "JavaScript"]
+          "technologies": [
+            "PHP",
+            "Bootstrap",
+            "MySQL",
+            "JavaScript"
+          ]
         }
       ]
     }
@@ -198,11 +286,26 @@
           "solution": "Phidias auto-sync + role-based UI with photo evidence per case.",
           "outcome": "70% faster disciplinary tracking workflow.",
           "architecture": [
-            { "label": "Phidias", "type": "source" },
-            { "label": "PostgreSQL", "type": "db" },
-            { "label": "Redis", "type": "cache" },
-            { "label": "Next.js API", "type": "api" },
-            { "label": "Teachers · Coordinators", "type": "consumer" }
+            {
+              "label": "Phidias",
+              "type": "source"
+            },
+            {
+              "label": "PostgreSQL",
+              "type": "db"
+            },
+            {
+              "label": "Redis",
+              "type": "cache"
+            },
+            {
+              "label": "Next.js API",
+              "type": "api"
+            },
+            {
+              "label": "Teachers · Coordinators",
+              "type": "consumer"
+            }
           ],
           "keyFeatures": [
             "Scheduled Phidias sync into a normalized model with photographic evidence.",
@@ -214,11 +317,31 @@
           "imageOptions": [],
           "images": [],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "prisma", "name": "Prisma", "type": "devicon" },
-            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
-            { "key": "redis", "name": "Redis", "type": "devicon" },
-            { "key": "docker", "name": "Docker", "type": "devicon" }
+            {
+              "key": "nextjs",
+              "name": "Next.js",
+              "type": "devicon"
+            },
+            {
+              "key": "prisma",
+              "name": "Prisma",
+              "type": "devicon"
+            },
+            {
+              "key": "postgresql",
+              "name": "PostgreSQL",
+              "type": "devicon"
+            },
+            {
+              "key": "redis",
+              "name": "Redis",
+              "type": "devicon"
+            },
+            {
+              "key": "docker",
+              "name": "Docker",
+              "type": "devicon"
+            }
           ]
         },
         {
@@ -243,9 +366,21 @@
           "imageOptions": [],
           "images": [],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
+            {
+              "key": "nextjs",
+              "name": "Next.js",
+              "type": "devicon"
+            },
+            {
+              "key": "react",
+              "name": "React",
+              "type": "devicon"
+            },
+            {
+              "key": "tailwindcss",
+              "name": "Tailwind CSS",
+              "type": "devicon"
+            }
           ]
         },
         {
@@ -270,11 +405,31 @@
           "imageOptions": [],
           "images": [],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
-            { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
-            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
-            { "key": "redis", "name": "Redis", "type": "devicon" }
+            {
+              "key": "nextjs",
+              "name": "Next.js",
+              "type": "devicon"
+            },
+            {
+              "key": "typescript",
+              "name": "TypeScript",
+              "type": "devicon"
+            },
+            {
+              "key": "fastapi",
+              "name": "FastAPI",
+              "type": "devicon"
+            },
+            {
+              "key": "postgresql",
+              "name": "PostgreSQL",
+              "type": "devicon"
+            },
+            {
+              "key": "redis",
+              "name": "Redis",
+              "type": "devicon"
+            }
           ]
         },
         {
@@ -299,11 +454,31 @@
           "imageOptions": [],
           "images": [],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "typescript", "name": "TypeScript", "type": "devicon" },
-            { "key": "prisma", "name": "Prisma", "type": "devicon" },
-            { "key": "postgresql", "name": "PostgreSQL", "type": "devicon" },
-            { "key": "redis", "name": "Redis", "type": "devicon" }
+            {
+              "key": "nextjs",
+              "name": "Next.js",
+              "type": "devicon"
+            },
+            {
+              "key": "typescript",
+              "name": "TypeScript",
+              "type": "devicon"
+            },
+            {
+              "key": "prisma",
+              "name": "Prisma",
+              "type": "devicon"
+            },
+            {
+              "key": "postgresql",
+              "name": "PostgreSQL",
+              "type": "devicon"
+            },
+            {
+              "key": "redis",
+              "name": "Redis",
+              "type": "devicon"
+            }
           ]
         },
         {
@@ -328,12 +503,30 @@
           "imageOptions": [],
           "images": [],
           "stack": [
-            { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-            { "key": "react", "name": "React", "type": "devicon" },
-            { "key": "tailwindcss", "name": "Tailwind CSS", "type": "devicon" }
+            {
+              "key": "nextjs",
+              "name": "Next.js",
+              "type": "devicon"
+            },
+            {
+              "key": "react",
+              "name": "React",
+              "type": "devicon"
+            },
+            {
+              "key": "tailwindcss",
+              "name": "Tailwind CSS",
+              "type": "devicon"
+            }
           ]
         }
       ]
+    },
+    "recent": {
+      "title": "Recent Projects",
+      "subtitle": "Selected GitHub work — automatically refreshed hourly.",
+      "filterAll": "All",
+      "filterEmpty": "No repositories match this filter."
     }
   },
   "pricing": {
@@ -451,44 +644,6 @@
       "trmNote": " Conversion is made with the current official TRM from Colombia."
     }
   },
-  "features": {
-    "title": "My Projects Features",
-    "subtitle": "Each project is developed with attention to detail and according to client needs",
-    "items": {
-      "fullStack": {
-        "title": "Full-Stack Development",
-        "description": "Complete experience in frontend and backend to create robust and scalable applications."
-      },
-      "responsive": {
-        "title": "Responsive Design",
-        "description": "Interfaces that adapt perfectly to any device and screen size."
-      },
-      "uiux": {
-        "title": "Modern UI/UX",
-        "description": "Attractive and functional designs that prioritize user experience."
-      },
-      "performance": {
-        "title": "Optimized Performance",
-        "description": "Fast and efficient applications with development best practices."
-      },
-      "collaboration": {
-        "title": "Collaborative Approach",
-        "description": "Effective teamwork and clear communication throughout the process."
-      },
-      "security": {
-        "title": "Secure Code",
-        "description": "Implementation of security best practices in every project."
-      },
-      "modernTech": {
-        "title": "Modern Technologies",
-        "description": "Use of latest technologies and frameworks for innovative solutions."
-      },
-      "dataManagement": {
-        "title": "Data Management",
-        "description": "Efficient handling of databases and APIs for dynamic applications."
-      }
-    }
-  },
   "common": {
     "loading": "Loading...",
     "error": "Error",
@@ -496,5 +651,12 @@
     "close": "Close",
     "save": "Save",
     "cancel": "Cancel"
+  },
+  "articles": {
+    "recent": {
+      "title": "Recent Articles",
+      "preTitle": "Writing",
+      "subTitle": "A personal quest to become a better creative writer."
+    }
   }
 }

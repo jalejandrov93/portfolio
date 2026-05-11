@@ -25,6 +25,12 @@ import Reveal, { Stagger, StaggerItem } from '../../utils/reveal.util';
 export default function About() {
 	const { t } = useTranslation('common');
 
+	// Methods array lives in i18n now — preserves the {key,name,type} shape
+	// BadgesBlock expects. Both locales translate `name`; `key`/`type` are
+	// FA icon identifiers and stay structural.
+	const methods = t('about.methods.items', { returnObjects: true });
+	const methodsList = Array.isArray(methods) ? methods : [];
+
 	return (
 		<Section classProp={about.section}>
 			<Container spacing={['verticalXXXLrg']}>
@@ -37,7 +43,7 @@ export default function About() {
 				</Reveal>
 				<Stagger className={about.content}>
 					<StaggerItem className={about.image}>
-						<Image src="/img/me.jpg" alt="Foto Saludando" width={600} height={800}/>
+						<Image src="/img/me.jpg" alt={t('about.imageAlt') || 'Portrait'} width={600} height={800}/>
 					</StaggerItem>
 					<StaggerItem className={about.copy}>
 						<CopyBlock
@@ -50,7 +56,7 @@ export default function About() {
 						<BadgesBlock
 							title={t('about.methods.title')}
 							containerClass={about.container}
-							list={methods}
+							list={methodsList}
 							fullContainer="fullContainer"
 							block="methods"
 							icon="fingerprint"
@@ -64,12 +70,3 @@ export default function About() {
 		</Section>
 	)
 }
-
-const methods = [
-	{ key: 'planet-moon', name: 'Investigación', type: 'fad' },
-	{ key: 'qrcode', name: 'Estrategia Digital', type: 'fad' },
-	{ key: 'window', name: 'Sistemas de Diseño', type: 'fad' },
-	{ key: 'cubes', name: 'Estrategia de Producto', type: 'far' },
-	{ key: 'layer-plus', name: 'Estrategia de Marca', type: 'fad' },
-	{ key: 'solar-system', name: 'Operaciones', type: 'fad' },
-];
